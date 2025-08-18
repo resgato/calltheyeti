@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { siteConfig } from "@/lib/site";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 type LeadPayload = {
   name: string;
@@ -35,14 +35,19 @@ export async function POST(request: NextRequest) {
       </div>
     `;
 
-    // Send email via Resend
-    await resend.emails.send({
-      from: `Yeti Plumbing <noreply@${new URL(siteConfig.url).hostname}>`,
-      to: [siteConfig.email],
-      subject: `New Lead: ${payload.service || "Service Request"} — ${payload.name}`,
-      replyTo: payload.email || undefined,
-      html,
-    });
+    // Send email via Resend if available
+    if (resend) {
+      await resend.emails.send({
+        from: `Yeti Plumbing <noreply@${new URL(siteConfig.url).hostname}>`,
+        to: [siteConfig.email],
+        subject: `New Lead: ${payload.service || "Service Request"} — ${payload.name}`,
+        replyTo: payload.email || undefined,
+        html,
+      });
+    } else {
+      // Fallback: log to console if Resend is not configured
+      console.log("New lead (Resend not configured):", payload);
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
