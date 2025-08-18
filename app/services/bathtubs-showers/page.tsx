@@ -44,12 +44,18 @@ export default function BathtubsShowersPage() {
             soaking tubs to modern walk-in showers, we create the perfect bathroom experience.
           </p>
 
+          <div className="mb-8">
+            <img src="/shower.jpeg" alt="Shower installation and repair" className="w-full h-64 object-cover rounded-lg shadow-md" />
+          </div>
+
           <div className="prose prose-lg max-w-none">
             <h2>Bathtub Installation & Replacement</h2>
             <p>
               Whether you're installing a new bathtub or replacing an old one, our expert team ensures 
               proper installation with attention to detail and code compliance.
             </p>
+
+            <h3>Types of Bathtubs We Install</h3>
             <ul>
               <li><strong>Acrylic Bathtubs:</strong> Lightweight, durable, and easy to maintain</li>
               <li><strong>Cast Iron Bathtubs:</strong> Classic, heavy-duty, and long-lasting</li>
@@ -59,11 +65,17 @@ export default function BathtubsShowersPage() {
               <li><strong>Whirlpool Tubs:</strong> Therapeutic massage and relaxation</li>
             </ul>
 
+            <div className="my-8">
+              <img src="/bathtubbefore.jpg" alt="Bathtub before installation" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            </div>
+
             <h2>Shower Installation & Replacement</h2>
             <p>
               Modern showers offer convenience and accessibility. We install all types of shower systems 
               with proper waterproofing and drainage.
             </p>
+
+            <h3>Shower Systems We Install</h3>
             <ul>
               <li><strong>Walk-in Showers:</strong> Accessible, modern shower designs</li>
               <li><strong>Shower Pans:</strong> Custom and pre-fabricated shower bases</li>
@@ -73,11 +85,17 @@ export default function BathtubsShowersPage() {
               <li><strong>Shower Surrounds:</strong> Tile, acrylic, and fiberglass options</li>
             </ul>
 
+            <div className="my-8">
+              <img src="/bathtub.jpg" alt="Bathtub after installation" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            </div>
+
             <h2>Tub to Shower Conversion</h2>
             <p>
               Converting a bathtub to a shower can improve accessibility and modernize your bathroom. 
-              Our conversion services include:
+              Our conversion services include complete transformation of your bathroom space.
             </p>
+
+            <h3>Conversion Process</h3>
             <ul>
               <li>Removing existing bathtub and plumbing</li>
               <li>Installing new shower pan and drain</li>
@@ -85,6 +103,15 @@ export default function BathtubsShowersPage() {
               <li>Installing shower doors and hardware</li>
               <li>Ensuring proper waterproofing</li>
               <li>Code compliance and permits</li>
+            </ul>
+
+            <h3>Benefits of Tub to Shower Conversion</h3>
+            <ul>
+              <li>Improved accessibility for all ages</li>
+              <li>Modern, updated bathroom appearance</li>
+              <li>Increased home value</li>
+              <li>Better safety for elderly family members</li>
+              <li>More efficient use of space</li>
             </ul>
 
             <h2>Common Questions About Bathtubs & Showers</h2>

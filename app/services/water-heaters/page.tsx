@@ -44,12 +44,18 @@ export default function WaterHeatersPage() {
             water heaters to modern tankless systems, we ensure reliable hot water for your home.
           </p>
 
+          <div className="mb-8">
+            <img src="/toiletinstalled.jpeg" alt="Water heater installation and repair" className="w-full h-64 object-cover rounded-lg shadow-md" />
+          </div>
+
           <div className="prose prose-lg max-w-none">
             <h2>Water Heater Installation & Replacement</h2>
             <p>
               Whether you need a new water heater installation or are replacing an old unit, our expert 
               team ensures proper installation with attention to safety and efficiency.
             </p>
+
+            <h3>Types of Water Heaters We Install</h3>
             <ul>
               <li><strong>Tank Water Heaters:</strong> Traditional, reliable hot water storage systems</li>
               <li><strong>Tankless Water Heaters:</strong> Energy-efficient, on-demand hot water</li>
@@ -59,10 +65,17 @@ export default function WaterHeatersPage() {
               <li><strong>Solar Water Heaters:</strong> Renewable energy hot water systems</li>
             </ul>
 
+            <div className="my-8">
+              <img src="/sinksfixed.jpeg" alt="Water heater repair work" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            </div>
+
             <h2>Water Heater Repair Services</h2>
             <p>
-              Don't let water heater problems leave you without hot water. Our repair services include:
+              Don't let water heater problems leave you without hot water. Our repair services include 
+              comprehensive diagnostics and reliable solutions.
             </p>
+
+            <h3>Common Water Heater Problems We Fix</h3>
             <ul>
               <li><strong>No Hot Water:</strong> Diagnosing and fixing heating element issues</li>
               <li><strong>Leaking Water Heaters:</strong> Tank and connection leak repairs</li>
@@ -72,9 +85,10 @@ export default function WaterHeatersPage() {
               <li><strong>Pressure Relief Valve:</strong> Safety valve replacement and repair</li>
             </ul>
 
-            <h2>Emergency Water Heater Services</h2>
+            <h3>Emergency Water Heater Services</h3>
             <p>
-              Water heater emergencies can happen at any time. We provide 24/7 emergency services for:
+              Water heater emergencies can happen at any time. We provide 24/7 emergency services for 
+              urgent situations that require immediate attention.
             </p>
             <ul>
               <li>Complete water heater failure</li>
@@ -85,11 +99,17 @@ export default function WaterHeatersPage() {
               <li>Emergency replacements</li>
             </ul>
 
+            <div className="my-8">
+              <img src="/sinksinstalled.webp" alt="Professional water heater installation" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            </div>
+
             <h2>Water Heater Maintenance</h2>
             <p>
               Regular maintenance extends the life of your water heater and prevents costly repairs. 
-              Our maintenance services include:
+              Our maintenance services keep your system running efficiently.
             </p>
+
+            <h3>Maintenance Services We Provide</h3>
             <ul>
               <li>Annual inspections and tune-ups</li>
               <li>Sediment removal and tank flushing</li>
@@ -97,6 +117,16 @@ export default function WaterHeatersPage() {
               <li>Temperature and pressure testing</li>
               <li>Safety valve testing</li>
               <li>Efficiency optimization</li>
+            </ul>
+
+            <h3>Benefits of Regular Maintenance</h3>
+            <ul>
+              <li>Extended water heater lifespan</li>
+              <li>Improved energy efficiency</li>
+              <li>Prevention of costly repairs</li>
+              <li>Better hot water performance</li>
+              <li>Safety assurance</li>
+              <li>Warranty protection</li>
             </ul>
 
             <h2>Common Questions About Water Heaters</h2>

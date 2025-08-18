@@ -44,6 +44,10 @@ export default function RenovationsPage() {
             to complete remodels, we ensure your renovation project has reliable, modern plumbing systems.
           </p>
 
+          <div className="mb-8">
+            <img src="/bathtub.jpg" alt="Bathroom renovation plumbing" className="w-full h-64 object-cover rounded-lg shadow-md" />
+          </div>
+
           <div className="prose prose-lg max-w-none">
             <h2>What is Renovation Plumbing?</h2>
             <p>
@@ -53,19 +57,10 @@ export default function RenovationsPage() {
             </p>
 
             <h2>Our Renovation Plumbing Services</h2>
-            <ul>
-              <li><strong>Kitchen Remodel Plumbing:</strong> Sink installation, dishwasher hookups, garbage disposal</li>
-              <li><strong>Bathroom Renovation:</strong> Toilet, sink, shower, and bathtub installation</li>
-              <li><strong>Fixture Upgrades:</strong> Modern faucets, showerheads, and fixtures</li>
-              <li><strong>Pipe Relocation:</strong> Moving plumbing lines for new layouts</li>
-              <li><strong>Code Upgrades:</strong> Bringing old plumbing up to current standards</li>
-              <li><strong>Gas Line Work:</strong> Stove, dryer, and appliance gas connections</li>
-            </ul>
-
-            <h2>Kitchen Renovation Plumbing</h2>
+            <h3>Kitchen Remodel Plumbing</h3>
             <p>
               Kitchen renovations often require significant plumbing work. We handle everything from 
-              simple sink replacements to complete kitchen plumbing overhauls, including:
+              simple sink replacements to complete kitchen plumbing overhauls.
             </p>
             <ul>
               <li>Kitchen sink installation and replacement</li>
@@ -76,10 +71,14 @@ export default function RenovationsPage() {
               <li>Gas line installation for stoves</li>
             </ul>
 
-            <h2>Bathroom Renovation Plumbing</h2>
+            <div className="my-8">
+              <img src="/kitchenbefore.jpg" alt="Kitchen before renovation" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            </div>
+
+            <h3>Bathroom Renovation Plumbing</h3>
             <p>
               Bathroom renovations can transform your home's value and comfort. Our bathroom plumbing 
-              services include:
+              services include complete fixture upgrades and modern installations.
             </p>
             <ul>
               <li>Toilet installation and replacement</li>
@@ -88,6 +87,34 @@ export default function RenovationsPage() {
               <li>Shower valve replacement</li>
               <li>Bathroom fixture upgrades</li>
               <li>Accessibility modifications</li>
+            </ul>
+
+            <div className="my-8">
+              <img src="/kitchen.jpg" alt="Kitchen after renovation" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            </div>
+
+            <h3>Fixture Upgrades</h3>
+            <p>
+              Modern fixtures can dramatically improve your home's functionality and appearance. 
+              We install and upgrade all types of plumbing fixtures.
+            </p>
+            <ul>
+              <li>Modern faucets and showerheads</li>
+              <li>Energy-efficient fixtures</li>
+              <li>Smart home plumbing features</li>
+              <li>Accessibility fixtures</li>
+            </ul>
+
+            <h3>Pipe Relocation</h3>
+            <p>
+              When renovating, you may need to move plumbing lines to accommodate new layouts. 
+              We handle all pipe relocation with minimal disruption.
+            </p>
+            <ul>
+              <li>Moving water supply lines</li>
+              <li>Relocating drain pipes</li>
+              <li>Updating vent systems</li>
+              <li>Gas line relocation</li>
             </ul>
 
             <h2>Common Questions About Renovation Plumbing</h2>

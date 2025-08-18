@@ -44,6 +44,10 @@ export default function CustomHomesPage() {
             we ensure your dream home has reliable, code-compliant plumbing systems.
           </p>
 
+          <div className="mb-8">
+            <img src="/kitchen.jpg" alt="Custom home kitchen plumbing" className="w-full h-64 object-cover rounded-lg shadow-md" />
+          </div>
+
           <div className="prose prose-lg max-w-none">
             <h2>What is Custom Home Plumbing?</h2>
             <p>
@@ -53,13 +57,40 @@ export default function CustomHomesPage() {
             </p>
 
             <h2>Our Custom Home Plumbing Services</h2>
+            <h3>Underground Plumbing</h3>
+            <p>
+              We handle all underground plumbing work including main water lines, sewer connections, and gas lines. 
+              This foundational work is critical for your home's plumbing system.
+            </p>
             <ul>
-              <li><strong>Underground Plumbing:</strong> Main water lines, sewer connections, and gas lines</li>
-              <li><strong>Rough-in Plumbing:</strong> Wall and floor pipe installation before drywall</li>
-              <li><strong>Gas Line Installation:</strong> Safe, code-compliant gas piping for appliances</li>
-              <li><strong>Finish Plumbing:</strong> Fixture installation and final connections</li>
-              <li><strong>Code Compliance:</strong> Ensuring all work meets Arizona building codes</li>
-              <li><strong>Inspection Support:</strong> Coordinating with building inspectors</li>
+              <li>Main water line installation</li>
+              <li>Sewer connection and drainage</li>
+              <li>Gas line installation</li>
+              <li>Underground pipe routing</li>
+            </ul>
+
+            <h3>Rough-in Plumbing</h3>
+            <p>
+              Rough-in plumbing involves installing pipes in walls and floors before drywall installation. 
+              This phase sets up the framework for all your fixtures.
+            </p>
+            <ul>
+              <li>Wall and floor pipe installation</li>
+              <li>Fixture stub-outs</li>
+              <li>Drain and vent systems</li>
+              <li>Gas line rough-ins</li>
+            </ul>
+
+            <h3>Finish Plumbing</h3>
+            <p>
+              Finish plumbing includes the final installation of fixtures and connections. This is where 
+              your plumbing system becomes functional.
+            </p>
+            <ul>
+              <li>Fixture installation and connection</li>
+              <li>Final pipe connections</li>
+              <li>Testing and inspection</li>
+              <li>Code compliance verification</li>
             </ul>
 
             <h2>Why Choose Yeti Plumbing for Custom Homes?</h2>
@@ -68,6 +99,10 @@ export default function CustomHomesPage() {
               plumbing system is built to last, with attention to detail and strict adherence to 
               building codes and best practices.
             </p>
+
+            <div className="my-8">
+              <img src="/familyfirst.jpg" alt="Family-first custom home plumbing" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            </div>
 
             <h2>Common Questions About Custom Home Plumbing</h2>
             
