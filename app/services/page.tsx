@@ -22,22 +22,22 @@ export default function ServicesPage() {
     { 
       title: "Service & Repairs", 
       copy: "Leaks, clogs, replacements, same-day fixes.",
-      image: "/familyfirst.jpg"
+      image: "/sinksfixed.jpeg"
     },
     { 
       title: "Bathtubs & Showers", 
       copy: "New installs, pans, valves, and surrounds.",
-      image: "/bathtub.jpg"
+      image: "/shower.jpeg"
     },
     { 
       title: "Faucets & Fixtures", 
       copy: "Repair or replace toilets, sinks, disposals.",
-      image: "/kitchen.jpg"
+      image: "/sinksinstalled.webp"
     },
     { 
       title: "Water Heaters", 
       copy: "Tank & tankless install and repair.",
-      image: "/familyfirst.jpg"
+      image: "/toiletinstalled.jpeg"
     },
   ];
 
@@ -75,6 +75,28 @@ export default function ServicesPage() {
             <div className="text-3xl mb-2">🛡️</div>
             <h3 className="font-semibold">Licensed & Insured</h3>
             <p className="text-sm text-black/70">ROC360510 - Your protection is our priority</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold mb-6 text-center">Recent Work Gallery</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="space-y-2">
+            <img src="/sinksfixed.jpeg" alt="Sinks fixed" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 text-center">Sink Repair</p>
+          </div>
+          <div className="space-y-2">
+            <img src="/sinksinstalled.webp" alt="New sinks installed" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 text-center">Sink Installation</p>
+          </div>
+          <div className="space-y-2">
+            <img src="/toiletinstalled.jpeg" alt="Toilet installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 text-center">Toilet Installation</p>
+          </div>
+          <div className="space-y-2">
+            <img src="/shower.jpeg" alt="Shower work" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 text-center">Shower Work</p>
           </div>
         </div>
       </div>
