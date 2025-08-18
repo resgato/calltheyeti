@@ -119,6 +119,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-gray-50">
+        <div className="mx-auto max-w-6xl px-4 py-12">
+          <h2 className="text-2xl font-semibold tracking-tight text-center">Our Work Speaks for Itself</h2>
+          <p className="mt-2 text-black/70 text-center">See the transformation from before to after</p>
+          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Kitchen Remodel</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <img src="/kitchenbefore.jpg" alt="Kitchen before renovation" className="w-full rounded-lg shadow-md" />
+                  <p className="mt-2 text-sm text-black/70 text-center">Before</p>
+                </div>
+                <div>
+                  <img src="/kitchen.jpg" alt="Kitchen after renovation" className="w-full rounded-lg shadow-md" />
+                  <p className="mt-2 text-sm text-black/70 text-center">After</p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Bathroom Upgrade</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <img src="/bathtubbefore.jpg" alt="Bathroom before renovation" className="w-full rounded-lg shadow-md" />
+                  <p className="mt-2 text-sm text-black/70 text-center">Before</p>
+                </div>
+                <div>
+                  <img src="/bathtub.jpg" alt="Bathroom after renovation" className="w-full rounded-lg shadow-md" />
+                  <p className="mt-2 text-sm text-black/70 text-center">After</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <img src="/familyfirst.jpg" alt="Family-first approach to plumbing" className="mx-auto max-w-md rounded-lg shadow-md" />
+            <p className="mt-4 text-lg font-medium">Family-First Approach</p>
+            <p className="text-black/70">We treat every home like it's our own</p>
+          </div>
+        </div>
+      </section>
+
       <section id="request" className="bg-[--color-ice-50]">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">

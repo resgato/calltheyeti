@@ -49,7 +49,7 @@ export function LeadForm() {
 
   return (
     <div className="w-full max-w-xl rounded-lg border border-black/10 bg-white p-6 shadow-sm">
-      <h3 className="text-lg font-semibold tracking-tight">Request Service</h3>
+      <h3 className="text-lg font-semibold tracking-tight text-black">Request Service</h3>
       <p className="mt-1 text-sm text-black/70">Fast response. Licensed • Insured • ROC360510</p>
       {submitted && (
         <div className="mt-3 rounded-md bg-green-50 p-3 text-sm text-green-800">
@@ -61,20 +61,20 @@ export function LeadForm() {
       )}
       <form onSubmit={handleSubmit} className="mt-4 grid grid-cols-1 gap-3">
         <div className="grid gap-1">
-          <label htmlFor="name" className="text-sm font-medium">Full name</label>
-          <input id="name" name="name" required placeholder="Jane Doe" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary]" />
+          <label htmlFor="name" className="text-sm font-medium text-black">Full name</label>
+          <input id="name" name="name" required placeholder="Jane Doe" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black" />
         </div>
         <div className="grid gap-1">
-          <label htmlFor="phone" className="text-sm font-medium">Phone</label>
-          <input id="phone" name="phone" required placeholder="(480) 555-0199" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary]" />
+          <label htmlFor="phone" className="text-sm font-medium text-black">Phone</label>
+          <input id="phone" name="phone" required placeholder="(480) 555-0199" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black" />
         </div>
         <div className="grid gap-1">
-          <label htmlFor="email" className="text-sm font-medium">Email (optional)</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary]" />
+          <label htmlFor="email" className="text-sm font-medium text-black">Email (optional)</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black" />
         </div>
         <div className="grid gap-1">
-          <label htmlFor="service" className="text-sm font-medium">Service needed</label>
-          <select id="service" name="service" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary]">
+          <label htmlFor="service" className="text-sm font-medium text-black">Service needed</label>
+          <select id="service" name="service" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black">
             <option>Custom Home</option>
             <option>Renovation / Remodel</option>
             <option>Service & Repairs</option>
@@ -85,12 +85,12 @@ export function LeadForm() {
           </select>
         </div>
         <div className="grid gap-1">
-          <label htmlFor="zip" className="text-sm font-medium">ZIP code</label>
-          <input id="zip" name="zip" placeholder="85001" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary]" />
+          <label htmlFor="zip" className="text-sm font-medium text-black">ZIP code</label>
+          <input id="zip" name="zip" placeholder="85001" className="h-10 rounded-md border border-black/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black" />
         </div>
         <div className="grid gap-1">
-          <label htmlFor="message" className="text-sm font-medium">Brief description</label>
-          <textarea id="message" name="message" rows={3} placeholder="Tell us what’s going on" className="rounded-md border border-black/15 px-3 py-2 outline-none focus:ring-2 focus:ring-[--color-primary]" />
+          <label htmlFor="message" className="text-sm font-medium text-black">Brief description</label>
+          <textarea id="message" name="message" rows={3} placeholder="Tell us what's going on" className="rounded-md border border-black/15 px-3 py-2 outline-none focus:ring-2 focus:ring-[--color-primary] text-black" />
         </div>
         <button
           type="submit"

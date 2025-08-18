@@ -6,7 +6,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-black/10 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/yeti-logo.svg" alt="Yeti Plumbing" className="h-8 w-8" />
+          <img src="/yeti-logo.png" alt="Yeti Plumbing" className="h-8 w-8" />
           <span className="text-xl font-bold tracking-tight">Yeti Plumbing</span>
           <span className="sr-only">Home</span>
         </Link>
