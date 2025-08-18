@@ -48,7 +48,7 @@ export default function Home() {
               Arizona's Best Plumber — Fast. Friendly. Fair.
             </h1>
             <div className="flex justify-center my-8">
-              <img src="/yeti-logo.png" alt="Yeti Plumbing" className="h-24 w-24 md:h-32 md:w-32" />
+              <img src="/yeti-logo.png" alt="Yeti Plumbing" className="w-full max-w-2xl h-auto" />
             </div>
             <p className="mt-4 text-lg text-white/90">
               Custom homes, renovations, and service plumbing done right. Bathtubs,
