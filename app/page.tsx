@@ -44,13 +44,11 @@ export default function Home() {
       <section className="bg-red-700 text-white">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-16 md:grid-cols-2 md:items-center">
           <div>
-            <div className="flex items-center gap-4 mb-6">
-              <img src="/yeti-logo.png" alt="Yeti Plumbing" className="h-16 w-16" />
-              <div>
-                <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
-                  Arizona's Best Plumber — Fast. Friendly. Fair.
-                </h1>
-              </div>
+            <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+              Arizona's Best Plumber — Fast. Friendly. Fair.
+            </h1>
+            <div className="flex justify-center my-8">
+              <img src="/yeti-logo.png" alt="Yeti Plumbing" className="h-24 w-24 md:h-32 md:w-32" />
             </div>
             <p className="mt-4 text-lg text-white/90">
               Custom homes, renovations, and service plumbing done right. Bathtubs,
