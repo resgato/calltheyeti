@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     // Send email via Resend if available
     if (resend) {
       await resend.emails.send({
-        from: `Yeti Plumbing <noreply@${new URL(siteConfig.url).hostname}>`,
+        from: "Yeti Plumbing <help@resgato.com>",
         to: [siteConfig.email],
         subject: `New Lead: ${payload.service || "Service Request"} — ${payload.name}`,
         replyTo: payload.email || undefined,
