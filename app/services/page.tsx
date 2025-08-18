@@ -2,9 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Custom Homes, Renovations & Service Plumbing",
+  title: "Plumbing Services | Custom Homes, Renovations & Repairs",
   description:
-    "Phoenix specialists in custom homes, renovations, and service plumbing—bathtubs, showers, faucets, kitchens, water heaters and more.",
+    "Professional plumbing services in Phoenix, Arizona. Custom homes, renovations, repairs, bathtubs, showers, faucets, kitchens, water heaters. Licensed • Insured • ROC360510.",
+  keywords: [
+    "Phoenix plumbing services",
+    "custom home plumbing",
+    "renovation plumbing",
+    "plumbing repairs",
+    "bathtub installation",
+    "shower installation",
+    "kitchen plumbing",
+    "water heater repair",
+    "emergency plumbing",
+  ],
+  openGraph: {
+    title: "Plumbing Services | Yeti Plumbing",
+    description: "Professional plumbing services in Phoenix, Arizona. Custom homes, renovations, repairs, and emergency service.",
+    images: ["/kitchen.jpg"],
+  },
+  alternates: {
+    canonical: "https://calltheyeti.com/services",
+  },
 };
 
 export default function ServicesPage() {

@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Yeti Plumbing",
+  title: "About Yeti Plumbing | Phoenix's Trusted Plumber",
   description:
-    "Phoenix plumbers focused on custom homes, renovations, and service. Licensed • Insured • ROC360510.",
+    "Learn about Yeti Plumbing, Phoenix's trusted plumber for custom homes, renovations, and service work. Licensed • Insured • ROC360510. Serving Phoenix, Mesa, Scottsdale, Gilbert, Chandler, and Queen Creek.",
+  keywords: [
+    "about Yeti Plumbing",
+    "Phoenix plumber company",
+    "Arizona plumbing contractor",
+    "licensed plumber Phoenix",
+    "trusted plumber Arizona",
+  ],
+  openGraph: {
+    title: "About Yeti Plumbing | Phoenix's Trusted Plumber",
+    description: "Learn about Yeti Plumbing, Phoenix's trusted plumber for custom homes, renovations, and service work.",
+    images: ["/familyfirst.jpg"],
+  },
+  alternates: {
+    canonical: "https://calltheyeti.com/about",
+  },
 };
 
 export default function AboutPage() {

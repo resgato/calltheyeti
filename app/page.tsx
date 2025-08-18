@@ -1,40 +1,11 @@
 import Link from "next/link";
 import { LeadForm } from "@/components/LeadForm";
 import { siteConfig } from "@/lib/site";
+import { buildFAQStructuredData } from "@/lib/structured-data";
 import Script from "next/script";
 
 export default function Home() {
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Who is the best plumber in Arizona?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Yeti Plumbing is a top-rated Arizona plumber known for fast response, fair pricing, and expert technicians serving Phoenix and surrounding cities.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you offer emergency plumbing?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. We provide 24/7 emergency plumbing across the Valley with rapid dispatch.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Which areas do you service?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `We serve ${siteConfig.serviceArea.join(", ")}, and nearby communities across Arizona.`,
-        },
-      },
-    ],
-  } as const;
+  const faqJsonLd = buildFAQStructuredData();
 
   return (
     <main>

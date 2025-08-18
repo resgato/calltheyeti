@@ -3,8 +3,23 @@ import { LeadForm } from "@/components/LeadForm";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact Yeti Plumbing",
-  description: "Call, email, or request service online for fast plumbing help across Arizona.",
+  title: "Contact Yeti Plumbing | Get Fast Plumbing Service",
+  description: "Contact Yeti Plumbing for fast, reliable plumbing service in Phoenix, Arizona. Call (801) 707-2547, email, or request service online. Licensed • Insured • ROC360510.",
+  keywords: [
+    "contact Yeti Plumbing",
+    "Phoenix plumber contact",
+    "emergency plumbing contact",
+    "plumbing service request",
+    "Yeti Plumbing phone number",
+  ],
+  openGraph: {
+    title: "Contact Yeti Plumbing | Get Fast Plumbing Service",
+    description: "Contact Yeti Plumbing for fast, reliable plumbing service in Phoenix, Arizona.",
+    images: ["/yeti-logo.png"],
+  },
+  alternates: {
+    canonical: "https://calltheyeti.com/contact",
+  },
 };
 
 export default function ContactPage() {
