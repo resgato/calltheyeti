@@ -28,35 +28,41 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   const services = [
-    { 
-      title: "Custom Homes", 
+    {
+      title: "Custom Homes",
       copy: "Ground-up rough-ins, gas, and finish plumbing.",
-      image: "/kitchen.jpg"
+      image: "/kitchen.jpg",
+      href: "/services/custom-homes"
     },
-    { 
-      title: "Renovations", 
+    {
+      title: "Renovations",
       copy: "Kitchen & bath re-pipes, fixture moves, code upgrades.",
-      image: "/bathtub.jpg"
+      image: "/bathtub.jpg",
+      href: "/services/renovations"
     },
-    { 
-      title: "Service & Repairs", 
-      copy: "Leaks, clogs, replacements, same-day fixes.",
-      image: "/sinksfixed.jpeg"
-    },
-    { 
-      title: "Bathtubs & Showers", 
+    {
+      title: "Bathtubs & Showers",
       copy: "New installs, pans, valves, and surrounds.",
-      image: "/shower.jpeg"
+      image: "/shower.jpeg",
+      href: "/services/bathtubs-showers"
     },
-    { 
-      title: "Faucets & Fixtures", 
-      copy: "Repair or replace toilets, sinks, disposals.",
-      image: "/sinksinstalled.webp"
-    },
-    { 
-      title: "Water Heaters", 
+    {
+      title: "Water Heaters",
       copy: "Tank & tankless install and repair.",
-      image: "/toiletinstalled.jpeg"
+      image: "/toiletinstalled.jpeg",
+      href: "/services/water-heaters"
+    },
+    {
+      title: "Service & Repairs",
+      copy: "Leaks, clogs, replacements, same-day fixes.",
+      image: "/sinksfixed.jpeg",
+      href: "/services/repairs"
+    },
+    {
+      title: "Faucets & Fixtures",
+      copy: "Repair or replace toilets, sinks, disposals.",
+      image: "/sinksinstalled.webp",
+      href: "/services/faucets-fixtures"
     },
   ];
 
@@ -64,16 +70,20 @@ export default function ServicesPage() {
     <main className="mx-auto max-w-6xl px-4 py-12">
       <h1 className="text-3xl font-bold tracking-tight">Plumbing Services</h1>
       <p className="mt-2 text-black/70">Licensed • Insured • ROC360510</p>
-      
+
       <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {services.map((s) => (
-          <div key={s.title} className="rounded-lg border border-black/10 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
+          <Link
+            key={s.title}
+            href={s.href}
+            className="rounded-lg border border-black/10 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
+          >
             <img src={s.image} alt={s.title} className="w-full h-48 object-cover" />
             <div className="p-4">
               <div className="text-lg font-medium">{s.title}</div>
               <div className="text-sm text-black/70 mt-1">{s.copy}</div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
