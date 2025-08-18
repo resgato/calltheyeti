@@ -10,7 +10,7 @@ export function Header() {
           <span className="text-xl font-bold tracking-tight">Yeti Plumbing</span>
           <span className="sr-only">Home</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="flex items-center gap-6 text-sm">
           <Link href="/services" className="hover:underline">Services</Link>
           <Link href="/about" className="hover:underline">About</Link>
           <Link href="/contact" className="hover:underline">Contact</Link>
