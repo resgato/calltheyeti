@@ -29,7 +29,7 @@ export const siteConfig: SiteConfig = {
   url: DEFAULT_URL,
   phone: "(801) 707-2547",
   phoneHref: "tel:+18017072547",
-  email: "hello@calltheyeti.com",
+  email: "cayden@calltheyeti.com",
   address: {
     streetAddress: "",
     addressLocality: "Phoenix",
