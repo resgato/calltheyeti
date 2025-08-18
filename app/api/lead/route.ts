@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
       from: `Yeti Plumbing <noreply@${new URL(siteConfig.url).hostname}>`,
       to: [siteConfig.email],
       subject: `New Lead: ${payload.service || "Service Request"} — ${payload.name}`,
-      reply_to: payload.email || undefined,
+      replyTo: payload.email || undefined,
       html,
     });
 
