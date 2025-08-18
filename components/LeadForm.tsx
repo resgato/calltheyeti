@@ -20,6 +20,7 @@ export function LeadForm() {
     event.preventDefault();
     setSubmitting(true);
     setError(null);
+    setSubmitted(false);
 
     const formData = new FormData(event.currentTarget);
     const payload: LeadPayload = {
