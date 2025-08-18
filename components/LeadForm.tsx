@@ -18,6 +18,10 @@ export function LeadForm() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    
+    // Prevent multiple submissions
+    if (submitting) return;
+    
     setSubmitting(true);
     setError(null);
     setSubmitted(false);
@@ -38,11 +42,17 @@ export function LeadForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error("Failed to submit");
+      
+      if (!res.ok) {
+        throw new Error("Failed to submit");
+      }
+      
       setSubmitted(true);
+      setError(null);
       (event.currentTarget as HTMLFormElement).reset();
     } catch (e) {
       setError("Something went wrong. Please call us if this persists.");
+      setSubmitted(false);
     } finally {
       setSubmitting(false);
     }
@@ -52,14 +62,17 @@ export function LeadForm() {
     <div className="w-full max-w-xl rounded-lg border border-black/10 bg-white p-6 shadow-sm">
       <h3 className="text-lg font-semibold tracking-tight text-black">Request Service</h3>
       <p className="mt-1 text-sm text-black/70">Fast response. Licensed • Insured • ROC360510</p>
-      {submitted && (
+      
+      {submitted && !error && (
         <div className="mt-3 rounded-md bg-green-50 p-3 text-sm text-green-800">
           Thanks! We received your request and will contact you shortly.
         </div>
       )}
-      {error && (
+      
+      {error && !submitted && (
         <div className="mt-3 rounded-md bg-red-50 p-3 text-sm text-red-700">{error}</div>
       )}
+      
       <form onSubmit={handleSubmit} className="mt-4 grid grid-cols-1 gap-3">
         <div className="grid gap-1">
           <label htmlFor="name" className="text-sm font-medium text-black">Full name</label>
