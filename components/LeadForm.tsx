@@ -22,6 +22,7 @@ export function LeadForm() {
     // Prevent multiple submissions
     if (submitting) return;
     
+    // Reset all states at the start
     setSubmitting(true);
     setError(null);
     setSubmitted(false);
@@ -37,20 +38,28 @@ export function LeadForm() {
     };
 
     try {
+      console.log("Submitting form:", payload);
+      
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
       
+      console.log("Response status:", res.status);
+      
       if (!res.ok) {
-        throw new Error("Failed to submit");
+        throw new Error(`HTTP ${res.status}: ${res.statusText}`);
       }
       
+      // Success - clear error and set submitted
+      console.log("Form submitted successfully");
       setSubmitted(true);
       setError(null);
       (event.currentTarget as HTMLFormElement).reset();
+      
     } catch (e) {
+      console.error("Form submission error:", e);
       setError("Something went wrong. Please call us if this persists.");
       setSubmitted(false);
     } finally {
@@ -63,7 +72,7 @@ export function LeadForm() {
       <h3 className="text-lg font-semibold tracking-tight text-black">Request Service</h3>
       <p className="mt-1 text-sm text-black/70">Fast response. Licensed • Insured • ROC360510</p>
       
-      {submitted && !error && (
+      {submitted && (
         <div className="mt-3 rounded-md bg-green-50 p-3 text-sm text-green-800">
           Thanks! We received your request and will contact you shortly.
         </div>
