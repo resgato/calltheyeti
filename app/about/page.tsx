@@ -24,14 +24,14 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className="text-3xl font-bold tracking-tight text-black dark:text-white">About Yeti Plumbing</h1>
-      <p className="mt-4 text-black/70 dark:text-white/70">
+      <h1 className="text-3xl font-bold tracking-tight text-black dark:text-black">About Yeti Plumbing</h1>
+      <p className="mt-4 text-black/70 dark:text-black/70">
         We're an Arizona plumbing company focused on quality craftsmanship for
         custom homes, renovations, and responsive service work. Our licensed,
         background-checked technicians prioritize clean jobsites and clear
         communication.
       </p>
-      <p className="mt-4 text-black/70 dark:text-white/70">
+      <p className="mt-4 text-black/70 dark:text-black/70">
         We serve Phoenix, Mesa, Scottsdale, Gilbert, Chandler, and Queen Creek.
         ROC360510 • Fully licensed and insured.
       </p>

@@ -140,8 +140,8 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
         {children}
-        <footer className="mt-24 border-t border-black/10 dark:border-white/10 bg-white dark:bg-gray-900">
-          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-black/70 dark:text-white/70">
+        <footer className="mt-24 border-t border-black/10 dark:border-white/10 bg-white dark:bg-gray-50">
+          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-black/70 dark:text-black/70">
             <p>
               © {new Date().getFullYear()} {siteConfig.name}. All rights reserved. {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} {siteConfig.address.postalCode} · {siteConfig.phone} · ROC360510
             </p>

@@ -27,24 +27,24 @@ export default function ContactPage() {
     <main className="mx-auto max-w-6xl px-4 py-12">
       <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-black dark:text-white">Contact Us</h1>
-          <p className="mt-2 text-black/70 dark:text-white/70">Phoenix, Arizona • ROC360510</p>
+          <h1 className="text-3xl font-bold tracking-tight text-black dark:text-black">Contact Us</h1>
+          <p className="mt-2 text-black/70 dark:text-black/70">Phoenix, Arizona • ROC360510</p>
           <div className="mt-6 space-y-3 text-sm">
             <div>
-              <div className="font-medium text-black dark:text-white">Phone</div>
+              <div className="font-medium text-black dark:text-black">Phone</div>
               <a href={siteConfig.phoneHref} className="text-[--color-primary] underline">
                 {siteConfig.phone}
               </a>
             </div>
             <div>
-              <div className="font-medium text-black dark:text-white">Email</div>
+              <div className="font-medium text-black dark:text-black">Email</div>
               <a href={`mailto:${siteConfig.email}`} className="text-[--color-primary] underline">
                 {siteConfig.email}
               </a>
             </div>
             <div>
-              <div className="font-medium text-black dark:text-white">Location</div>
-              <div className="text-black/70 dark:text-white/70">Phoenix, Arizona</div>
+              <div className="font-medium text-black dark:text-black">Location</div>
+              <div className="text-black/70 dark:text-black/70">Phoenix, Arizona</div>
             </div>
           </div>
         </div>

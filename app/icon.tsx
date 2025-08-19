@@ -17,24 +17,19 @@ export default function Icon() {
       // ImageResponse JSX element
       <div
         style={{
-          background: 'white',
+          background: '#b21f2d',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          color: 'white',
+          fontWeight: 'bold',
+          fontSize: '20px',
           borderRadius: '4px',
         }}
       >
-        <img
-          src="https://calltheyeti.com/yeti-logo.png"
-          alt="Yeti Plumbing"
-          style={{
-            width: '28px',
-            height: '28px',
-            objectFit: 'contain',
-          }}
-        />
+        Y
       </div>
     ),
     // ImageResponse options
