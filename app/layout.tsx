@@ -113,22 +113,18 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Favicon Links */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        
-        {/* Microsoft Tiles */}
-        <meta name="msapplication-TileColor" content="#b91c1c" />
-        <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="CallTheYeti" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#b91c1c" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Yeti Plumbing" />
         
         {/* Structured Data */}
         <Script id="yeti-jsonld" type="application/ld+json">
