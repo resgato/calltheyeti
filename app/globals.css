@@ -28,8 +28,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #101010;
-    --foreground: #efefef;
+    --background: #f9fafb; /* Light gray background instead of dark */
+    --foreground: #1a1a1a; /* Keep black text for better readability */
   }
 }
 
