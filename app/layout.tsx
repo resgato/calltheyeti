@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     "Gilbert plumber",
     "Chandler plumber",
     "Queen Creek plumber",
+    "plumbing services",
+    "residential plumbing",
+    "commercial plumbing",
+    "plumbing repair",
+    "plumbing installation",
   ],
   authors: [{ name: "Yeti Plumbing" }],
   creator: "Yeti Plumbing",
@@ -92,6 +97,11 @@ export const metadata: Metadata = {
   },
   category: "Plumbing Services",
   classification: "Local Business",
+  other: {
+    "theme-color": "#b91c1c",
+    "msapplication-TileColor": "#b91c1c",
+    "msapplication-config": "/browserconfig.xml",
+  },
 };
 
 export default function RootLayout({
@@ -102,6 +112,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon Links */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* Microsoft Tiles */}
+        <meta name="msapplication-TileColor" content="#b91c1c" />
+        <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#b91c1c" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Yeti Plumbing" />
+        
+        {/* Structured Data */}
         <Script id="yeti-jsonld" type="application/ld+json">
           {JSON.stringify(buildLocalBusinessJsonLd())}
         </Script>
@@ -112,8 +140,8 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
         {children}
-        <footer className="mt-24 border-t border-black/10 bg-white">
-          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-black/70">
+        <footer className="mt-24 border-t border-black/10 dark:border-white/10 bg-white dark:bg-gray-900">
+          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-black/70 dark:text-white/70">
             <p>
               © {new Date().getFullYear()} {siteConfig.name}. All rights reserved. {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} {siteConfig.address.postalCode} · {siteConfig.phone} · ROC360510
             </p>

@@ -42,11 +42,11 @@ export default function Home() {
                 Request Service
               </a>
             </div>
-            <ul className="mt-6 grid grid-cols-1 gap-2 text-sm text-black/70 sm:grid-cols-2">
-              <li className="text-white/90">✓ 24/7 Emergency Service</li>
-              <li className="text-white/90">✓ Licensed & Insured</li>
-              <li className="text-white/90">✓ Upfront, Honest Pricing</li>
-              <li className="text-white/90">✓ 1000+ Local Homes Served</li>
+            <ul className="mt-6 grid grid-cols-1 gap-2 text-sm text-white/90 sm:grid-cols-2">
+              <li>✓ 24/7 Emergency Service</li>
+              <li>✓ Licensed & Insured</li>
+              <li>✓ Upfront, Honest Pricing</li>
+              <li>✓ 1000+ Local Homes Served</li>
             </ul>
           </div>
           <div>
@@ -63,17 +63,17 @@ export default function Home() {
             { title: "Experienced Team", desc: "Licensed • Insured" },
           ].map((b) => (
             <div key={b.title} className="rounded-md bg-white p-4 shadow-sm">
-              <div className="text-base font-semibold">{b.title}</div>
+              <div className="text-base font-semibold text-black">{b.title}</div>
               <div className="text-xs text-black/70">{b.desc}</div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-black/10">
+      <section className="border-t border-black/10 dark:border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight">Plumbing Services</h2>
-          <p className="mt-2 text-black/70">Expert technicians for any job — big or small.</p>
+          <p className="mt-2 text-black/70 dark:text-white/70">Expert technicians for any job — big or small.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {[
               { href: "/services", title: "Custom Homes", desc: "Plumbing rough-ins & finish" },
@@ -86,65 +86,65 @@ export default function Home() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="rounded-lg border border-black/10 p-4 hover:shadow-sm bg-white"
+                className="rounded-lg border border-black/10 dark:border-white/10 p-4 hover:shadow-sm bg-white dark:bg-gray-800"
               >
-                <div className="text-lg font-medium">{item.title}</div>
-                <div className="text-sm text-black/70">{item.desc}</div>
+                <div className="text-lg font-medium text-black dark:text-white">{item.title}</div>
+                <div className="text-sm text-black/70 dark:text-white/70">{item.desc}</div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-50">
+      <section className="bg-gray-50 dark:bg-gray-900">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-center">Our Work Speaks for Itself</h2>
-          <p className="mt-2 text-black/70 text-center">See the transformation from before to after</p>
+          <p className="mt-2 text-black/70 dark:text-white/70 text-center">See the transformation from before to after</p>
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Kitchen Remodel</h3>
+              <h3 className="text-lg font-semibold text-black dark:text-white">Kitchen Remodel</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <img src="/kitchenbefore.jpg" alt="Kitchen before renovation" className="w-full rounded-lg shadow-md" />
-                  <p className="mt-2 text-sm text-black/70 text-center">Before</p>
+                  <p className="mt-2 text-sm text-black/70 dark:text-white/70 text-center">Before</p>
                 </div>
                 <div>
                   <img src="/kitchen.jpg" alt="Kitchen after renovation" className="w-full rounded-lg shadow-md" />
-                  <p className="mt-2 text-sm text-black/70 text-center">After</p>
+                  <p className="mt-2 text-sm text-black/70 dark:text-white/70 text-center">After</p>
                 </div>
               </div>
             </div>
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Bathroom Upgrade</h3>
+              <h3 className="text-lg font-semibold text-black dark:text-white">Bathroom Upgrade</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <img src="/bathtubbefore.jpg" alt="Bathroom before renovation" className="w-full rounded-lg shadow-md" />
-                  <p className="mt-2 text-sm text-black/70 text-center">Before</p>
+                  <p className="mt-2 text-sm text-black/70 dark:text-white/70 text-center">Before</p>
                 </div>
                 <div>
                   <img src="/bathtub.jpg" alt="Bathroom after renovation" className="w-full rounded-lg shadow-md" />
-                  <p className="mt-2 text-sm text-black/70 text-center">After</p>
+                  <p className="mt-2 text-sm text-black/70 dark:text-white/70 text-center">After</p>
                 </div>
               </div>
             </div>
           </div>
           <div className="mt-8 text-center">
             <img src="/familyfirst.jpg" alt="Family-first approach to plumbing" className="mx-auto max-w-md rounded-lg shadow-md" />
-            <p className="mt-4 text-lg font-medium">Family-First Approach</p>
-            <p className="text-black/70">We treat every home like it's our own</p>
+            <p className="mt-4 text-lg font-medium text-black dark:text-white">Family-First Approach</p>
+            <p className="text-black/70 dark:text-white/70">We treat every home like it's our own</p>
           </div>
         </div>
       </section>
 
-      <section id="request" className="bg-[--color-ice-50]">
+      <section id="request" className="bg-[--color-ice-50] dark:bg-gray-800">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight">Need a plumber now?</h2>
-              <p className="mt-2 text-black/70">
-                We’ll dispatch a pro to your door. Most issues resolved same day.
+              <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white">Need a plumber now?</h2>
+              <p className="mt-2 text-black/70 dark:text-white/70">
+                We'll dispatch a pro to your door. Most issues resolved same day.
               </p>
-              <ul className="mt-4 grid grid-cols-1 gap-2 text-sm text-black/70 sm:grid-cols-2">
+              <ul className="mt-4 grid grid-cols-1 gap-2 text-sm text-black/70 dark:text-white/70 sm:grid-cols-2">
                 <li>✓ Valley-wide coverage</li>
                 <li>✓ Great reviews</li>
                 <li>✓ Respect for your home</li>
@@ -156,10 +156,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-black/10">
+      <section className="border-t border-black/10 dark:border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-12">
-          <h2 className="text-2xl font-semibold tracking-tight">Proudly Serving Arizona</h2>
-          <p className="mt-2 text-black/70">
+          <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white">Proudly Serving Arizona</h2>
+          <p className="mt-2 text-black/70 dark:text-white/70">
             {siteConfig.serviceArea.join(" • ")}
           </p>
         </div>

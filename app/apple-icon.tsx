@@ -17,19 +17,24 @@ export default function AppleIcon() {
       // ImageResponse JSX element
       <div
         style={{
-          fontSize: 120,
-          background: '#b91c1c',
+          background: 'white',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'white',
-          fontWeight: 'bold',
           borderRadius: '20px',
         }}
       >
-        Y
+        <img
+          src="https://calltheyeti.com/yeti-logo.png"
+          alt="Yeti Plumbing"
+          style={{
+            width: '140px',
+            height: '140px',
+            objectFit: 'contain',
+          }}
+        />
       </div>
     ),
     // ImageResponse options

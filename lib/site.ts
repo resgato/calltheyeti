@@ -21,7 +21,7 @@ export type SiteConfig = {
   license?: string;
 };
 
-const DEFAULT_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const DEFAULT_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://calltheyeti.com";
 
 export const siteConfig: SiteConfig = {
   name: "Yeti Plumbing",
@@ -36,6 +36,8 @@ export const siteConfig: SiteConfig = {
     addressRegion: "AZ",
     postalCode: "",
     addressCountry: "US",
+    latitude: 33.4484,
+    longitude: -112.0740,
   },
   serviceArea: [
     "Phoenix",
@@ -54,6 +56,7 @@ export function buildLocalBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": "Plumber",
     name: siteConfig.name,
+    alternateName: "Yeti Plumbing LLC",
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
@@ -66,6 +69,11 @@ export function buildLocalBusinessJsonLd() {
       postalCode: siteConfig.address.postalCode,
       addressCountry: siteConfig.address.addressCountry,
     },
+    geo: siteConfig.address.latitude && siteConfig.address.longitude ? {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.address.latitude,
+      longitude: siteConfig.address.longitude,
+    } : undefined,
     areaServed: siteConfig.serviceArea.map((area) => ({ "@type": "City", name: area })),
     hasCredential: siteConfig.license
       ? {
@@ -91,6 +99,62 @@ export function buildLocalBusinessJsonLd() {
         closes: "23:59",
       },
     ],
+    serviceType: [
+      "Custom Home Plumbing",
+      "Renovation Plumbing",
+      "Emergency Plumbing",
+      "Kitchen Plumbing",
+      "Bathroom Plumbing",
+      "Water Heater Installation",
+      "Fixture Installation",
+      "Plumbing Repair",
+      "Drain Cleaning",
+    ],
+    priceRange: "$$",
+    paymentAccepted: ["Cash", "Check", "Credit Card", "Debit Card"],
+    foundingDate: "2020",
+    description: "Phoenix plumbers for custom homes, renovations, and service. Bathtubs, showers, faucets, kitchens, water heaters and more.",
+    slogan: "Fast. Friendly. Fair.",
+    knowsAbout: [
+      "Plumbing Systems",
+      "Custom Home Construction",
+      "Kitchen Remodeling",
+      "Bathroom Remodeling",
+      "Water Heater Installation",
+      "Emergency Plumbing",
+      "Drain Cleaning",
+      "Fixture Installation",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Plumbing Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Custom Home Plumbing",
+            description: "Complete plumbing systems for new custom homes"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Renovation Plumbing",
+            description: "Kitchen and bathroom renovation plumbing services"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Emergency Plumbing",
+            description: "24/7 emergency plumbing services"
+          }
+        }
+      ]
+    },
     sameAs: [] as string[],
   } as const;
 }

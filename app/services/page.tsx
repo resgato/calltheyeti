@@ -68,70 +68,70 @@ export default function ServicesPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-3xl font-bold tracking-tight">Plumbing Services</h1>
-      <p className="mt-2 text-black/70">Licensed • Insured • ROC360510</p>
+      <h1 className="text-3xl font-bold tracking-tight text-black dark:text-white">Plumbing Services</h1>
+      <p className="mt-2 text-black/70 dark:text-white/70">Licensed • Insured • ROC360510</p>
 
       <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {services.map((s) => (
           <Link
             key={s.title}
             href={s.href}
-            className="rounded-lg border border-black/10 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-lg border border-black/10 dark:border-white/10 overflow-hidden bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow"
           >
             <img src={s.image} alt={s.title} className="w-full h-48 object-cover" />
             <div className="p-4">
-              <div className="text-lg font-medium">{s.title}</div>
-              <div className="text-sm text-black/70 mt-1">{s.copy}</div>
+              <div className="text-lg font-medium text-black dark:text-white">{s.title}</div>
+              <div className="text-sm text-black/70 dark:text-white/70 mt-1">{s.copy}</div>
             </div>
           </Link>
         ))}
       </div>
 
-      <div className="mt-12 bg-gray-50 rounded-lg p-8">
-        <h2 className="text-2xl font-semibold mb-4">Why Choose Yeti Plumbing?</h2>
+      <div className="mt-12 bg-gray-50 dark:bg-gray-900 rounded-lg p-8">
+        <h2 className="text-2xl font-semibold mb-4 text-black dark:text-white">Why Choose Yeti Plumbing?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
             <div className="text-3xl mb-2">🏠</div>
-            <h3 className="font-semibold">Family-First</h3>
-            <p className="text-sm text-black/70">We treat every home like it's our own</p>
+            <h3 className="font-semibold text-black dark:text-white">Family-First</h3>
+            <p className="text-sm text-black/70 dark:text-white/70">We treat every home like it's our own</p>
           </div>
           <div className="text-center">
             <div className="text-3xl mb-2">⚡</div>
-            <h3 className="font-semibold">Fast Response</h3>
-            <p className="text-sm text-black/70">Same-day service across the Valley</p>
+            <h3 className="font-semibold text-black dark:text-white">Fast Response</h3>
+            <p className="text-sm text-black/70 dark:text-white/70">Same-day service across the Valley</p>
           </div>
           <div className="text-center">
             <div className="text-3xl mb-2">🛡️</div>
-            <h3 className="font-semibold">Licensed & Insured</h3>
-            <p className="text-sm text-black/70">ROC360510 - Your protection is our priority</p>
+            <h3 className="font-semibold text-black dark:text-white">Licensed & Insured</h3>
+            <p className="text-sm text-black/70 dark:text-white/70">ROC360510 - Your protection is our priority</p>
           </div>
         </div>
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Recent Work Gallery</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center text-black dark:text-white">Recent Work Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="space-y-2">
             <img src="/sinksfixed.jpeg" alt="Sinks fixed" className="w-full h-32 object-cover rounded-lg shadow-sm" />
-            <p className="text-sm text-black/70 text-center">Sink Repair</p>
+            <p className="text-sm text-black/70 dark:text-white/70 text-center">Sink Repair</p>
           </div>
           <div className="space-y-2">
             <img src="/sinksinstalled.webp" alt="New sinks installed" className="w-full h-32 object-cover rounded-lg shadow-sm" />
-            <p className="text-sm text-black/70 text-center">Sink Installation</p>
+            <p className="text-sm text-black/70 dark:text-white/70 text-center">Sink Installation</p>
           </div>
           <div className="space-y-2">
             <img src="/toiletinstalled.jpeg" alt="Toilet installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
-            <p className="text-sm text-black/70 text-center">Toilet Installation</p>
+            <p className="text-sm text-black/70 dark:text-white/70 text-center">Toilet Installation</p>
           </div>
           <div className="space-y-2">
             <img src="/shower.jpeg" alt="Shower work" className="w-full h-32 object-cover rounded-lg shadow-sm" />
-            <p className="text-sm text-black/70 text-center">Shower Work</p>
+            <p className="text-sm text-black/70 dark:text-white/70 text-center">Shower Work</p>
           </div>
         </div>
       </div>
 
       <div className="mt-8">
-        <Link href="/" className="text-red-700 underline">
+        <Link href="/" className="text-red-700 dark:text-red-400 underline">
           Back to home
         </Link>
       </div>
