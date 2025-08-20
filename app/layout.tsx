@@ -139,9 +139,19 @@ export default function RootLayout({
         {children}
         <footer className="mt-24 border-t border-black/10 dark:border-white/10 bg-white dark:bg-gray-50">
           <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-black/70 dark:text-black/70">
-            <p>
-              © {new Date().getFullYear()} {siteConfig.name}. All rights reserved. {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} {siteConfig.address.postalCode} · {siteConfig.phone} · ROC360510
-            </p>
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <p>
+                © {new Date().getFullYear()} {siteConfig.name}. All rights reserved. {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} {siteConfig.address.postalCode} · {siteConfig.phone} · ROC360510
+              </p>
+              <a
+                href="https://resgato.com?utm_source=calltheyeti&utm_medium=website&utm_campaign=footer_credit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-black/50 dark:text-black/50 hover:text-black/70 dark:hover:text-black/70 transition-colors duration-200"
+              >
+                Built by Resgato
+              </a>
+            </div>
           </div>
         </footer>
       </body>
