@@ -56,10 +56,11 @@ export async function PUT(request: NextRequest) {
         { status: 500 }
       );
     }
-  } catch (error) {
-    return NextResponse.json(
-      { success: false, message: 'Failed to update content' },
-      { status: 500 }
-    );
-  }
+      } catch (error) {
+      console.error('Homepage content update error:', error);
+      return NextResponse.json(
+        { success: false, message: 'Failed to update content. Please try again.' },
+        { status: 500 }
+      );
+    }
 }
