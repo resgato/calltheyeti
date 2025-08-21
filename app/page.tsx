@@ -2,10 +2,12 @@ import Link from "next/link";
 import { LeadForm } from "@/components/LeadForm";
 import { siteConfig } from "@/lib/site";
 import { buildFAQStructuredData } from "@/lib/structured-data";
+import { contentStore } from "@/lib/content";
 import Script from "next/script";
 
 export default function Home() {
   const faqJsonLd = buildFAQStructuredData();
+  const content = contentStore.getHomepageContent();
 
   return (
     <main>
@@ -16,17 +18,16 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-16 md:grid-cols-2 md:items-center">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
-              Arizona's Best Plumber — Fast. Friendly. Fair.
+              {content.hero.title}
             </h1>
             <div className="flex justify-center my-8">
               <img src="/yeti-logo.png" alt="Yeti Plumbing" className="w-full max-w-2xl h-auto" />
             </div>
             <p className="mt-4 text-lg text-white/90">
-              Custom homes, renovations, and service plumbing done right. Bathtubs,
-              showers, faucets, kitchens, and more — same-day service across the Valley.
+              {content.hero.description}
             </p>
             <p className="mt-2 text-white/80">
-              Serving {siteConfig.serviceArea.join(", ")} and surrounding areas.
+              Serving {content.serviceArea.areas.join(", ")} and surrounding areas.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
@@ -43,10 +44,9 @@ export default function Home() {
               </a>
             </div>
             <ul className="mt-6 grid grid-cols-1 gap-2 text-sm text-white/90 sm:grid-cols-2">
-              <li>✓ 24/7 Emergency Service</li>
-              <li>✓ Licensed & Insured</li>
-              <li>✓ Upfront, Honest Pricing</li>
-              <li>✓ 1000+ Local Homes Served</li>
+              {content.hero.features.map((feature, index) => (
+                <li key={index}>✓ {feature}</li>
+              ))}
             </ul>
           </div>
           <div>
@@ -57,14 +57,10 @@ export default function Home() {
 
       <section className="bg-yellow-400">
         <div className="mx-auto max-w-6xl px-4 py-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          {[
-            { title: "Customer Education", desc: "Clear options and pricing" },
-            { title: "No Mess", desc: "Clean protective jobsite" },
-            { title: "Experienced Team", desc: "Licensed • Insured" },
-          ].map((b) => (
-            <div key={b.title} className="rounded-md bg-white p-4 shadow-sm">
-              <div className="text-base font-semibold text-black">{b.title}</div>
-              <div className="text-xs text-black/70">{b.desc}</div>
+          {content.features.map((feature, index) => (
+            <div key={index} className="rounded-md bg-white p-4 shadow-sm">
+              <div className="text-base font-semibold text-black">{feature.title}</div>
+              <div className="text-xs text-black/70">{feature.description}</div>
             </div>
           ))}
         </div>
@@ -72,24 +68,17 @@ export default function Home() {
 
       <section className="border-t border-black/10 dark:border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-12">
-          <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white">Plumbing Services</h2>
-          <p className="mt-2 text-black/70 dark:text-white/70">Expert technicians for any job — big or small.</p>
+          <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white">{content.services.title}</h2>
+          <p className="mt-2 text-black/70 dark:text-white/70">{content.services.subtitle}</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {[
-              { href: "/services", title: "Custom Homes", desc: "Plumbing rough-ins & finish" },
-              { href: "/services", title: "Renovations", desc: "Kitchen & bath remodel plumbing" },
-              { href: "/services", title: "Service & Repairs", desc: "Leaks, clogs, replacements" },
-              { href: "/services", title: "Bathtubs & Showers", desc: "Install & upgrades" },
-              { href: "/services", title: "Faucets & Fixtures", desc: "Repair or replace" },
-              { href: "/services", title: "Water Heaters", desc: "Repair & install" },
-            ].map((item) => (
+            {content.services.items.map((item, index) => (
               <Link
-                key={item.title}
+                key={index}
                 href={item.href}
                 className="rounded-lg border border-black/10 dark:border-white/10 p-4 hover:shadow-sm bg-white dark:bg-gray-50"
               >
                 <div className="text-lg font-medium text-black dark:text-black">{item.title}</div>
-                <div className="text-sm text-black/70 dark:text-black/70">{item.desc}</div>
+                <div className="text-sm text-black/70 dark:text-black/70">{item.description}</div>
               </Link>
             ))}
           </div>
@@ -98,40 +87,29 @@ export default function Home() {
 
       <section className="bg-gray-50 dark:bg-gray-100">
         <div className="mx-auto max-w-6xl px-4 py-12">
-          <h2 className="text-2xl font-semibold tracking-tight text-center text-black dark:text-black">Our Work Speaks for Itself</h2>
-          <p className="mt-2 text-black/70 dark:text-black/70 text-center">See the transformation from before to after</p>
+          <h2 className="text-2xl font-semibold tracking-tight text-center text-black dark:text-black">{content.gallery.title}</h2>
+          <p className="mt-2 text-black/70 dark:text-black/70 text-center">{content.gallery.subtitle}</p>
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-black dark:text-black">Kitchen Remodel</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <img src="/kitchenbefore.jpg" alt="Kitchen before renovation" className="w-full rounded-lg shadow-md" />
-                  <p className="mt-2 text-sm text-black/70 dark:text-black/70 text-center">Before</p>
-                </div>
-                <div>
-                  <img src="/kitchen.jpg" alt="Kitchen after renovation" className="w-full rounded-lg shadow-md" />
-                  <p className="mt-2 text-sm text-black/70 dark:text-black/70 text-center">After</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-black dark:text-black">Bathroom Upgrade</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <img src="/bathtubbefore.jpg" alt="Bathroom before renovation" className="w-full rounded-lg shadow-md" />
-                  <p className="mt-2 text-sm text-black/70 dark:text-black/70 text-center">Before</p>
-                </div>
-                <div>
-                  <img src="/bathtub.jpg" alt="Bathroom after renovation" className="w-full rounded-lg shadow-md" />
-                  <p className="mt-2 text-sm text-black/70 dark:text-black/70 text-center">After</p>
+            {content.gallery.projects.map((project, index) => (
+              <div key={index} className="space-y-4">
+                <h3 className="text-lg font-semibold text-black dark:text-black">{project.title}</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <img src={project.beforeImage} alt={`${project.title} before`} className="w-full rounded-lg shadow-md" />
+                    <p className="mt-2 text-sm text-black/70 dark:text-black/70 text-center">Before</p>
+                  </div>
+                  <div>
+                    <img src={project.afterImage} alt={`${project.title} after`} className="w-full rounded-lg shadow-md" />
+                    <p className="mt-2 text-sm text-black/70 dark:text-black/70 text-center">After</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
           <div className="mt-8 text-center">
-            <img src="/familyfirst.jpg" alt="Family-first approach to plumbing" className="mx-auto max-w-md rounded-lg shadow-md" />
-            <p className="mt-4 text-lg font-medium text-black dark:text-black">Family-First Approach</p>
-            <p className="text-black/70 dark:text-black/70">We treat every home like it's our own</p>
+            <img src={content.gallery.familyImage} alt="Family-first approach to plumbing" className="mx-auto max-w-md rounded-lg shadow-md" />
+            <p className="mt-4 text-lg font-medium text-black dark:text-black">{content.gallery.familyTitle}</p>
+            <p className="text-black/70 dark:text-black/70">{content.gallery.familyDescription}</p>
           </div>
         </div>
       </section>
@@ -140,15 +118,14 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-black">Need a plumber now?</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-black">{content.cta.title}</h2>
               <p className="mt-2 text-black/70 dark:text-black/70">
-                We'll dispatch a pro to your door. Most issues resolved same day.
+                {content.cta.description}
               </p>
               <ul className="mt-4 grid grid-cols-1 gap-2 text-sm text-black/70 dark:text-black/70 sm:grid-cols-2">
-                <li>✓ Valley-wide coverage</li>
-                <li>✓ Great reviews</li>
-                <li>✓ Respect for your home</li>
-                <li>✓ Financing options</li>
+                {content.cta.features.map((feature, index) => (
+                  <li key={index}>✓ {feature}</li>
+                ))}
               </ul>
             </div>
             <LeadForm />
@@ -158,9 +135,9 @@ export default function Home() {
 
       <section className="border-t border-black/10 dark:border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-12">
-          <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-black">Proudly Serving Arizona</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-black">{content.serviceArea.title}</h2>
           <p className="mt-2 text-black/70 dark:text-black/70">
-            {siteConfig.serviceArea.join(" • ")}
+            {content.serviceArea.areas.join(" • ")}
           </p>
         </div>
       </section>
