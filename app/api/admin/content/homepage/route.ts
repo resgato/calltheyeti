@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
-import { contentStore, HomepageContent } from '@/lib/content';
+import { contentStorage } from '@/lib/content-storage';
+import { HomepageContent } from '@/lib/content';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
@@ -21,7 +22,7 @@ function verifyToken(request: NextRequest) {
 
 export async function GET() {
   try {
-    const content = contentStore.getHomepageContent();
+    const content = await contentStorage.getHomepageContent();
     return NextResponse.json({ success: true, content });
   } catch (error) {
     return NextResponse.json(
@@ -42,12 +43,19 @@ export async function PUT(request: NextRequest) {
     }
 
     const content: HomepageContent = await request.json();
-    contentStore.setHomepageContent(content);
+    const success = await contentStorage.setHomepageContent(content);
     
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Content updated successfully' 
-    });
+    if (success) {
+      return NextResponse.json({ 
+        success: true, 
+        message: 'Content updated successfully' 
+      });
+    } else {
+      return NextResponse.json(
+        { success: false, message: 'Failed to save content' },
+        { status: 500 }
+      );
+    }
   } catch (error) {
     return NextResponse.json(
       { success: false, message: 'Failed to update content' },

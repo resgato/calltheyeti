@@ -2,12 +2,12 @@ import Link from "next/link";
 import { LeadForm } from "@/components/LeadForm";
 import { siteConfig } from "@/lib/site";
 import { buildFAQStructuredData } from "@/lib/structured-data";
-import { contentStore } from "@/lib/content";
+import { contentStorage } from "@/lib/content-storage";
 import Script from "next/script";
 
-export default function Home() {
+export default async function Home() {
   const faqJsonLd = buildFAQStructuredData();
-  const content = contentStore.getHomepageContent();
+  const content = await contentStorage.getHomepageContent();
 
   return (
     <main>

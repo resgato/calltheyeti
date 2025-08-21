@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
-import { contentStore, ContactContent } from '@/lib/content';
+import { contentStorage } from '@/lib/content-storage';
+import { ContactContent } from '@/lib/content';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
@@ -21,7 +22,7 @@ function verifyToken(request: NextRequest) {
 
 export async function GET() {
   try {
-    const content = contentStore.getContactContent();
+    const content = await contentStorage.getContactContent();
     return NextResponse.json({ success: true, content });
   } catch (error) {
     return NextResponse.json(
@@ -42,12 +43,19 @@ export async function PUT(request: NextRequest) {
     }
 
     const content: ContactContent = await request.json();
-    contentStore.setContactContent(content);
+    const success = await contentStorage.setContactContent(content);
     
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Contact information updated successfully' 
-    });
+    if (success) {
+      return NextResponse.json({ 
+        success: true, 
+        message: 'Contact information updated successfully' 
+      });
+    } else {
+      return NextResponse.json(
+        { success: false, message: 'Failed to save contact information' },
+        { status: 500 }
+      );
+    }
   } catch (error) {
     return NextResponse.json(
       { success: false, message: 'Failed to update contact information' },
