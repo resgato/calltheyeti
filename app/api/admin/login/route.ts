@@ -1,47 +1,65 @@
 import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
+import { supabase } from '@/lib/supabase';
 
-const JWT_SECRET = process.env.JWT_SECRET;
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-for-development';
 
 export async function POST(request: NextRequest) {
   try {
-    // Validate environment variables
-    if (!JWT_SECRET) {
-      return NextResponse.json(
-        { success: false, message: 'Server configuration error' },
-        { status: 500 }
-      );
-    }
-
-    if (!ADMIN_USERNAME || !ADMIN_PASSWORD) {
-      return NextResponse.json(
-        { success: false, message: 'Server configuration error' },
-        { status: 500 }
-      );
-    }
-
     const { username, password } = await request.json();
 
-    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
-      const token = jwt.sign(
-        { username, role: 'admin' },
-        JWT_SECRET,
-        { expiresIn: '24h' }
+    if (!username || !password) {
+      return NextResponse.json(
+        { success: false, message: 'Username and password are required' },
+        { status: 400 }
       );
+    }
 
-      return NextResponse.json({ 
-        success: true, 
-        token,
-        message: 'Login successful' 
-      });
-    } else {
+    // Query the admin_users table in Supabase
+    const { data: user, error } = await supabase
+      .from('admin_users')
+      .select('*')
+      .eq('username', username)
+      .single();
+
+    if (error || !user) {
       return NextResponse.json(
         { success: false, message: 'Invalid credentials' },
         { status: 401 }
       );
     }
+
+    // Verify password using bcrypt
+    const isValidPassword = await bcrypt.compare(password, user.password_hash);
+
+    if (!isValidPassword) {
+      return NextResponse.json(
+        { success: false, message: 'Invalid credentials' },
+        { status: 401 }
+      );
+    }
+
+    // Generate JWT token
+    const token = jwt.sign(
+      { 
+        username: user.username, 
+        role: user.role,
+        userId: user.id 
+      },
+      JWT_SECRET,
+      { expiresIn: '24h' }
+    );
+
+    return NextResponse.json({ 
+      success: true, 
+      token,
+      message: 'Login successful',
+      user: {
+        username: user.username,
+        role: user.role
+      }
+    });
   } catch (error) {
     return NextResponse.json(
       { success: false, message: 'Internal server error' },
