@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { contentStorage } from "@/lib/content-storage";
 
 export const metadata: Metadata = {
   title: "Plumbing Services | Custom Homes, Renovations & Repairs",
@@ -26,50 +27,41 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ServicesPage() {
-  const services = [
-    {
-      title: "Custom Homes",
-      copy: "Ground-up rough-ins, gas, and finish plumbing.",
-      image: "/kitchen.jpg",
-      href: "/services/custom-homes"
-    },
-    {
-      title: "Renovations",
-      copy: "Kitchen & bath re-pipes, fixture moves, code upgrades.",
-      image: "/bathtub.jpg",
-      href: "/services/renovations"
-    },
-    {
-      title: "Bathtubs & Showers",
-      copy: "New installs, pans, valves, and surrounds.",
-      image: "/shower.jpeg",
-      href: "/services/bathtubs-showers"
-    },
-    {
-      title: "Water Heaters",
-      copy: "Tank & tankless install and repair.",
-      image: "/toiletinstalled.jpeg",
-      href: "/services/water-heaters"
-    },
-    {
-      title: "Service & Repairs",
-      copy: "Leaks, clogs, replacements, same-day fixes.",
-      image: "/sinksfixed.jpeg",
-      href: "/services/repairs"
-    },
-    {
-      title: "Faucets & Fixtures",
-      copy: "Repair or replace toilets, sinks, disposals.",
-      image: "/sinksinstalled.webp",
-      href: "/services/faucets-fixtures"
-    },
-  ];
+export default async function ServicesPage() {
+  const servicesContent = await contentStorage.getServicesContent();
+  
+  // Map the CMS services to the page format
+  const services = servicesContent.services.map((service, index) => {
+    const defaultImages = [
+      "/kitchen.jpg",
+      "/bathtub.jpg", 
+      "/shower.jpeg",
+      "/toiletinstalled.jpeg",
+      "/sinksfixed.jpeg",
+      "/sinksinstalled.webp"
+    ];
+    
+    const defaultHrefs = [
+      "/services/custom-homes",
+      "/services/renovations",
+      "/services/bathtubs-showers", 
+      "/services/water-heaters",
+      "/services/repairs",
+      "/services/faucets-fixtures"
+    ];
+    
+    return {
+      title: service.title,
+      copy: service.description,
+      image: service.image || defaultImages[index] || defaultImages[0],
+      href: defaultHrefs[index] || "/services"
+    };
+  });
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-3xl font-bold tracking-tight text-black dark:text-black">Plumbing Services</h1>
-      <p className="mt-2 text-black/70 dark:text-black/70">Licensed • Insured • ROC360510</p>
+      <h1 className="text-3xl font-bold tracking-tight text-black dark:text-black">{servicesContent.title}</h1>
+      <p className="mt-2 text-black/70 dark:text-black/70">{servicesContent.subtitle}</p>
 
       <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {services.map((s) => (
