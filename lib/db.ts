@@ -1,7 +1,10 @@
-import { supabase } from './supabase';
+import { supabase, validateSupabaseConfig } from './supabase';
 
 export async function createTables() {
   try {
+    // Validate Supabase configuration
+    validateSupabaseConfig();
+    
     // Check if content table exists by trying to query it
     const { error } = await supabase
       .from('content')
@@ -146,6 +149,9 @@ export async function createTables() {
 
 export async function getContent(type: string) {
   try {
+    // Validate Supabase configuration
+    validateSupabaseConfig();
+    
     const { data, error } = await supabase
       .from('content')
       .select('data')
@@ -166,6 +172,9 @@ export async function getContent(type: string) {
 
 export async function updateContent(type: string, data: any) {
   try {
+    // Validate Supabase configuration
+    validateSupabaseConfig();
+    
     const { error } = await supabase
       .from('content')
       .upsert({
@@ -190,6 +199,9 @@ export async function updateContent(type: string, data: any) {
 
 export async function resetContent() {
   try {
+    // Validate Supabase configuration
+    validateSupabaseConfig();
+    
     const { error } = await supabase
       .from('content')
       .delete()
