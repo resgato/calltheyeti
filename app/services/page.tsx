@@ -30,31 +30,46 @@ export const metadata: Metadata = {
 export default async function ServicesPage() {
   const servicesContent = await dbContentStorage.getServicesContent();
   
-  // Map the CMS services to the page format
+  // Map the CMS services to the page format with proper image matching
   const services = servicesContent.services.map((service, index) => {
-    const defaultImages = [
-      "/kitchen.jpg",
-      "/bathtub.jpg", 
-      "/shower.jpeg",
-      "/arizonawaterheater.png",
-      "/sinksfixed.jpeg",
-      "/sinksinstalled.webp"
-    ];
+    // Create a mapping of service titles to appropriate images and links
+    const serviceMappings = {
+      "Custom Homes": {
+        image: "/kitchen.jpg",
+        href: "/services/custom-homes"
+      },
+      "Renovations": {
+        image: "/bathtub.jpg",
+        href: "/services/renovations"
+      },
+      "Bathtubs & Showers": {
+        image: "/shower.jpeg",
+        href: "/services/bathtubs-showers"
+      },
+      "Water Heaters": {
+        image: "/arizonawaterheater.png",
+        href: "/services/water-heaters"
+      },
+      "Service & Repairs": {
+        image: "/sinksfixed.jpeg",
+        href: "/services/repairs"
+      },
+      "Faucets & Fixtures": {
+        image: "/sinksinstalled.webp",
+        href: "/services/faucets-fixtures"
+      }
+    };
     
-    const defaultHrefs = [
-      "/services/custom-homes",
-      "/services/renovations",
-      "/services/bathtubs-showers", 
-      "/services/water-heaters",
-      "/services/repairs",
-      "/services/faucets-fixtures"
-    ];
+    const mapping = serviceMappings[service.title as keyof typeof serviceMappings] || {
+      image: "/kitchen.jpg",
+      href: "/services"
+    };
     
     return {
       title: service.title,
       copy: service.description,
-      image: service.image || defaultImages[index] || defaultImages[0],
-      href: defaultHrefs[index] || "/services"
+      image: service.image || mapping.image,
+      href: mapping.href
     };
   });
 
@@ -104,20 +119,20 @@ export default async function ServicesPage() {
         <h2 className="text-2xl font-semibold mb-6 text-center text-black dark:text-black">Recent Work Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="space-y-2">
-            <img src="/sinksfixed.jpeg" alt="Sinks fixed" className="w-full h-32 object-cover rounded-lg shadow-sm" />
-            <p className="text-sm text-black/70 dark:text-black/70 text-center">Sink Repair</p>
+            <img src="/kitchen.jpg" alt="Kitchen renovation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 dark:text-black/70 text-center">Kitchen Renovation</p>
           </div>
           <div className="space-y-2">
-            <img src="/sinksinstalled.webp" alt="New sinks installed" className="w-full h-32 object-cover rounded-lg shadow-sm" />
-            <p className="text-sm text-black/70 dark:text-black/70 text-center">Sink Installation</p>
+            <img src="/bathtub.jpg" alt="Bathroom upgrade" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 dark:text-black/70 text-center">Bathroom Upgrade</p>
           </div>
           <div className="space-y-2">
-            <img src="/toiletinstalled.jpeg" alt="Toilet installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
-            <p className="text-sm text-black/70 dark:text-black/70 text-center">Toilet Installation</p>
+            <img src="/arizonawaterheater.png" alt="Water heater installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 dark:text-black/70 text-center">Water Heater</p>
           </div>
           <div className="space-y-2">
-            <img src="/shower.jpeg" alt="Shower work" className="w-full h-32 object-cover rounded-lg shadow-sm" />
-            <p className="text-sm text-black/70 dark:text-black/70 text-center">Shower Work</p>
+            <img src="/sinksinstalled.webp" alt="Fixture installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 dark:text-black/70 text-center">Fixture Installation</p>
           </div>
         </div>
       </div>
