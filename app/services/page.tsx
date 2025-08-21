@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { dbContentStorage } from "@/lib/db-content-storage";
+import { defaultServicesContent } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Plumbing Services | Custom Homes, Renovations & Repairs",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function ServicesPage() {
-  const servicesContent = await dbContentStorage.getServicesContent();
+export default function ServicesPage() {
+  const servicesContent = defaultServicesContent;
   
   // Map the CMS services to the page format with proper image matching
   const services = servicesContent.services.map((service, index) => {
@@ -42,21 +42,21 @@ export default async function ServicesPage() {
         image: "/bathtub.jpg",
         href: "/services/renovations"
       },
-      "Bathtubs & Showers": {
-        image: "/shower.jpeg",
-        href: "/services/bathtubs-showers"
-      },
-      "Water Heaters": {
-        image: "/arizonawaterheater.png",
-        href: "/services/water-heaters"
-      },
       "Service & Repairs": {
         image: "/sinksfixed.jpeg",
         href: "/services/repairs"
       },
+      "Bathtubs & Showers": {
+        image: "/shower.jpeg",
+        href: "/services/bathtubs-showers"
+      },
       "Faucets & Fixtures": {
         image: "/sinksinstalled.webp",
         href: "/services/faucets-fixtures"
+      },
+      "Water Heaters": {
+        image: "/arizonawaterheater.png",
+        href: "/services/water-heaters"
       }
     };
     
