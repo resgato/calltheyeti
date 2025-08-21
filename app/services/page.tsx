@@ -36,7 +36,7 @@ export default async function ServicesPage() {
       "/kitchen.jpg",
       "/bathtub.jpg", 
       "/shower.jpeg",
-      "/toiletinstalled.jpeg",
+      "/arizonawaterheater.png",
       "/sinksfixed.jpeg",
       "/sinksinstalled.webp"
     ];

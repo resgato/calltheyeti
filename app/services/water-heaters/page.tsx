@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Water Heaters | Phoenix Water Heater Installation & Repair",
     description: "Expert water heater installation, repair, and replacement in Phoenix, Arizona. Tank and tankless water heaters, repairs, maintenance, and emergency service.",
-    images: ["/toiletinstalled.jpeg"],
+    images: ["/arizonawaterheater.png"],
   },
   alternates: {
     canonical: "https://calltheyeti.com/services/water-heaters",
@@ -45,7 +45,7 @@ export default function WaterHeatersPage() {
           </p>
 
           <div className="mb-8">
-            <img src="/toiletinstalled.jpeg" alt="Water heater installation" className="w-full h-64 object-cover rounded-lg shadow-md" />
+            <img src="/arizonawaterheater.png" alt="Water heater installation" className="w-full h-64 object-cover rounded-lg shadow-md" />
           </div>
 
           <div className="prose prose-lg max-w-none">
