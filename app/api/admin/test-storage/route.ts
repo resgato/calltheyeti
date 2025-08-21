@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
-import { contentStorage } from '@/lib/content-storage';
+import { dbContentStorage } from '@/lib/db-content-storage';
 
 export async function GET() {
   try {
-    const homepage = await contentStorage.getHomepageContent();
-    const contact = await contentStorage.getContactContent();
-    const services = await contentStorage.getServicesContent();
+    const homepage = await dbContentStorage.getHomepageContent();
+    const contact = await dbContentStorage.getContactContent();
+    const services = await dbContentStorage.getServicesContent();
     
     return NextResponse.json({
       success: true,

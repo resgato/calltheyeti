@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { contentStorage } from "@/lib/content-storage";
+import { dbContentStorage } from "@/lib/db-content-storage";
 
 export const metadata: Metadata = {
   title: "Plumbing Services | Custom Homes, Renovations & Repairs",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ServicesPage() {
-  const servicesContent = await contentStorage.getServicesContent();
+  const servicesContent = await dbContentStorage.getServicesContent();
   
   // Map the CMS services to the page format
   const services = servicesContent.services.map((service, index) => {

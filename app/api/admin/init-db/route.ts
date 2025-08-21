@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
-import { dbContentStorage } from '@/lib/db-content-storage';
+import { createTables } from '@/lib/db';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
@@ -29,22 +29,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const success = await dbContentStorage.resetToDefaults();
+    await createTables();
     
-    if (success) {
-      return NextResponse.json({ 
-        success: true, 
-        message: 'Content reset to defaults successfully' 
-      });
-    } else {
-      return NextResponse.json(
-        { success: false, message: 'Failed to reset content' },
-        { status: 500 }
-      );
-    }
+    return NextResponse.json({ 
+      success: true, 
+      message: 'Database initialized successfully' 
+    });
   } catch (error) {
+    console.error('Database initialization error:', error);
     return NextResponse.json(
-      { success: false, message: 'Failed to reset content' },
+      { success: false, message: 'Failed to initialize database' },
       { status: 500 }
     );
   }
