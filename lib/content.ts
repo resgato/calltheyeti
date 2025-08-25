@@ -72,9 +72,8 @@ export const defaultHomepageContent: HomepageContent = {
     title: "Arizona's Best Plumber — Fast. Friendly. Fair.",
     subtitle: "Custom homes, renovations, and service plumbing done right.",
     description: "Custom homes, renovations, and service plumbing done right. Bathtubs, showers, faucets, kitchens, and more — same-day service across the Valley.",
-    features: [
-      "24/7 Emergency Service",
-      "Licensed & Insured",
+          features: [
+        "Licensed & Insured",
       "Upfront, Honest Pricing",
       "1000+ Local Homes Served"
     ]
@@ -121,8 +120,7 @@ export const defaultHomepageContent: HomepageContent = {
     features: [
       "Valley-wide coverage",
       "Great reviews",
-      "Respect for your home",
-      "Financing options"
+      "Respect for your home"
     ]
   },
   serviceArea: {

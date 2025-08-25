@@ -1,31 +1,68 @@
-import { supabase, validateSupabaseConfig } from './supabase';
+const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config({ path: '.env.local' });
 
-export async function createTables() {
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!supabaseUrl || !supabaseServiceKey) {
+  console.error('Missing required environment variables');
+  console.log('NEXT_PUBLIC_SUPABASE_URL:', supabaseUrl ? 'SET' : 'MISSING');
+  console.log('SUPABASE_SERVICE_ROLE_KEY:', supabaseServiceKey ? 'SET' : 'MISSING');
+  process.exit(1);
+}
+
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+async function runMigrations() {
   try {
-    // Validate Supabase configuration
-    validateSupabaseConfig();
-    
-    // Check if content table exists by trying to query it
-    const { error } = await supabase
-      .from('content')
-      .select('*')
-      .limit(1);
-    
-    if (error && error.code === 'PGRST116') {
-      console.log('Content table does not exist. Please run the SQL migration in Supabase SQL Editor.');
-      console.log('You can find the migration file at: supabase-migration.sql');
-      return;
+    console.log('Starting migrations...');
+
+    // Create content table
+    console.log('Creating content table...');
+    const { error: contentTableError } = await supabase.rpc('exec_sql', {
+      sql: `
+        CREATE TABLE IF NOT EXISTS content (
+          id SERIAL PRIMARY KEY,
+          type VARCHAR(50) NOT NULL UNIQUE,
+          data JSONB NOT NULL,
+          created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+          updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+        );
+      `
+    });
+
+    if (contentTableError) {
+      console.log('Content table creation error (might already exist):', contentTableError.message);
+    } else {
+      console.log('Content table created successfully');
     }
 
-    // Check if content exists
-    const { data: existingContent } = await supabase
-      .from('content')
-      .select('*')
-      .in('type', ['homepage', 'contact', 'services']);
+    // Create admin_users table
+    console.log('Creating admin_users table...');
+    const { error: adminTableError } = await supabase.rpc('exec_sql', {
+      sql: `
+        CREATE TABLE IF NOT EXISTS admin_users (
+          id SERIAL PRIMARY KEY,
+          username VARCHAR(50) NOT NULL UNIQUE,
+          password_hash VARCHAR(255) NOT NULL,
+          role VARCHAR(20) DEFAULT 'admin',
+          created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+          updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+        );
+      `
+    });
 
-    if (!existingContent || existingContent.length === 0) {
-      // Insert default content
-      const defaultContent = [
+    if (adminTableError) {
+      console.log('Admin users table creation error (might already exist):', adminTableError.message);
+    } else {
+      console.log('Admin users table created successfully');
+    }
+
+    // Insert default content
+    console.log('Inserting default content...');
+    const { error: contentError } = await supabase
+      .from('content')
+      .upsert([
         {
           type: 'homepage',
           data: {
@@ -33,7 +70,7 @@ export async function createTables() {
               title: "Arizona's Best Plumber — Fast. Friendly. Fair.",
               subtitle: "Custom homes, renovations, and service plumbing done right.",
               description: "Custom homes, renovations, and service plumbing done right. Bathtubs, showers, faucets, kitchens, and more — same-day service across the Valley.",
-              features: ["Licensed & Insured", "Upfront, Honest Pricing", "1000+ Local Homes Served"]
+              features: ["24/7 Emergency Service", "Licensed & Insured", "Upfront, Honest Pricing", "1000+ Local Homes Served"]
             },
             services: {
               title: "Plumbing Services",
@@ -66,7 +103,7 @@ export async function createTables() {
             cta: {
               title: "Need a plumber now?",
               description: "We'll dispatch a pro to your door. Most issues resolved same day.",
-              features: ["Valley-wide coverage", "Great reviews", "Respect for your home"]
+              features: ["Valley-wide coverage", "Great reviews", "Respect for your home", "Financing options"]
             },
             serviceArea: {
               title: "Proudly Serving Arizona",
@@ -129,93 +166,54 @@ export async function createTables() {
             ]
           }
         }
-      ];
+      ], { onConflict: 'type' });
 
-      const { error: insertError } = await supabase
-        .from('content')
-        .insert(defaultContent);
-
-      if (insertError) {
-        console.error('Error inserting default content:', insertError);
-      }
+    if (contentError) {
+      console.log('Content insertion error:', contentError.message);
+    } else {
+      console.log('Default content inserted successfully');
     }
 
-    console.log('Database tables created successfully');
-  } catch (error) {
-    console.error('Error creating tables:', error);
-    throw error;
-  }
-}
-
-export async function getContent(type: string) {
-  try {
-    // Validate Supabase configuration
-    validateSupabaseConfig();
+    // Insert admin user
+    console.log('Inserting admin user...');
+    const bcrypt = require('bcryptjs');
+    const passwordHash = await bcrypt.hash('siggy', 10);
     
-    const { data, error } = await supabase
-      .from('content')
-      .select('data')
-      .eq('type', type)
-      .single();
-    
-    if (error) {
-      console.error(`Error getting ${type} content:`, error);
-      return null;
-    }
-    
-    return data?.data || null;
-  } catch (error) {
-    console.error(`Error getting ${type} content:`, error);
-    return null;
-  }
-}
-
-export async function updateContent(type: string, data: any) {
-  try {
-    // Validate Supabase configuration
-    validateSupabaseConfig();
-    
-    const { error } = await supabase
-      .from('content')
+    const { error: adminError } = await supabase
+      .from('admin_users')
       .upsert({
-        type,
-        data,
-        updated_at: new Date().toISOString()
-      }, {
-        onConflict: 'type'
-      });
-    
-    if (error) {
-      console.error(`Error updating ${type} content:`, error);
-      return false;
+        username: 'cami',
+        password_hash: passwordHash,
+        role: 'admin'
+      }, { onConflict: 'username' });
+
+    if (adminError) {
+      console.log('Admin user insertion error:', adminError.message);
+    } else {
+      console.log('Admin user created successfully');
     }
+
+    console.log('Migrations completed successfully!');
     
-    return true;
+    // Test the connection
+    console.log('\nTesting connection...');
+    const { data: contentTest, error: contentTestError } = await supabase
+      .from('content')
+      .select('type')
+      .limit(1);
+    
+    if (contentTestError) {
+      console.log('Content table test error:', contentTestError.message);
+    } else {
+      console.log('Content table test successful:', contentTest);
+    }
+
   } catch (error) {
-    console.error(`Error updating ${type} content:`, error);
-    return false;
+    console.error('Migration failed:', error);
   }
 }
 
-export async function resetContent() {
-  try {
-    // Validate Supabase configuration
-    validateSupabaseConfig();
-    
-    const { error } = await supabase
-      .from('content')
-      .delete()
-      .in('type', ['homepage', 'contact', 'services']);
-    
-    if (error) {
-      console.error('Error deleting content:', error);
-      return false;
-    }
-    
-    await createTables(); // This will recreate the default content
-    return true;
-  } catch (error) {
-    console.error('Error resetting content:', error);
-    return false;
-  }
-}
+runMigrations();
+
+
+

@@ -150,7 +150,7 @@ export function buildLocalBusinessJsonLd() {
           itemOffered: {
             "@type": "Service",
             name: "Emergency Plumbing",
-            description: "24/7 emergency plumbing services"
+            description: "Emergency plumbing services"
           }
         }
       ]

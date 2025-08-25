@@ -122,7 +122,7 @@ export function buildFAQStructuredData() {
         name: "Do you offer emergency plumbing?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. We provide 24/7 emergency plumbing across the Valley with rapid dispatch.",
+          text: "Yes. We provide emergency plumbing across the Valley with rapid dispatch.",
         },
       },
       {

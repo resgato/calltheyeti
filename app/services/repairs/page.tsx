@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Plumbing Repairs | Phoenix Emergency Plumbing Repair Service",
-  description: "Expert plumbing repair services in Phoenix, Arizona. Emergency repairs, leak fixes, drain cleaning, pipe repairs, and more. 24/7 emergency service. Licensed • Insured • ROC360510.",
+  description: "Expert plumbing repair services in Phoenix, Arizona. Emergency repairs, leak fixes, drain cleaning, pipe repairs, and more. Emergency service. Licensed • Insured • ROC360510.",
   keywords: [
     "plumbing repair Phoenix",
     "emergency plumbing Arizona",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "pipe repair",
     "Phoenix plumber repair",
     "Arizona emergency plumbing",
-    "24/7 plumbing service",
+    "Emergency plumbing service",
   ],
   openGraph: {
     title: "Plumbing Repairs | Phoenix Emergency Plumbing Repair Service",
@@ -51,7 +51,7 @@ export default function RepairsPage() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-black dark:text-black">Emergency Plumbing Repairs</h2>
             <p className="text-black dark:text-black">
-              Plumbing emergencies can happen at any time. Our 24/7 emergency repair service ensures 
+              Plumbing emergencies can happen at any time. Our emergency repair service ensures 
               you get help when you need it most.
             </p>
 
@@ -181,7 +181,7 @@ export default function RepairsPage() {
 
             <h3 className="text-black dark:text-black">Do you provide emergency service?</h3>
             <p className="text-black dark:text-black">
-              Yes! We provide 24/7 emergency plumbing repair service. Emergency calls are prioritized 
+              Yes! We provide emergency plumbing repair service. Emergency calls are prioritized 
               and we respond quickly to prevent water damage.
             </p>
 
@@ -225,9 +225,9 @@ export default function RepairsPage() {
           </div>
 
           <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">24/7 Emergency Service</h3>
+                          <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Emergency Service</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
-              Plumbing emergency? We provide 24/7 emergency repair service.
+                              Plumbing emergency? We provide emergency repair service.
             </p>
             <a 
               href="tel:+18017072547" 
@@ -268,7 +268,7 @@ export default function RepairsPage() {
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>✓ Licensed & Insured (ROC360510)</li>
               <li>✓ 15+ Years Experience</li>
-              <li>✓ 24/7 Emergency Service</li>
+                              <li>✓ Emergency Service</li>
               <li>✓ Competitive Pricing</li>
               <li>✓ Warranty on All Work</li>
             </ul>

@@ -174,7 +174,7 @@ export default function WaterHeatersPage() {
 
             <h3 className="text-black dark:text-black">Do you provide emergency water heater service?</h3>
             <p className="text-black dark:text-black">
-              Yes! We provide 24/7 emergency water heater repair service for urgent issues like no hot 
+              Yes! We provide emergency water heater repair service for urgent issues like no hot 
               water or leaks.
             </p>
 
@@ -202,7 +202,7 @@ export default function WaterHeatersPage() {
           <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Emergency Service</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
-              No hot water? We provide 24/7 emergency water heater repair service.
+              No hot water? We provide emergency water heater repair service.
             </p>
             <a 
               href="tel:+18017072547" 
@@ -243,7 +243,7 @@ export default function WaterHeatersPage() {
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>✓ Licensed & Insured (ROC360510)</li>
               <li>✓ 15+ Years Experience</li>
-              <li>✓ 24/7 Emergency Service</li>
+                              <li>✓ Emergency Service</li>
               <li>✓ Competitive Pricing</li>
               <li>✓ Warranty on All Work</li>
             </ul>
