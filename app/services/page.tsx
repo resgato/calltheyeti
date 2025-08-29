@@ -96,7 +96,7 @@ export default function ServicesPage() {
       </div>
 
       <div className="mt-12 bg-gray-50 dark:bg-gray-100 rounded-lg p-8">
-        <h2 className="text-2xl font-semibold mb-4 text-black dark:text-black">Why Choose Yeti Plumbing?</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center text-black dark:text-black">Why Choose Yeti Plumbing?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
             <div className="text-3xl mb-2">🏠</div>
