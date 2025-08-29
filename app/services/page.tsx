@@ -95,17 +95,7 @@ export default function ServicesPage() {
         ))}
       </div>
 
-      <div className="mt-12 flex flex-col lg:flex-row gap-8">
-        <div className="flex-1">
-          <h2 className="text-2xl font-semibold mb-6 text-black dark:text-black">Request Service</h2>
-          <p className="text-black/70 dark:text-black/70 mb-6">
-            Need plumbing help? Fill out the form and we'll get back to you quickly. 
-            Same-day service available across the Valley.
-          </p>
-          <LeadForm />
-        </div>
-        
-        <div className="flex-1 bg-gray-50 dark:bg-gray-100 rounded-lg p-8">
+      <div className="mt-12 bg-gray-50 dark:bg-gray-100 rounded-lg p-8">
         <h2 className="text-2xl font-semibold mb-4 text-black dark:text-black">Why Choose Yeti Plumbing?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
@@ -125,6 +115,16 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold mb-6 text-black dark:text-black">Request Service</h2>
+        <p className="text-black/70 dark:text-black/70 mb-6">
+          Need plumbing help? Fill out the form and we'll get back to you quickly. 
+          Same-day service available across the Valley.
+        </p>
+        <div className="flex justify-center">
+          <LeadForm />
+        </div>
       </div>
 
       <div className="mt-12">
