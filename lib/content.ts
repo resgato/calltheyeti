@@ -176,6 +176,11 @@ export const defaultServicesContent: ServicesContent = {
       title: "Water Heaters",
       description: "Water heater repair and installation services",
       features: ["Tank water heaters", "Tankless water heaters", "Repairs", "Energy efficiency"]
+    },
+    {
+      title: "Water Softeners",
+      description: "Water softener installation and maintenance services",
+      features: ["Water softener installation", "System maintenance", "Salt delivery", "Water quality testing"]
     }
   ]
 };

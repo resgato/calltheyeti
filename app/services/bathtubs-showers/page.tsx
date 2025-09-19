@@ -48,123 +48,145 @@ export default function BathtubsShowersPage() {
             <img src="/bathtub.jpg" alt="Bathtub and shower installation" className="w-full h-64 object-cover rounded-lg shadow-md" />
           </div>
 
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-black dark:text-black">Bathtub Installation & Replacement</h2>
-            <p className="text-black dark:text-black">
-              Whether you're installing a new bathtub or replacing an old one, our expert team ensures 
-              proper installation with attention to detail and functionality.
-            </p>
+          <div className="prose prose-lg max-w-none space-y-8">
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Bathtub Installation & Replacement</h2>
+              <p className="text-black dark:text-black mb-6">
+                Whether you're installing a new bathtub or replacing an old one, our expert team ensures 
+                proper installation with attention to detail and functionality.
+              </p>
 
-            <h3 className="text-black dark:text-black">Types of Bathtubs We Install</h3>
-            <ul className="text-black dark:text-black">
-              <li><strong>Alcove Bathtubs:</strong> Standard bathtubs that fit between three walls</li>
-              <li><strong>Drop-in Bathtubs:</strong> Freestanding tubs that drop into a deck or platform</li>
-              <li><strong>Undermount Bathtubs:</strong> Tubs that mount underneath a deck surface</li>
-              <li><strong>Freestanding Bathtubs:</strong> Standalone tubs that don't require walls</li>
-              <li><strong>Corner Bathtubs:</strong> Triangular tubs that fit in corner spaces</li>
-              <li><strong>Walk-in Bathtubs:</strong> Accessible tubs with doors for easy entry</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Types of Bathtubs We Install</h3>
+              <ul className="text-black dark:text-black space-y-2 mb-6">
+                <li><strong>Alcove Bathtubs:</strong> Standard bathtubs that fit between three walls</li>
+                <li><strong>Drop-in Bathtubs:</strong> Freestanding tubs that drop into a deck or platform</li>
+                <li><strong>Undermount Bathtubs:</strong> Tubs that mount underneath a deck surface</li>
+                <li><strong>Freestanding Bathtubs:</strong> Standalone tubs that don't require walls</li>
+                <li><strong>Corner Bathtubs:</strong> Triangular tubs that fit in corner spaces</li>
+                <li><strong>Walk-in Bathtubs:</strong> Accessible tubs with doors for easy entry</li>
+              </ul>
 
-            <div className="my-8">
-              <img src="/bathtubbefore.jpg" alt="Bathtub before installation" className="w-full h-48 object-cover rounded-lg shadow-md" />
-            </div>
+              <div className="my-8">
+                <img src="/bathtubbefore.jpg" alt="Bathtub before installation" className="w-full h-48 object-cover rounded-lg shadow-md" />
+              </div>
 
-            <h3 className="text-black dark:text-black">Bathtub Installation Process</h3>
-            <p className="text-black dark:text-black">
-              Our bathtub installation process ensures quality work and lasting results.
-            </p>
-            <ul className="text-black dark:text-black">
-              <li>Remove old bathtub and inspect plumbing</li>
-              <li>Prepare installation area and level surface</li>
-              <li>Install new bathtub with proper support</li>
-              <li>Connect plumbing and test for leaks</li>
-              <li>Install fixtures and accessories</li>
-              <li>Final inspection and cleanup</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Bathtub Installation Process</h3>
+              <p className="text-black dark:text-black mb-4">
+                Our bathtub installation process ensures quality work and lasting results.
+              </p>
+              <ul className="text-black dark:text-black space-y-2">
+                <li>Remove old bathtub and inspect plumbing</li>
+                <li>Prepare installation area and level surface</li>
+                <li>Install new bathtub with proper support</li>
+                <li>Connect plumbing and test for leaks</li>
+                <li>Install fixtures and accessories</li>
+                <li>Final inspection and cleanup</li>
+              </ul>
+            </section>
 
-            <h2 className="text-black dark:text-black">Shower Installation & Upgrades</h2>
-            <p className="text-black dark:text-black">
-              Modern showers can transform your bathroom experience. We install and upgrade all types 
-              of shower systems with professional quality.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Shower Installation & Upgrades</h2>
+              <p className="text-black dark:text-black mb-6">
+                Modern showers can transform your bathroom experience. We install and upgrade all types 
+                of shower systems with professional quality.
+              </p>
 
-            <h3 className="text-black dark:text-black">Shower Types We Install</h3>
-            <ul className="text-black dark:text-black">
-              <li><strong>Walk-in Showers:</strong> Modern, accessible shower designs</li>
-              <li><strong>Shower-Tub Combinations:</strong> Versatile bathing options</li>
-              <li><strong>Custom Shower Enclosures:</strong> Tailored to your space</li>
-              <li><strong>Steam Showers:</strong> Luxury spa-like experiences</li>
-              <li><strong>Accessibility Showers:</strong> ADA-compliant designs</li>
-              <li><strong>Outdoor Showers:</strong> Pool and patio installations</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Shower Types We Install</h3>
+              <ul className="text-black dark:text-black space-y-2 mb-6">
+                <li><strong>Walk-in Showers:</strong> Modern, accessible shower designs</li>
+                <li><strong>Shower-Tub Combinations:</strong> Versatile bathing options</li>
+                <li><strong>Custom Shower Enclosures:</strong> Tailored to your space</li>
+                <li><strong>Steam Showers:</strong> Luxury spa-like experiences</li>
+                <li><strong>Accessibility Showers:</strong> ADA-compliant designs</li>
+                <li><strong>Outdoor Showers:</strong> Pool and patio installations</li>
+              </ul>
 
-            <div className="my-8">
-              <img src="/shower.jpeg" alt="Shower installation work" className="w-full h-48 object-cover rounded-lg shadow-md" />
-            </div>
+              <div className="my-8">
+                <img src="/shower.jpeg" alt="Shower installation work" className="w-full h-48 object-cover rounded-lg shadow-md" />
+              </div>
 
-            <h3 className="text-black dark:text-black">Shower Components</h3>
-            <ul className="text-black dark:text-black">
-              <li><strong>Shower Valves:</strong> Temperature and flow control</li>
-              <li><strong>Showerheads:</strong> Fixed, handheld, and rain shower options</li>
-              <li><strong>Shower Pans:</strong> Waterproof bases and drains</li>
-              <li><strong>Shower Doors:</strong> Sliding, hinged, and frameless options</li>
-              <li><strong>Shower Walls:</strong> Tile, acrylic, and solid surface options</li>
-              <li><strong>Shower Accessories:</strong> Shelves, benches, and grab bars</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Shower Components</h3>
+              <ul className="text-black dark:text-black space-y-2">
+                <li><strong>Shower Valves:</strong> Temperature and flow control</li>
+                <li><strong>Showerheads:</strong> Fixed, handheld, and rain shower options</li>
+                <li><strong>Shower Pans:</strong> Waterproof bases and drains</li>
+                <li><strong>Shower Doors:</strong> Sliding, hinged, and frameless options</li>
+                <li><strong>Shower Walls:</strong> Tile, acrylic, and solid surface options</li>
+                <li><strong>Shower Accessories:</strong> Shelves, benches, and grab bars</li>
+              </ul>
+            </section>
 
-            <h2 className="text-black dark:text-black">Repair & Maintenance Services</h2>
-            <p className="text-black dark:text-black">
-              We provide comprehensive repair and maintenance services to keep your bathtubs and showers 
-              working perfectly.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Repair & Maintenance Services</h2>
+              <p className="text-black dark:text-black mb-6">
+                We provide comprehensive repair and maintenance services to keep your bathtubs and showers 
+                working perfectly.
+              </p>
 
-            <h3 className="text-black dark:text-black">Common Repairs</h3>
-            <ul className="text-black dark:text-black">
-              <li><strong>Leak Repairs:</strong> Fix water leaks and prevent damage</li>
-              <li><strong>Drain Issues:</strong> Clear clogs and repair drains</li>
-              <li><strong>Valve Repairs:</strong> Fix temperature and flow problems</li>
-              <li><strong>Fixture Replacement:</strong> Update showerheads and faucets</li>
-              <li><strong>Caulking & Sealing:</strong> Prevent water damage</li>
-              <li><strong>Accessibility Upgrades:</strong> Add safety features</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Common Repairs</h3>
+              <ul className="text-black dark:text-black space-y-2">
+                <li><strong>Leak Repairs:</strong> Fix water leaks and prevent damage</li>
+                <li><strong>Drain Issues:</strong> Clear clogs and repair drains</li>
+                <li><strong>Valve Repairs:</strong> Fix temperature and flow problems</li>
+                <li><strong>Fixture Replacement:</strong> Update showerheads and faucets</li>
+                <li><strong>Caulking & Sealing:</strong> Prevent water damage</li>
+                <li><strong>Accessibility Upgrades:</strong> Add safety features</li>
+              </ul>
+            </section>
 
-            <h2 className="text-black dark:text-black">Common Questions About Bathtubs & Showers</h2>
-            
-            <h3 className="text-black dark:text-black">How much does bathtub installation cost?</h3>
-            <p className="text-black dark:text-black">
-              Bathtub installation costs vary based on type and complexity. Basic alcove tub installation 
-              starts at $800-1,500, while luxury freestanding tubs range from $2,000-5,000. Contact us 
-              for a detailed estimate.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Common Questions About Bathtubs & Showers</h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">How much does bathtub installation cost?</h3>
+                  <p className="text-black dark:text-black">
+                    Bathtub installation costs vary based on type and complexity. Basic alcove tub installation 
+                    starts at $800-1,500, while luxury freestanding tubs range from $2,000-5,000. Contact us 
+                    for a detailed estimate.
+                  </p>
+                </div>
 
-            <h3 className="text-black dark:text-black">How long does shower installation take?</h3>
-            <p className="text-black dark:text-black">
-              Simple shower installations take 1-2 days, while custom shower projects may take 3-5 days. 
-              We work efficiently to minimize disruption to your home.
-            </p>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">How long does shower installation take?</h3>
+                  <p className="text-black dark:text-black">
+                    Simple shower installations take 1-2 days, while custom shower projects may take 3-5 days. 
+                    We work efficiently to minimize disruption to your home.
+                  </p>
+                </div>
 
-            <h3 className="text-black dark:text-black">Can you convert a bathtub to a shower?</h3>
-            <p className="text-black dark:text-black">
-              Yes! We can convert bathtubs to walk-in showers or shower-tub combinations. We'll assess 
-              your space and provide options that work best for your needs.
-            </p>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Can you convert a bathtub to a shower?</h3>
+                  <p className="text-black dark:text-black">
+                    Yes! We can convert bathtubs to walk-in showers or shower-tub combinations. We'll assess 
+                    your space and provide options that work best for your needs.
+                  </p>
+                </div>
 
-            <h3 className="text-black dark:text-black">Do you install walk-in bathtubs?</h3>
-            <p className="text-black dark:text-black">
-              Absolutely! We install walk-in bathtubs for accessibility and safety. We'll ensure proper 
-              installation and test all safety features.
-            </p>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Do you install walk-in bathtubs?</h3>
+                  <p className="text-black dark:text-black">
+                    Absolutely! We install walk-in bathtubs for accessibility and safety. We'll ensure proper 
+                    installation and test all safety features.
+                  </p>
+                </div>
 
-            <h3 className="text-black dark:text-black">What if I have a leak in my shower?</h3>
-            <p className="text-black dark:text-black">
-              We provide emergency leak repair services. We'll quickly identify the source and fix the 
-              issue to prevent water damage to your home.
-            </p>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">What if I have a leak in my shower?</h3>
+                  <p className="text-black dark:text-black">
+                    We provide emergency leak repair services. We'll quickly identify the source and fix the 
+                    issue to prevent water damage to your home.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-            <h2 className="text-black dark:text-black">Areas We Serve</h2>
-            <p className="text-black dark:text-black">
-              We provide bathtub and shower services throughout the Phoenix metro area: {siteConfig.serviceArea.join(", ")}.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Areas We Serve</h2>
+              <p className="text-black dark:text-black">
+                We provide bathtub and shower services throughout the Phoenix metro area: {siteConfig.serviceArea.join(", ")}.
+              </p>
+            </section>
           </div>
         </div>
 

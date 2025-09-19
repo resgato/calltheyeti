@@ -58,6 +58,10 @@ export default function ServicesPage() {
       "Water Heaters": {
         image: "/arizonawaterheater.png",
         href: "/services/water-heaters"
+      },
+      "Water Softeners": {
+        image: "/watersoftener.jpg",
+        href: "/services/water-softeners"
       }
     };
     
