@@ -1,0 +1,206 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/admin/images/[filename]",
+      "regex": "^/api/admin/images/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPfilename": "nxtPfilename"
+      },
+      "namedRegex": "^/api/admin/images/(?<nxtPfilename>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/admin/content/contact",
+      "regex": "^/admin/content/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/content/contact(?:/)?$"
+    },
+    {
+      "page": "/admin/content/homepage",
+      "regex": "^/admin/content/homepage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/content/homepage(?:/)?$"
+    },
+    {
+      "page": "/admin/content/services",
+      "regex": "^/admin/content/services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/content/services(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard",
+      "regex": "^/admin/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard(?:/)?$"
+    },
+    {
+      "page": "/admin/images",
+      "regex": "^/admin/images(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/images(?:/)?$"
+    },
+    {
+      "page": "/admin/login",
+      "regex": "^/admin/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/login(?:/)?$"
+    },
+    {
+      "page": "/admin/logo",
+      "regex": "^/admin/logo(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/logo(?:/)?$"
+    },
+    {
+      "page": "/admin/settings",
+      "regex": "^/admin/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/settings(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/manifest.webmanifest",
+      "regex": "^/manifest\\.webmanifest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/manifest\\.webmanifest(?:/)?$"
+    },
+    {
+      "page": "/notes",
+      "regex": "^/notes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/notes(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/services",
+      "regex": "^/services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services(?:/)?$"
+    },
+    {
+      "page": "/services/bathtubs-showers",
+      "regex": "^/services/bathtubs\\-showers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/bathtubs\\-showers(?:/)?$"
+    },
+    {
+      "page": "/services/custom-homes",
+      "regex": "^/services/custom\\-homes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/custom\\-homes(?:/)?$"
+    },
+    {
+      "page": "/services/faucets-fixtures",
+      "regex": "^/services/faucets\\-fixtures(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/faucets\\-fixtures(?:/)?$"
+    },
+    {
+      "page": "/services/renovations",
+      "regex": "^/services/renovations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/renovations(?:/)?$"
+    },
+    {
+      "page": "/services/repairs",
+      "regex": "^/services/repairs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/repairs(?:/)?$"
+    },
+    {
+      "page": "/services/water-heaters",
+      "regex": "^/services/water\\-heaters(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/water\\-heaters(?:/)?$"
+    },
+    {
+      "page": "/services/water-softeners",
+      "regex": "^/services/water\\-softeners(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/water\\-softeners(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/test-supabase",
+      "regex": "^/test\\-supabase(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test\\-supabase(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
