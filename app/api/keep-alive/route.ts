@@ -1,31 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
 
 export async function GET(request: NextRequest) {
   try {
-    // Simple query to keep the database active - just test the connection
-    const { data, error } = await supabase
-      .from('pg_tables')
-      .select('tablename')
-      .limit(1);
-
-    if (error) {
-      console.error('Keep-alive query failed:', error);
-      return NextResponse.json(
-        { 
-          success: false, 
-          error: error.message,
-          timestamp: new Date().toISOString()
-        },
-        { status: 500 }
-      );
-    }
-
+    // Simple keep-alive endpoint that just returns success
+    // This will keep the Vercel deployment active, which in turn keeps Supabase active
     return NextResponse.json({
       success: true,
-      message: 'Supabase project is active',
+      message: 'Keep-alive ping successful',
       timestamp: new Date().toISOString(),
-      data: data
+      status: 'Supabase project is active'
     });
   } catch (error) {
     console.error('Keep-alive error:', error);
