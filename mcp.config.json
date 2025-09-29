@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "vercel": {
+      "url": "https://mcp.vercel.com"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "/Users/taylorbrody/calltheyeti"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-fetch"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}
+

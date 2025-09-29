@@ -10,6 +10,14 @@
       "env": {
         "SUPABASE_ACCESS_TOKEN": "sbp_5948c9919f6f6ba33e95d7a8874f1eec1a59a8bb"
       }
+    },
+    "calltheyeti": {
+      "command": "node",
+      "args": ["/Users/taylorbrody/calltheyeti/scripts/mcp-server.js"],
+      "cwd": "/Users/taylorbrody/calltheyeti",
+      "env": {
+        "NODE_ENV": "development"
+      }
     }
   }
 }

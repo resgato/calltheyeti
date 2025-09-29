@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "calltheyeti-local": {
+      "command": "node",
+      "args": ["scripts/mcp-server.js"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "calltheyeti-http": {
+      "url": "http://localhost:3001/api/mcp",
+      "description": "Call The Yeti MCP Server via HTTP"
+    },
+    "calltheyeti-vercel": {
+      "url": "https://your-app.vercel.app/api/mcp",
+      "description": "Call The Yeti MCP Server on Vercel"
+    }
+  }
+}
+

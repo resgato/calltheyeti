@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "calltheyeti": {
+      "command": "node",
+      "args": ["/Users/taylorbrody/calltheyeti/scripts/mcp-server.js"],
+      "cwd": "/Users/taylorbrody/calltheyeti",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}
