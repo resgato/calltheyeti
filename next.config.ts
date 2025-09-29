@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  // Reduce memory usage during build
+  compress: true,
 };
 
 export default nextConfig;
