@@ -15,6 +15,7 @@ export function LeadForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [formKey, setFormKey] = useState(0);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -75,7 +76,9 @@ export function LeadForm() {
       console.log("Form submitted successfully");
       setSubmitted(true);
       setError(null);
-      (event.currentTarget as HTMLFormElement).reset();
+      
+      // Reset form by changing the key to force re-render
+      setFormKey(prev => prev + 1);
       
     } catch (e) {
       console.error("Form submission error:", e);
@@ -101,7 +104,7 @@ export function LeadForm() {
         <div className="mt-3 rounded-md bg-red-50 dark:bg-red-100 p-3 text-sm text-red-700 dark:text-red-900">{error}</div>
       )}
       
-      <form onSubmit={handleSubmit} className="mt-4 grid grid-cols-1 gap-3">
+      <form key={formKey} onSubmit={handleSubmit} className="mt-4 grid grid-cols-1 gap-3">
         <div className="grid gap-1">
           <label htmlFor="name" className="text-sm font-medium text-black dark:text-black">Full name</label>
           <input 
