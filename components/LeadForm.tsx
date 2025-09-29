@@ -37,6 +37,19 @@ export function LeadForm() {
       message: String(formData.get("message") || "").trim() || undefined,
     };
 
+    // Debug: Log form data
+    console.log("Form data entries:");
+    for (const [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+
+    // Validate required fields
+    if (!payload.name || !payload.phone) {
+      setError("Name and phone are required.");
+      setSubmitting(false);
+      return;
+    }
+
     try {
       console.log("Submitting form:", payload);
       
@@ -47,10 +60,16 @@ export function LeadForm() {
       });
       
       console.log("Response status:", res.status);
+      console.log("Response headers:", Object.fromEntries(res.headers.entries()));
       
       if (!res.ok) {
+        const errorText = await res.text();
+        console.error("Error response:", errorText);
         throw new Error(`HTTP ${res.status}: ${res.statusText}`);
       }
+      
+      const result = await res.json();
+      console.log("Success response:", result);
       
       // Success - clear error and set submitted
       console.log("Form submitted successfully");
