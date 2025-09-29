@@ -15,8 +15,12 @@ type LeadPayload = {
 
 export async function POST(request: NextRequest) {
   try {
+    console.log("Lead API called");
     const payload = (await request.json()) as Partial<LeadPayload>;
+    console.log("Received payload:", payload);
+    
     if (!payload.name || !payload.phone) {
+      console.log("Missing required fields:", { name: payload.name, phone: payload.phone });
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -37,13 +41,15 @@ export async function POST(request: NextRequest) {
 
     // Send email via Resend if available
     if (resend) {
-      await resend.emails.send({
+      console.log("Sending email via Resend to:", siteConfig.email);
+      const emailResult = await resend.emails.send({
         from: "Yeti Plumbing <help@resgato.com>",
         to: [siteConfig.email],
         subject: `New Lead: ${payload.service || "Service Request"} — ${payload.name}`,
         replyTo: payload.email || undefined,
         html,
       });
+      console.log("Email sent successfully:", emailResult);
     } else {
       // Fallback: log to console if Resend is not configured
       console.log("New lead (Resend not configured):", payload);
