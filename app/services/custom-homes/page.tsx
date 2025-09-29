@@ -48,95 +48,91 @@ export default function CustomHomesPage() {
             <img src="/kitchen.jpg" alt="Custom home kitchen plumbing" className="w-full h-64 object-cover rounded-lg shadow-md" />
           </div>
 
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-black dark:text-black">What is Custom Home Plumbing?</h2>
-            <p className="text-black dark:text-black">
-              Custom home plumbing involves designing and installing complete plumbing systems for new construction. 
-              This includes everything from underground pipes to fixture installation, ensuring your home has 
-              reliable water supply, drainage, and gas systems.
-            </p>
+          <div className="prose prose-lg max-w-none space-y-8">
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">What is Custom Home Plumbing?</h2>
+              <p className="text-black dark:text-black mb-6">
+                Custom home plumbing involves designing and installing complete plumbing systems for new construction. 
+                This includes everything from underground pipes to fixture installation, ensuring your home has 
+                reliable water supply, drainage, and gas systems.
+              </p>
+            </section>
 
-            <h2 className="text-black dark:text-black">Our Custom Home Plumbing Services</h2>
-            <h3 className="text-black dark:text-black">Underground Plumbing</h3>
-            <p className="text-black dark:text-black">
-              We handle all underground plumbing work including main water lines, sewer connections, and gas lines. 
-              This foundational work is critical for your home's plumbing system.
-            </p>
-            <ul className="text-black dark:text-black">
-              <li>Main water line installation</li>
-              <li>Sewer connection and drainage</li>
-              <li>Gas line installation</li>
-              <li>Underground pipe routing</li>
-            </ul>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Our Custom Home Plumbing Services</h2>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Underground Plumbing</h3>
+              <p className="text-black dark:text-black mb-4">
+                We handle all underground plumbing work including main water lines, sewer connections, and gas lines. 
+                This foundational work is critical for your home's plumbing system.
+              </p>
+              <ul className="text-black dark:text-black space-y-2 mb-6">
+                <li>Main water line installation</li>
+                <li>Sewer connection and drainage</li>
+                <li>Gas line installation</li>
+                <li>Underground pipe routing</li>
+              </ul>
 
-            <h3 className="text-black dark:text-black">Rough-in Plumbing</h3>
-            <p className="text-black dark:text-black">
-              Rough-in plumbing involves installing pipes in walls and floors before drywall installation. 
-              This phase sets up the framework for all your fixtures.
-            </p>
-            <ul className="text-black dark:text-black">
-              <li>Wall and floor pipe installation</li>
-              <li>Fixture stub-outs</li>
-              <li>Drain and vent systems</li>
-              <li>Gas line rough-ins</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Rough-in Plumbing</h3>
+              <p className="text-black dark:text-black mb-4">
+                Rough-in plumbing involves installing pipes in walls and floors before drywall installation. 
+                This phase sets up the framework for all your fixtures.
+              </p>
+              <ul className="text-black dark:text-black space-y-2 mb-6">
+                <li>Wall and floor pipe installation</li>
+                <li>Fixture stub-outs</li>
+                <li>Drain and vent systems</li>
+                <li>Gas line rough-ins</li>
+              </ul>
 
-            <h3 className="text-black dark:text-black">Finish Plumbing</h3>
-            <p className="text-black dark:text-black">
-              Finish plumbing includes the final installation of fixtures and connections. This is where 
-              your plumbing system becomes functional.
-            </p>
-            <ul className="text-black dark:text-black">
-              <li>Fixture installation and connection</li>
-              <li>Final pipe connections</li>
-              <li>Testing and inspection</li>
-              <li>Code compliance verification</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Finish Plumbing</h3>
+              <p className="text-black dark:text-black mb-4">
+                Finish plumbing includes the final installation of fixtures and connections. This is where 
+                your plumbing system becomes functional.
+              </p>
+              <ul className="text-black dark:text-black space-y-2">
+                <li>Fixture installation and connection</li>
+                <li>Final pipe connections</li>
+                <li>Testing and inspection</li>
+                <li>Code compliance verification</li>
+              </ul>
+            </section>
 
-            <h2 className="text-black dark:text-black">Why Choose Yeti Plumbing for Custom Homes?</h2>
-            <p className="text-black dark:text-black">
-              Building a custom home is a significant investment. Our experienced team ensures your 
-              plumbing system is built to last, with attention to detail and strict adherence to 
-              building codes and best practices.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Why Choose Yeti Plumbing for Custom Homes?</h2>
+              <p className="text-black dark:text-black mb-6">
+                Building a custom home is a significant investment. Our experienced team ensures your 
+                plumbing system is built to last, with attention to detail and strict adherence to 
+                building codes and best practices.
+              </p>
 
             <div className="my-8">
               <img src="/familyfirst.jpg" alt="Family-first custom home plumbing" className="w-full h-48 object-cover rounded-lg shadow-md" />
             </div>
 
-            <h2 className="text-black dark:text-black">Common Questions About Custom Home Plumbing</h2>
-            
-            <h3 className="text-black dark:text-black">How much does custom home plumbing cost?</h3>
-            <p className="text-black dark:text-black">
-              Custom home plumbing costs vary based on home size, complexity, and fixtures chosen. 
-              A typical 2,500 sq ft home ranges from $15,000-$25,000 for complete plumbing systems. 
-              Contact us for a detailed estimate.
-            </p>
+            </section>
 
-            <h3 className="text-black dark:text-black">How long does custom home plumbing take?</h3>
-            <p className="text-black dark:text-black">
-              Rough-in plumbing typically takes 1-2 weeks, while finish plumbing takes 3-5 days. 
-              Total timeline depends on home size and complexity. We coordinate with your builder 
-              to ensure timely completion.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Common Questions About Custom Home Plumbing</h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">How much does custom home plumbing cost?</h3>
+                  <p className="text-black dark:text-black">
+                    Custom home plumbing costs vary based on home size, complexity, and fixtures chosen. 
+                    A typical 2,500 sq ft home ranges from $15,000-$25,000 for complete plumbing systems. 
+                    Contact us for a detailed estimate.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-            <h3 className="text-black dark:text-black">What permits are required for custom home plumbing?</h3>
-            <p className="text-black dark:text-black">
-              All custom home plumbing requires permits and inspections. We handle all permit 
-              applications and coordinate inspections to ensure compliance with Arizona building codes.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Areas We Serve</h2>
+              <p className="text-black dark:text-black">
+                We provide custom home plumbing services throughout the Phoenix metro area: {siteConfig.serviceArea.join(", ")}.
+              </p>
+            </section>
 
-            <h3 className="text-black dark:text-black">Do you work with custom home builders?</h3>
-            <p className="text-black dark:text-black">
-              Yes, we regularly work with custom home builders throughout Phoenix, Mesa, Scottsdale, 
-              Gilbert, Chandler, and Queen Creek. We coordinate with your builder's timeline and 
-              specifications.
-            </p>
-
-            <h2 className="text-black dark:text-black">Areas We Serve</h2>
-            <p className="text-black dark:text-black">
-              We provide custom home plumbing services throughout the Phoenix metro area: {siteConfig.serviceArea.join(", ")}.
-            </p>
           </div>
         </div>
 

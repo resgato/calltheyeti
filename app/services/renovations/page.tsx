@@ -48,113 +48,101 @@ export default function RenovationsPage() {
             <img src="/bathtub.jpg" alt="Bathroom renovation plumbing" className="w-full h-64 object-cover rounded-lg shadow-md" />
           </div>
 
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-black dark:text-black">What is Renovation Plumbing?</h2>
-            <p className="text-black dark:text-black">
-              Renovation plumbing involves updating or replacing existing plumbing systems during home 
-              remodeling projects. This includes upgrading fixtures, relocating plumbing lines, and 
-              ensuring all work meets current building codes and standards.
-            </p>
+          <div className="prose prose-lg max-w-none space-y-8">
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">What is Renovation Plumbing?</h2>
+              <p className="text-black dark:text-black mb-6">
+                Renovation plumbing involves updating or replacing existing plumbing systems during home 
+                remodeling projects. This includes upgrading fixtures, relocating plumbing lines, and 
+                ensuring all work meets current building codes and standards.
+              </p>
+            </section>
 
-            <h2 className="text-black dark:text-black">Our Renovation Plumbing Services</h2>
-            <h3 className="text-black dark:text-black">Kitchen Remodel Plumbing</h3>
-            <p className="text-black dark:text-black">
-              Kitchen renovations often require significant plumbing work. We handle everything from 
-              simple sink replacements to complete kitchen plumbing overhauls.
-            </p>
-            <ul className="text-black dark:text-black">
-              <li>Kitchen sink installation and replacement</li>
-              <li>Dishwasher installation and hookups</li>
-              <li>Garbage disposal installation</li>
-              <li>Pot filler installation</li>
-              <li>Refrigerator water line installation</li>
-              <li>Gas line installation for stoves</li>
-            </ul>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Our Renovation Plumbing Services</h2>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Kitchen Remodel Plumbing</h3>
+              <p className="text-black dark:text-black mb-4">
+                Kitchen renovations often require significant plumbing work. We handle everything from 
+                simple sink replacements to complete kitchen plumbing overhauls.
+              </p>
+              <ul className="text-black dark:text-black space-y-2 mb-6">
+                <li>Kitchen sink installation and replacement</li>
+                <li>Dishwasher installation and hookups</li>
+                <li>Garbage disposal installation</li>
+                <li>Pot filler installation</li>
+                <li>Refrigerator water line installation</li>
+                <li>Gas line installation for stoves</li>
+              </ul>
 
             <div className="my-8">
               <img src="/kitchenbefore.jpg" alt="Kitchen before renovation" className="w-full h-48 object-cover rounded-lg shadow-md" />
             </div>
 
-            <h3 className="text-black dark:text-black">Bathroom Renovation Plumbing</h3>
-            <p className="text-black dark:text-black">
-              Bathroom renovations can transform your home's value and comfort. Our bathroom plumbing 
-              services include complete fixture upgrades and modern installations.
-            </p>
-            <ul className="text-black dark:text-black">
-              <li>Toilet installation and replacement</li>
-              <li>Vanity sink installation</li>
-              <li>Shower and bathtub installation</li>
-              <li>Shower valve replacement</li>
-              <li>Bathroom fixture upgrades</li>
-              <li>Accessibility modifications</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Bathroom Renovation Plumbing</h3>
+              <p className="text-black dark:text-black mb-4">
+                Bathroom renovations can transform your home's value and comfort. Our bathroom plumbing 
+                services include complete fixture upgrades and modern installations.
+              </p>
+              <ul className="text-black dark:text-black space-y-2 mb-6">
+                <li>Toilet installation and replacement</li>
+                <li>Vanity sink installation</li>
+                <li>Shower and bathtub installation</li>
+                <li>Shower valve replacement</li>
+                <li>Bathroom fixture upgrades</li>
+                <li>Accessibility modifications</li>
+              </ul>
 
             <div className="my-8">
               <img src="/kitchen.jpg" alt="Kitchen after renovation" className="w-full h-48 object-cover rounded-lg shadow-md" />
             </div>
 
-            <h3 className="text-black dark:text-black">Fixture Upgrades</h3>
-            <p className="text-black dark:text-black">
-              Modern fixtures can dramatically improve your home's functionality and appearance. 
-              We install and upgrade all types of plumbing fixtures.
-            </p>
-            <ul className="text-black dark:text-black">
-              <li>Modern faucets and showerheads</li>
-              <li>Energy-efficient fixtures</li>
-              <li>Smart home plumbing features</li>
-              <li>Accessibility fixtures</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Fixture Upgrades</h3>
+              <p className="text-black dark:text-black mb-4">
+                Modern fixtures can dramatically improve your home's functionality and appearance. 
+                We install and upgrade all types of plumbing fixtures.
+              </p>
+              <ul className="text-black dark:text-black space-y-2 mb-6">
+                <li>Modern faucets and showerheads</li>
+                <li>Energy-efficient fixtures</li>
+                <li>Smart home plumbing features</li>
+                <li>Accessibility fixtures</li>
+              </ul>
 
-            <h3 className="text-black dark:text-black">Pipe Relocation</h3>
-            <p className="text-black dark:text-black">
-              When renovating, you may need to move plumbing lines to accommodate new layouts. 
-              We handle all pipe relocation with minimal disruption.
-            </p>
-            <ul className="text-black dark:text-black">
-              <li>Moving water supply lines</li>
-              <li>Relocating drain pipes</li>
-              <li>Updating vent systems</li>
-              <li>Gas line relocation</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Pipe Relocation</h3>
+              <p className="text-black dark:text-black mb-4">
+                When renovating, you may need to move plumbing lines to accommodate new layouts. 
+                We handle all pipe relocation with minimal disruption.
+              </p>
+              <ul className="text-black dark:text-black space-y-2">
+                <li>Moving water supply lines</li>
+                <li>Relocating drain pipes</li>
+                <li>Updating vent systems</li>
+                <li>Gas line relocation</li>
+              </ul>
+            </section>
 
-            <h2 className="text-black dark:text-black">Common Questions About Renovation Plumbing</h2>
-            
-            <h3 className="text-black dark:text-black">How much does renovation plumbing cost?</h3>
-            <p className="text-black dark:text-black">
-              Renovation plumbing costs vary widely based on project scope. Simple fixture replacements 
-              start at $200-500, while complete kitchen or bathroom remodels range from $3,000-$15,000. 
-              Contact us for a detailed estimate.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Common Questions About Renovation Plumbing</h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">How much does renovation plumbing cost?</h3>
+                  <p className="text-black dark:text-black">
+                    Renovation plumbing costs vary widely based on project scope. Simple fixture replacements 
+                    start at $200-500, while complete kitchen or bathroom remodels range from $3,000-$15,000. 
+                    Contact us for a detailed estimate.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-            <h3 className="text-black dark:text-black">How long does renovation plumbing take?</h3>
-            <p className="text-black dark:text-black">
-              Timeline depends on project complexity. Simple fixture replacements take 2-4 hours, 
-              while complete renovations take 1-3 days. We coordinate with your contractor to 
-              minimize disruption.
-            </p>
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Areas We Serve</h2>
+              <p className="text-black dark:text-black">
+                We provide renovation plumbing services throughout the Phoenix metro area: {siteConfig.serviceArea.join(", ")}.
+              </p>
+            </section>
 
-            <h3 className="text-black dark:text-black">Do I need permits for renovation plumbing?</h3>
-            <p className="text-black dark:text-black">
-              Most renovation plumbing work requires permits, especially when moving or adding 
-              plumbing lines. We handle all permit applications and coordinate inspections.
-            </p>
-
-            <h3 className="text-black dark:text-black">Can you work with my contractor?</h3>
-            <p className="text-black dark:text-black">
-              Absolutely! We regularly work with contractors, designers, and homeowners to ensure 
-              smooth renovation projects. We coordinate timing and specifications with your team.
-            </p>
-
-            <h3 className="text-black dark:text-black">What if you find problems during renovation?</h3>
-            <p className="text-black dark:text-black">
-              We thoroughly inspect existing plumbing before starting work. If we discover issues 
-              like old pipes or code violations, we'll provide options and estimates for repairs.
-            </p>
-
-            <h2 className="text-black dark:text-black">Areas We Serve</h2>
-            <p className="text-black dark:text-black">
-              We provide renovation plumbing services throughout the Phoenix metro area: {siteConfig.serviceArea.join(", ")}.
-            </p>
           </div>
         </div>
 
