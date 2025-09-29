@@ -69,20 +69,32 @@ export function LeadForm() {
         throw new Error(`HTTP ${res.status}: ${res.statusText}`);
       }
       
-      const result = await res.json();
-      console.log("Success response:", result);
+      let result;
+      try {
+        result = await res.json();
+        console.log("Success response:", result);
+      } catch (jsonError) {
+        console.error("Failed to parse JSON response:", jsonError);
+        throw new Error("Invalid response from server");
+      }
       
-      // Success - clear error and set submitted
-      console.log("Form submitted successfully");
-      setSubmitted(true);
-      setError(null);
+      // Check if the response indicates success
+      if (result.success || result.ok) {
+        console.log("Form submitted successfully");
+        setSubmitted(true);
+        setError(null);
+      } else {
+        console.error("API returned error:", result);
+        throw new Error(result.error || "Server returned an error");
+      }
       
       // Reset form by changing the key to force re-render
       setFormKey(prev => prev + 1);
       
     } catch (e) {
       console.error("Form submission error:", e);
-      setError("Something went wrong. Please call us if this persists.");
+      const errorMessage = e instanceof Error ? e.message : "Something went wrong. Please call us if this persists.";
+      setError(errorMessage);
       setSubmitted(false);
     } finally {
       setSubmitting(false);

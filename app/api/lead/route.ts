@@ -55,7 +55,10 @@ export async function POST(request: NextRequest) {
       console.log("New lead (Resend not configured):", payload);
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ 
+      success: true, 
+      message: "Lead submitted successfully" 
+    });
   } catch (err) {
     console.error("Lead POST error:", err);
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
