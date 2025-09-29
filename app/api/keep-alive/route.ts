@@ -3,10 +3,10 @@ import { supabase } from '@/lib/supabase';
 
 export async function GET(request: NextRequest) {
   try {
-    // Simple query to keep the database active
+    // Simple query to keep the database active - just test the connection
     const { data, error } = await supabase
-      .from('content')
-      .select('id')
+      .from('pg_tables')
+      .select('tablename')
       .limit(1);
 
     if (error) {
