@@ -9,7 +9,8 @@
     "lint": "next lint",
     "mcp:server": "node scripts/mcp-server.js",
     "mcp:test": "node scripts/test-mcp-connection.js",
-    "test:mcp": "node scripts/test-mcp-connection.js"
+    "test:mcp": "node scripts/test-mcp-connection.js",
+    "keep-alive": "node scripts/keep-alive.js"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",
