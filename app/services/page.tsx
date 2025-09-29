@@ -58,6 +58,10 @@ export default function ServicesPage() {
       "Water Heaters": {
         image: "/arizonawaterheater.png",
         href: "/services/water-heaters"
+      },
+      "Water Softeners": {
+        image: "/watersoftener.jpg",
+        href: "/services/water-softeners"
       }
     };
     
@@ -145,6 +149,10 @@ export default function ServicesPage() {
           <div className="space-y-2">
             <img src="/sinksinstalled.webp" alt="Fixture installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
             <p className="text-sm text-black/70 dark:text-black/70 text-center">Fixture Installation</p>
+          </div>
+          <div className="space-y-2">
+            <img src="/watersoftener.jpg" alt="Water softener installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <p className="text-sm text-black/70 dark:text-black/70 text-center">Water Softener</p>
           </div>
         </div>
       </div>

@@ -87,7 +87,8 @@ export const defaultHomepageContent: HomepageContent = {
       { title: "Service & Repairs", description: "Leaks, clogs, replacements", href: "/services" },
       { title: "Bathtubs & Showers", description: "Install & upgrades", href: "/services" },
       { title: "Faucets & Fixtures", description: "Repair or replace", href: "/services" },
-      { title: "Water Heaters", description: "Repair & install", href: "/services" }
+      { title: "Water Heaters", description: "Repair & install", href: "/services" },
+      { title: "Water Softeners", description: "Install & maintain", href: "/services" }
     ]
   },
   features: [
@@ -176,6 +177,11 @@ export const defaultServicesContent: ServicesContent = {
       title: "Water Heaters",
       description: "Water heater repair and installation services",
       features: ["Tank water heaters", "Tankless water heaters", "Repairs", "Energy efficiency"]
+    },
+    {
+      title: "Water Softeners",
+      description: "Water softener installation and maintenance services",
+      features: ["Salt-based systems", "Salt-free conditioners", "Whole house treatment", "Water quality testing"]
     }
   ]
 };

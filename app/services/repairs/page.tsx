@@ -227,7 +227,7 @@ export default function RepairsPage() {
           <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
                           <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Emergency Service</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
-                              Plumbing emergency? We provide emergency repair service.
+              Plumbing emergency? We provide 24/7 emergency repair service.
             </p>
             <a 
               href="tel:+18017072547" 
@@ -268,7 +268,7 @@ export default function RepairsPage() {
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>✓ Licensed & Insured (ROC360510)</li>
               <li>✓ 15+ Years Experience</li>
-                              <li>✓ Emergency Service</li>
+              <li>✓ 24/7 Emergency Service</li>
               <li>✓ Competitive Pricing</li>
               <li>✓ Warranty on All Work</li>
             </ul>
