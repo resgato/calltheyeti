@@ -3,7 +3,6 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: "Water Softeners | Phoenix Water Softener Installation & Repair",
   description: "Expert water softener installation, repair, and maintenance in Phoenix, Arizona. Whole house water treatment systems, salt-free options, and water quality solutions. Licensed • Insured • ROC360510.",
   keywords: [
@@ -19,23 +18,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Water Softeners | Phoenix Water Softener Installation & Repair",
     description: "Expert water softener installation, repair, and maintenance in Phoenix, Arizona. Whole house water treatment systems, salt-free options, and water quality solutions.",
-=======
-  title: "Water Softeners | Phoenix Water Softener Installation & Service",
-  description: "Expert water softener installation, repair, and maintenance in Phoenix, Arizona. Salt-based and salt-free systems, water quality testing, and regular service. Licensed • Insured • ROC360510.",
-  keywords: [
-    "water softener installation Phoenix",
-    "water softener repair Arizona",
-    "salt-free water softener",
-    "water softener maintenance",
-    "Phoenix water softener service",
-    "Arizona water softener plumber",
-    "water quality testing",
-    "hard water treatment",
-  ],
-  openGraph: {
-    title: "Water Softeners | Phoenix Water Softener Installation & Service",
-    description: "Expert water softener installation, repair, and maintenance in Phoenix, Arizona. Salt-based and salt-free systems, water quality testing, and regular service.",
->>>>>>> a2c2c87c7d95c04f4a8f9a2a8cbf90586153c4e1
     images: ["/watersoftener.jpg"],
   },
   alternates: {
