@@ -245,7 +245,7 @@ export default function WaterHeatersPage() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/emergency-plumbing" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/repairs" className="text-red-700 dark:text-red-700 hover:underline">
                   Emergency Plumbing
                 </Link>
               </li>

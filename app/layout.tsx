@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Add your Google Search Console verification code
+    // google: "YOUR_CODE_HERE", // Add your Google Search Console verification code
   },
   category: "Plumbing Services",
   classification: "Local Business",

@@ -227,12 +227,12 @@ export default function FaucetsFixturesPage() {
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Related Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/kitchen-plumbing" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/custom-homes" className="text-red-700 dark:text-red-700 hover:underline">
                   Kitchen Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/bathroom-plumbing" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/bathtubs-showers" className="text-red-700 dark:text-red-700 hover:underline">
                   Bathroom Plumbing
                 </Link>
               </li>
@@ -242,7 +242,7 @@ export default function FaucetsFixturesPage() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/emergency-plumbing" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/repairs" className="text-red-700 dark:text-red-700 hover:underline">
                   Emergency Plumbing
                 </Link>
               </li>

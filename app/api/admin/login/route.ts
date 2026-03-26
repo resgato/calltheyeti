@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import { supabase } from '@/lib/supabase';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-for-development';
+const JWT_SECRET = process.env.JWT_SECRET || '';
 
 export async function POST(request: NextRequest) {
   try {

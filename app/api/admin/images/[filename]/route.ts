@@ -4,7 +4,7 @@ import { unlink } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const JWT_SECRET = process.env.JWT_SECRET || '';
 
 function verifyToken(request: NextRequest) {
   const authHeader = request.headers.get('authorization');
@@ -36,7 +36,17 @@ export async function DELETE(
 
     const resolvedParams = await params;
     const filename = decodeURIComponent(resolvedParams.filename);
-    const filepath = join(process.cwd(), 'public', 'uploads', filename);
+
+    // Prevent path traversal
+    if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
+      return NextResponse.json(
+        { success: false, message: 'Invalid filename' },
+        { status: 400 }
+      );
+    }
+
+    const uploadDir = join(process.cwd(), 'public', 'uploads');
+    const filepath = join(uploadDir, filename);
 
     if (!existsSync(filepath)) {
       return NextResponse.json(

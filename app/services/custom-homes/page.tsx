@@ -159,12 +159,12 @@ export default function CustomHomesPage() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/kitchen-plumbing" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/faucets-fixtures" className="text-red-700 dark:text-red-700 hover:underline">
                   Kitchen Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/bathroom-plumbing" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/bathtubs-showers" className="text-red-700 dark:text-red-700 hover:underline">
                   Bathroom Plumbing
                 </Link>
               </li>

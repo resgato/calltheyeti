@@ -4,7 +4,7 @@ import { writeFile, copyFile } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const JWT_SECRET = process.env.JWT_SECRET || '';
 
 function verifyToken(request: NextRequest) {
   const authHeader = request.headers.get('authorization');

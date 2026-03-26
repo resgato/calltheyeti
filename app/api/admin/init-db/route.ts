@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 import { createTables } from '@/lib/db';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const JWT_SECRET = process.env.JWT_SECRET || '';
 
 function verifyToken(request: NextRequest) {
   const authHeader = request.headers.get('authorization');

@@ -73,37 +73,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Add service area pages for local SEO
     {
-      url: `${baseUrl}/phoenix-plumber`,
+      url: `${baseUrl}/services/phoenix-plumber`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/mesa-plumber`,
+      url: `${baseUrl}/services/mesa-plumber`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/scottsdale-plumber`,
+      url: `${baseUrl}/services/scottsdale-plumber`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/gilbert-plumber`,
+      url: `${baseUrl}/services/gilbert-plumber`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/chandler-plumber`,
+      url: `${baseUrl}/services/chandler-plumber`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/queen-creek-plumber`,
+      url: `${baseUrl}/services/queen-creek-plumber`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,

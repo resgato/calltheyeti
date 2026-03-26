@@ -238,7 +238,7 @@ export default function RepairsPage() {
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Related Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/emergency-plumbing" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/water-heaters" className="text-red-700 dark:text-red-700 hover:underline">
                   Emergency Plumbing
                 </Link>
               </li>

@@ -175,22 +175,29 @@ async function runMigrations() {
     }
 
     // Insert admin user
-    console.log('Inserting admin user...');
-    const bcrypt = require('bcryptjs');
-    const passwordHash = await bcrypt.hash('siggy', 10);
-    
-    const { error: adminError } = await supabase
-      .from('admin_users')
-      .upsert({
-        username: 'cami',
-        password_hash: passwordHash,
-        role: 'admin'
-      }, { onConflict: 'username' });
+    const adminUsername = process.env.ADMIN_USERNAME;
+    const adminPassword = process.env.ADMIN_PASSWORD;
 
-    if (adminError) {
-      console.log('Admin user insertion error:', adminError.message);
+    if (adminUsername && adminPassword) {
+      console.log('Inserting admin user...');
+      const bcrypt = require('bcryptjs');
+      const passwordHash = await bcrypt.hash(adminPassword, 10);
+
+      const { error: adminError } = await supabase
+        .from('admin_users')
+        .upsert({
+          username: adminUsername,
+          password_hash: passwordHash,
+          role: 'admin'
+        }, { onConflict: 'username' });
+
+      if (adminError) {
+        console.log('Admin user insertion error:', adminError.message);
+      } else {
+        console.log('Admin user created successfully');
+      }
     } else {
-      console.log('Admin user created successfully');
+      console.log('Skipping admin user creation: set ADMIN_USERNAME and ADMIN_PASSWORD env vars');
     }
 
     console.log('Migrations completed successfully!');

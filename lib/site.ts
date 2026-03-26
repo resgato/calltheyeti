@@ -92,11 +92,15 @@ export function buildLocalBusinessJsonLd() {
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
-          "Sunday",
         ],
-        opens: "00:00",
-        closes: "23:59",
+        opens: "08:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday"],
+        opens: "08:00",
+        closes: "14:00",
       },
     ],
     serviceType: [
@@ -155,7 +159,7 @@ export function buildLocalBusinessJsonLd() {
         }
       ]
     },
-    sameAs: [] as string[],
+    sameAs: ["https://www.instagram.com/yetiplumbingaz/"],
   } as const;
 }
 

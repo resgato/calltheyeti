@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import { dbContentStorage } from '@/lib/db-content-storage';
 import { HomepageContent } from '@/lib/content';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const JWT_SECRET = process.env.JWT_SECRET || '';
 
 function verifyToken(request: NextRequest) {
   const authHeader = request.headers.get('authorization');
