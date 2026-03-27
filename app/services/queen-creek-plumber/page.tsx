@@ -205,6 +205,26 @@ export default function QueenCreekPlumberPage() {
                 weekend, give us a call.
               </p>
             </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Does Yeti Plumbing serve Queen Creek?</h3>
+                  <p className="text-black dark:text-black">
+                    Yes, Yeti Plumbing provides full plumbing services throughout Queen Creek including Sossaman
+                    Farms, Hastings Farms, and all surrounding neighborhoods.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Do you offer new construction plumbing in Queen Creek?</h3>
+                  <p className="text-black dark:text-black">
+                    Yes, with Queen Creek's rapid growth, Yeti Plumbing works with builders and homeowners on new
+                    construction plumbing throughout the area.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
 

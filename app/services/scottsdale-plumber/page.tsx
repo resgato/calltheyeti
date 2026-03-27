@@ -188,6 +188,26 @@ export default function ScottsdalePlumberPage() {
                 attention to detail.
               </p>
             </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Do you work on luxury homes in Scottsdale?</h3>
+                  <p className="text-black dark:text-black">
+                    Yes, Yeti Plumbing specializes in plumbing for luxury and custom homes throughout Scottsdale,
+                    including North Scottsdale, McCormick Ranch, and Gainey Ranch.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">What plumbing services do you offer in Scottsdale?</h3>
+                  <p className="text-black dark:text-black">
+                    Yeti Plumbing offers custom home plumbing, renovation plumbing, repairs, water heater service,
+                    fixture installation, and emergency plumbing in Scottsdale.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
 

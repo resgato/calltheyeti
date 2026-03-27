@@ -82,13 +82,13 @@ export const defaultHomepageContent: HomepageContent = {
     title: "Plumbing Services",
     subtitle: "Expert technicians for any job — big or small.",
     items: [
-      { title: "Custom Homes", description: "Plumbing rough-ins & finish", href: "/services" },
-      { title: "Renovations", description: "Kitchen & bath remodel plumbing", href: "/services" },
-      { title: "Service & Repairs", description: "Leaks, clogs, replacements", href: "/services" },
-      { title: "Bathtubs & Showers", description: "Install & upgrades", href: "/services" },
-      { title: "Faucets & Fixtures", description: "Repair or replace", href: "/services" },
-      { title: "Water Heaters", description: "Repair & install", href: "/services" },
-      { title: "Water Softeners", description: "Install & maintain", href: "/services" }
+      { title: "Custom Homes", description: "Plumbing rough-ins & finish", href: "/services/custom-homes" },
+      { title: "Renovations", description: "Kitchen & bath remodel plumbing", href: "/services/renovations" },
+      { title: "Service & Repairs", description: "Leaks, clogs, replacements", href: "/services/repairs" },
+      { title: "Bathtubs & Showers", description: "Install & upgrades", href: "/services/bathtubs-showers" },
+      { title: "Faucets & Fixtures", description: "Repair or replace", href: "/services/faucets-fixtures" },
+      { title: "Water Heaters", description: "Repair & install", href: "/services/water-heaters" },
+      { title: "Water Softeners", description: "Install & maintain", href: "/services/water-softeners" }
     ]
   },
   features: [

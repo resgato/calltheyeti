@@ -191,6 +191,26 @@ export default function ChandlerPlumberPage() {
                 ready to help.
               </p>
             </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">What plumbing services does Yeti Plumbing offer in Chandler?</h3>
+                  <p className="text-black dark:text-black">
+                    Yeti Plumbing offers residential plumbing repairs, water heater installation and repair,
+                    renovation plumbing, new construction plumbing, and emergency service throughout Chandler, AZ.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Is Yeti Plumbing licensed to work in Chandler?</h3>
+                  <p className="text-black dark:text-black">
+                    Yes, Yeti Plumbing is fully licensed (ROC360510) and insured for plumbing work throughout
+                    Chandler and the Phoenix metro area.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
 

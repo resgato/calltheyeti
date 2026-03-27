@@ -188,6 +188,26 @@ export default function MesaPlumberPage() {
                 get the work done right the first time.
               </p>
             </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">What areas of Mesa does Yeti Plumbing serve?</h3>
+                  <p className="text-black dark:text-black">
+                    Yeti Plumbing serves all of Mesa including East Mesa, Superstition Springs, Mesa Riverview,
+                    Las Sendas, Red Mountain, Dobson Ranch, and surrounding neighborhoods.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Do you offer emergency plumbing in Mesa?</h3>
+                  <p className="text-black dark:text-black">
+                    Yes, Yeti Plumbing provides emergency plumbing service throughout Mesa with rapid response times.
+                    Call {siteConfig.phone} for immediate assistance.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
 

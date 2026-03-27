@@ -199,6 +199,26 @@ export default function GilbertPlumberPage() {
                 and stand behind every job with a warranty.
               </p>
             </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">What areas of Gilbert does Yeti Plumbing serve?</h3>
+                  <p className="text-black dark:text-black">
+                    Yeti Plumbing serves all of Gilbert including Power Ranch, Agritopia, the Heritage District,
+                    and surrounding communities.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Do you handle new construction plumbing in Gilbert?</h3>
+                  <p className="text-black dark:text-black">
+                    Yes, Yeti Plumbing provides complete new construction plumbing for custom homes and builders
+                    throughout Gilbert, AZ.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
 

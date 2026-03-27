@@ -190,6 +190,33 @@ export default function PhoenixPlumberPage() {
                 Phoenix, we treat every job with the same level of care.
               </p>
             </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-black dark:text-black mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">What areas of Phoenix does Yeti Plumbing serve?</h3>
+                  <p className="text-black dark:text-black">
+                    Yeti Plumbing serves all of Phoenix including Arcadia, Ahwatukee, North Phoenix, Downtown Phoenix,
+                    Desert Ridge, Biltmore, Camelback East, Laveen, South Mountain, Maryvale, Encanto, and Paradise
+                    Valley Village.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">How much does a plumber cost in Phoenix?</h3>
+                  <p className="text-black dark:text-black">
+                    Plumbing costs in Phoenix vary by service. Yeti Plumbing offers upfront, honest pricing with free
+                    estimates for most jobs. Call {siteConfig.phone} for a quote.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-black dark:text-black mb-2">Do you offer same-day plumbing service in Phoenix?</h3>
+                  <p className="text-black dark:text-black">
+                    Yes, Yeti Plumbing offers same-day service for most repairs in Phoenix and surrounding areas.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
 
