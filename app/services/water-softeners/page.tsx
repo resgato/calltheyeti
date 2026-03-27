@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildServicePageJsonLd, buildBreadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Water Softeners | Phoenix Water Softener Installation & Repair",
@@ -26,8 +28,26 @@ export const metadata: Metadata = {
 };
 
 export default function WaterSoftenersPage() {
+  const serviceJsonLd = buildServicePageJsonLd({
+    name: "Water Softener Installation",
+    description: "Water softener installation, repair, and maintenance in Phoenix, Arizona. Whole house water treatment systems, salt-free options, and water quality solutions.",
+    url: "https://calltheyeti.com/services/water-softeners",
+    image: "https://calltheyeti.com/watersoftener.jpg",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Water Softeners", url: "https://calltheyeti.com/services/water-softeners" },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="service-jsonld" type="application/ld+json">
+        {JSON.stringify(serviceJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

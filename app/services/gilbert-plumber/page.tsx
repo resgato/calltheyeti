@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildLocationPageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Gilbert Plumber | Licensed Plumbing Services | Yeti Plumbing",
@@ -29,8 +31,33 @@ export const metadata: Metadata = {
 };
 
 export default function GilbertPlumberPage() {
+  const locationJsonLd = buildLocationPageJsonLd({
+    city: "Gilbert",
+    state: "AZ",
+    url: "https://calltheyeti.com/services/gilbert-plumber",
+    description: "Licensed Gilbert, AZ plumber serving Power Ranch, Agritopia, and the Heritage District. New construction, renovations, repairs, and water heater service.",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Gilbert Plumber", url: "https://calltheyeti.com/services/gilbert-plumber" },
+  ]);
+  const faqJsonLd = buildPageFAQJsonLd([
+    { question: "What areas of Gilbert does Yeti Plumbing serve?", answer: "Yeti Plumbing serves all of Gilbert including Power Ranch, Agritopia, the Heritage District, and surrounding communities." },
+    { question: "Do you handle new construction plumbing in Gilbert?", answer: "Yes, Yeti Plumbing provides complete new construction plumbing for custom homes and builders throughout Gilbert, AZ." },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="location-jsonld" type="application/ld+json">
+        {JSON.stringify(locationJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
+      <Script id="faq-jsonld" type="application/ld+json">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

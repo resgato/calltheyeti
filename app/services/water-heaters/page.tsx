@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildServicePageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Water Heaters | Phoenix Water Heater Installation & Repair",
@@ -26,8 +28,36 @@ export const metadata: Metadata = {
 };
 
 export default function WaterHeatersPage() {
+  const serviceJsonLd = buildServicePageJsonLd({
+    name: "Water Heater Installation & Repair",
+    description: "Water heater installation, repair, and replacement in Phoenix, Arizona. Tank and tankless water heaters, emergency service, and maintenance.",
+    url: "https://calltheyeti.com/services/water-heaters",
+    image: "https://calltheyeti.com/arizonawaterheater.png",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Water Heaters", url: "https://calltheyeti.com/services/water-heaters" },
+  ]);
+  const faqJsonLd = buildPageFAQJsonLd([
+    { question: "How much does water heater installation cost?", answer: "Water heater installation costs vary based on type and size. Traditional tank water heaters range from $800-2,000, while tankless systems range from $1,500-4,000. Contact Yeti Plumbing for a detailed estimate." },
+    { question: "How long does water heater installation take?", answer: "Traditional water heater installation takes 2-4 hours, while tankless installations may take 4-6 hours." },
+    { question: "Should I repair or replace my water heater?", answer: "Generally, water heaters over 10 years old may be better replaced, especially if repairs are costly. Yeti Plumbing will assess your water heater's age, condition, and repair costs to recommend the best option." },
+    { question: "How often should I maintain my water heater?", answer: "Annual maintenance is recommended for optimal performance and longevity. This includes inspection, flushing, and component checks." },
+    { question: "Do you provide emergency water heater service?", answer: "Yes, Yeti Plumbing provides emergency water heater repair service for urgent issues like no hot water or leaks in Phoenix and surrounding areas." },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="service-jsonld" type="application/ld+json">
+        {JSON.stringify(serviceJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
+      <Script id="faq-jsonld" type="application/ld+json">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

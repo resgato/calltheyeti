@@ -48,12 +48,15 @@ export function buildStructuredData() {
         ],
         serviceType: [
           "Custom Home Plumbing",
-          "Renovation Plumbing", 
+          "Renovation Plumbing",
           "Emergency Plumbing",
           "Kitchen Plumbing",
           "Bathroom Plumbing",
           "Water Heater Installation",
+          "Water Softener Installation",
           "Fixture Installation",
+          "Plumbing Repair",
+          "Drain Cleaning",
         ],
         priceRange: "$$",
         paymentAccepted: ["Cash", "Check", "Credit Card"],
@@ -69,16 +72,6 @@ export function buildStructuredData() {
         publisher: {
           "@id": `${siteConfig.url}#organization`,
         },
-        potentialAction: [
-          {
-            "@type": "SearchAction",
-            target: {
-              "@type": "EntryPoint",
-              urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
-            },
-            "query-input": "required name=search_term_string",
-          },
-        ],
       },
       {
         "@type": "WebPage",
@@ -122,7 +115,7 @@ export function buildFAQStructuredData() {
         },
       },
       {
-        "@type": "Question", 
+        "@type": "Question",
         name: "Do you offer emergency plumbing?",
         acceptedAnswer: {
           "@type": "Answer",
@@ -150,9 +143,110 @@ export function buildFAQStructuredData() {
         name: "What types of plumbing services do you offer?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer custom home plumbing, renovations, repairs, bathtub and shower installation, faucet and fixture work, water heater installation and repair, and emergency plumbing services.",
+          text: "We offer custom home plumbing, renovations, repairs, bathtub and shower installation, faucet and fixture work, water heater installation and repair, water softener installation, and emergency plumbing services.",
         },
       },
     ],
+  }
+}
+
+// Reusable breadcrumb builder for any page
+export function buildBreadcrumbJsonLd(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  }
+}
+
+// Service page structured data
+export function buildServicePageJsonLd(config: {
+  name: string
+  description: string
+  url: string
+  image?: string
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: config.name,
+    description: config.description,
+    url: config.url,
+    image: config.image,
+    provider: {
+      "@type": "Plumber",
+      "@id": `${siteConfig.url}#organization`,
+      name: siteConfig.name,
+      telephone: siteConfig.phone,
+      url: siteConfig.url,
+    },
+    areaServed: siteConfig.serviceArea.map((area) => ({ "@type": "City", name: area })),
+    serviceType: config.name,
+  }
+}
+
+// Reusable FAQ builder for any page
+export function buildPageFAQJsonLd(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  }
+}
+
+// Location page structured data — city-specific LocalBusiness
+export function buildLocationPageJsonLd(config: {
+  city: string
+  state: string
+  url: string
+  description: string
+  neighborhoods?: string[]
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    name: `Yeti Plumbing - ${config.city} Plumber`,
+    url: config.url,
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
+    description: config.description,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: config.city,
+      addressRegion: config.state,
+      addressCountry: "US",
+    },
+    areaServed: {
+      "@type": "City",
+      name: config.city,
+      containedInPlace: {
+        "@type": "State",
+        name: "Arizona",
+      },
+    },
+    parentOrganization: {
+      "@type": "Plumber",
+      "@id": `${siteConfig.url}#organization`,
+      name: siteConfig.name,
+    },
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Contractor License",
+      name: siteConfig.license,
+      issuingBody: "Arizona Registrar of Contractors",
+    },
+    priceRange: "$$",
   }
 }

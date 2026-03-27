@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildLocationPageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Queen Creek Plumber | Licensed Plumbing Services | Yeti Plumbing",
@@ -29,8 +31,33 @@ export const metadata: Metadata = {
 };
 
 export default function QueenCreekPlumberPage() {
+  const locationJsonLd = buildLocationPageJsonLd({
+    city: "Queen Creek",
+    state: "AZ",
+    url: "https://calltheyeti.com/services/queen-creek-plumber",
+    description: "Licensed Queen Creek, AZ plumber serving Sossaman Farms, Hastings Farms, and Queen Creek Marketplace. New home plumbing, repairs, water heaters, and more.",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Queen Creek Plumber", url: "https://calltheyeti.com/services/queen-creek-plumber" },
+  ]);
+  const faqJsonLd = buildPageFAQJsonLd([
+    { question: "Does Yeti Plumbing serve Queen Creek?", answer: "Yes, Yeti Plumbing provides full plumbing services throughout Queen Creek including Sossaman Farms, Hastings Farms, and all surrounding neighborhoods." },
+    { question: "Do you offer new construction plumbing in Queen Creek?", answer: "Yes, with Queen Creek's rapid growth, Yeti Plumbing works with builders and homeowners on new construction plumbing throughout the area." },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="location-jsonld" type="application/ld+json">
+        {JSON.stringify(locationJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
+      <Script id="faq-jsonld" type="application/ld+json">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

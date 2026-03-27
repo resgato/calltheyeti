@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildLocationPageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Scottsdale Plumber | Licensed Plumbing Services | Yeti Plumbing",
@@ -29,8 +31,33 @@ export const metadata: Metadata = {
 };
 
 export default function ScottsdalePlumberPage() {
+  const locationJsonLd = buildLocationPageJsonLd({
+    city: "Scottsdale",
+    state: "AZ",
+    url: "https://calltheyeti.com/services/scottsdale-plumber",
+    description: "Licensed Scottsdale plumber for luxury homes, remodels, and repairs. Serving Old Town, North Scottsdale, McCormick Ranch, and Gainey Ranch.",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Scottsdale Plumber", url: "https://calltheyeti.com/services/scottsdale-plumber" },
+  ]);
+  const faqJsonLd = buildPageFAQJsonLd([
+    { question: "Do you work on luxury homes in Scottsdale?", answer: "Yes, Yeti Plumbing specializes in plumbing for luxury and custom homes throughout Scottsdale, including North Scottsdale, McCormick Ranch, and Gainey Ranch." },
+    { question: "What plumbing services do you offer in Scottsdale?", answer: "Yeti Plumbing offers custom home plumbing, renovation plumbing, repairs, water heater service, fixture installation, and emergency plumbing in Scottsdale." },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="location-jsonld" type="application/ld+json">
+        {JSON.stringify(locationJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
+      <Script id="faq-jsonld" type="application/ld+json">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

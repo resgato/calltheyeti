@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildLocationPageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Mesa Plumber | Licensed Plumbing Services | Yeti Plumbing",
@@ -29,8 +31,33 @@ export const metadata: Metadata = {
 };
 
 export default function MesaPlumberPage() {
+  const locationJsonLd = buildLocationPageJsonLd({
+    city: "Mesa",
+    state: "AZ",
+    url: "https://calltheyeti.com/services/mesa-plumber",
+    description: "Licensed Mesa, AZ plumber serving East Mesa, Superstition Springs, and Mesa Riverview. Repairs, water heaters, renovations, and custom home plumbing.",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Mesa Plumber", url: "https://calltheyeti.com/services/mesa-plumber" },
+  ]);
+  const faqJsonLd = buildPageFAQJsonLd([
+    { question: "What areas of Mesa does Yeti Plumbing serve?", answer: "Yeti Plumbing serves all of Mesa including East Mesa, Superstition Springs, Mesa Riverview, and surrounding neighborhoods." },
+    { question: "Do you offer emergency plumbing in Mesa?", answer: "Yes, Yeti Plumbing provides emergency plumbing service throughout Mesa with rapid response times." },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="location-jsonld" type="application/ld+json">
+        {JSON.stringify(locationJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
+      <Script id="faq-jsonld" type="application/ld+json">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

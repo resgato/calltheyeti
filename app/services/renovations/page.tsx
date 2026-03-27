@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildServicePageJsonLd, buildBreadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Renovation Plumbing | Phoenix Kitchen & Bath Remodel Plumbing",
@@ -26,8 +28,26 @@ export const metadata: Metadata = {
 };
 
 export default function RenovationsPage() {
+  const serviceJsonLd = buildServicePageJsonLd({
+    name: "Renovation Plumbing",
+    description: "Kitchen and bathroom renovation plumbing in Phoenix, Arizona. Remodel plumbing, fixture upgrades, layout changes, and code compliance.",
+    url: "https://calltheyeti.com/services/renovations",
+    image: "https://calltheyeti.com/bathtub.jpg",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Renovations", url: "https://calltheyeti.com/services/renovations" },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="service-jsonld" type="application/ld+json">
+        {JSON.stringify(serviceJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

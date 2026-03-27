@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { siteConfig, buildLocalBusinessJsonLd } from "@/lib/site";
 import { buildStructuredData } from "@/lib/structured-data";
 import Script from "next/script";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -157,10 +158,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Header />
         {children}
         <footer className="mt-24 border-t border-black/10 dark:border-white/10 bg-white dark:bg-gray-50">
-          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-black/70 dark:text-black/70">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-black/70 dark:text-black/70">
+            <nav aria-label="Footer navigation" className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
+              <div>
+                <h3 className="font-semibold text-black dark:text-black mb-3">Services</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/services/custom-homes" className="hover:text-red-700">Custom Homes</Link></li>
+                  <li><Link href="/services/renovations" className="hover:text-red-700">Renovations</Link></li>
+                  <li><Link href="/services/repairs" className="hover:text-red-700">Repairs</Link></li>
+                  <li><Link href="/services/water-heaters" className="hover:text-red-700">Water Heaters</Link></li>
+                  <li><Link href="/services/water-softeners" className="hover:text-red-700">Water Softeners</Link></li>
+                  <li><Link href="/services/bathtubs-showers" className="hover:text-red-700">Bathtubs & Showers</Link></li>
+                  <li><Link href="/services/faucets-fixtures" className="hover:text-red-700">Faucets & Fixtures</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-black dark:text-black mb-3">Service Areas</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/services/phoenix-plumber" className="hover:text-red-700">Phoenix</Link></li>
+                  <li><Link href="/services/mesa-plumber" className="hover:text-red-700">Mesa</Link></li>
+                  <li><Link href="/services/scottsdale-plumber" className="hover:text-red-700">Scottsdale</Link></li>
+                  <li><Link href="/services/gilbert-plumber" className="hover:text-red-700">Gilbert</Link></li>
+                  <li><Link href="/services/chandler-plumber" className="hover:text-red-700">Chandler</Link></li>
+                  <li><Link href="/services/queen-creek-plumber" className="hover:text-red-700">Queen Creek</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-black dark:text-black mb-3">Company</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/about" className="hover:text-red-700">About Us</Link></li>
+                  <li><Link href="/contact" className="hover:text-red-700">Contact</Link></li>
+                  <li><Link href="/services" className="hover:text-red-700">All Services</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-black dark:text-black mb-3">Contact</h3>
+                <ul className="space-y-2">
+                  <li><a href={siteConfig.phoneHref} className="hover:text-red-700">{siteConfig.phone}</a></li>
+                  <li><a href={`mailto:${siteConfig.email}`} className="hover:text-red-700">{siteConfig.email}</a></li>
+                  <li className="text-xs">Licensed & Insured · ROC360510</li>
+                </ul>
+              </div>
+            </nav>
+            <div className="border-t border-black/10 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <p>
-                © {new Date().getFullYear()} {siteConfig.name}. All rights reserved. {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} {siteConfig.address.postalCode} · {siteConfig.phone} · ROC360510
+                © {new Date().getFullYear()} {siteConfig.name}. All rights reserved. {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} · {siteConfig.phone} · ROC360510
               </p>
               <a
                 href="https://resgato.com?utm_source=calltheyeti&utm_medium=website&utm_campaign=footer_credit"

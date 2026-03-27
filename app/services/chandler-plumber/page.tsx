@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildLocationPageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Chandler Plumber | Licensed Plumbing Services | Yeti Plumbing",
@@ -29,8 +31,33 @@ export const metadata: Metadata = {
 };
 
 export default function ChandlerPlumberPage() {
+  const locationJsonLd = buildLocationPageJsonLd({
+    city: "Chandler",
+    state: "AZ",
+    url: "https://calltheyeti.com/services/chandler-plumber",
+    description: "Licensed Chandler, AZ plumber serving Ocotillo, Downtown Chandler, and Sun Lakes. Residential plumbing repairs, water heaters, renovations, and new construction.",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Chandler Plumber", url: "https://calltheyeti.com/services/chandler-plumber" },
+  ]);
+  const faqJsonLd = buildPageFAQJsonLd([
+    { question: "What plumbing services does Yeti Plumbing offer in Chandler?", answer: "Yeti Plumbing offers residential plumbing repairs, water heater installation and repair, renovation plumbing, new construction plumbing, and emergency service throughout Chandler, AZ." },
+    { question: "Is Yeti Plumbing licensed to work in Chandler?", answer: "Yes, Yeti Plumbing is fully licensed (ROC360510) and insured for plumbing work throughout Chandler and the Phoenix metro area." },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="location-jsonld" type="application/ld+json">
+        {JSON.stringify(locationJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
+      <Script id="faq-jsonld" type="application/ld+json">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

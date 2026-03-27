@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { buildLocationPageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Phoenix Plumber | Licensed Plumbing Services | Yeti Plumbing",
@@ -30,8 +32,34 @@ export const metadata: Metadata = {
 };
 
 export default function PhoenixPlumberPage() {
+  const locationJsonLd = buildLocationPageJsonLd({
+    city: "Phoenix",
+    state: "AZ",
+    url: "https://calltheyeti.com/services/phoenix-plumber",
+    description: "Licensed Phoenix plumber serving Arcadia, Ahwatukee, North Phoenix, Downtown, and all Phoenix neighborhoods. Custom homes, renovations, repairs, water heaters, and more.",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "https://calltheyeti.com" },
+    { name: "Services", url: "https://calltheyeti.com/services" },
+    { name: "Phoenix Plumber", url: "https://calltheyeti.com/services/phoenix-plumber" },
+  ]);
+  const faqJsonLd = buildPageFAQJsonLd([
+    { question: "What areas of Phoenix does Yeti Plumbing serve?", answer: "Yeti Plumbing serves all of Phoenix including Arcadia, Ahwatukee, North Phoenix, Downtown Phoenix, Desert Ridge, Biltmore, Camelback East, Laveen, South Mountain, Maryvale, Encanto, and Paradise Valley Village." },
+    { question: "How much does a plumber cost in Phoenix?", answer: "Plumbing costs in Phoenix vary by service. Yeti Plumbing offers upfront, honest pricing with free estimates for most jobs. Call (801) 707-2547 for a quote." },
+    { question: "Do you offer same-day plumbing service in Phoenix?", answer: "Yes, Yeti Plumbing offers same-day service for most repairs in Phoenix and surrounding areas." },
+  ]);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <Script id="location-jsonld" type="application/ld+json">
+        {JSON.stringify(locationJsonLd)}
+      </Script>
+      <Script id="breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </Script>
+      <Script id="faq-jsonld" type="application/ld+json">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services
