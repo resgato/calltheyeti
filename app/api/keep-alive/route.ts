@@ -1,22 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { supabase } from '@/lib/supabase';
 
 export async function GET(request: NextRequest) {
   try {
-    // Simple keep-alive endpoint that just returns success
-    // This will keep the Vercel deployment active, which in turn keeps Supabase active
+    // Ping the Supabase database with a real query to prevent auto-pause
+    const { error } = await supabase.from('content').select('id').limit(1);
+
+    if (error && error.code !== 'PGRST116') {
+      // PGRST116 = table not found, which is fine — the query still woke the DB
+      console.error('Keep-alive query error:', error);
+    }
+
     return NextResponse.json({
       success: true,
-      message: 'Keep-alive ping successful',
+      message: 'Supabase keep-alive ping successful',
       timestamp: new Date().toISOString(),
-      status: 'Supabase project is active'
     });
   } catch (error) {
     console.error('Keep-alive error:', error);
     return NextResponse.json(
-      { 
-        success: false, 
+      {
+        success: false,
         error: 'Internal server error',
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       },
       { status: 500 }
     );

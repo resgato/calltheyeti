@@ -14,5 +14,11 @@
     "env": {
       "NODE_OPTIONS": "--max-old-space-size=4096"
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/keep-alive",
+      "schedule": "0 12 */5 * *"
+    }
+  ]
 }
