@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { ClickToCallTracker } from "@/components/ClickToCallTracker";
 import { siteConfig, buildLocalBusinessJsonLd } from "@/lib/site";
 import { buildStructuredData } from "@/lib/structured-data";
 import Script from "next/script";
@@ -155,6 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         
+        <ClickToCallTracker />
         <Header />
         {children}
         <footer className="mt-24 border-t border-black/10 dark:border-white/10 bg-white dark:bg-gray-50">
