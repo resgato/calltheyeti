@@ -166,6 +166,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <ul className="space-y-2">
                   <li><Link href="/services/emergency-plumber" className="hover:text-brand-700">Emergency Plumbing</Link></li>
                   <li><Link href="/services/drain-cleaning" className="hover:text-brand-700">Drain Cleaning</Link></li>
+                  <li><Link href="/services/sewer-line-repair" className="hover:text-brand-700">Sewer Line Repair</Link></li>
                   <li><Link href="/services/custom-homes" className="hover:text-brand-700">Custom Homes</Link></li>
                   <li><Link href="/services/renovations" className="hover:text-brand-700">Renovations</Link></li>
                   <li><Link href="/services/repairs" className="hover:text-brand-700">Repairs</Link></li>

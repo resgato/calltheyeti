@@ -43,6 +43,7 @@ plumbing, service and repair work, and emergency response.
 ## Services
 
 - Emergency plumbing (${siteConfig.url}/services/emergency-plumber): burst pipes, slab leaks, water heater failure, sewer backups, no water
+- Sewer line repair (${siteConfig.url}/services/sewer-line-repair): camera inspection, root removal, spot repair, replacement assessment
 - Drain cleaning (${siteConfig.url}/services/drain-cleaning): clogged drains, main sewer line clearing, camera inspection, tree root removal, hydro jetting
 - Custom home plumbing (${siteConfig.url}/services/custom-homes): full rough-in and finish plumbing for new construction
 - Renovation plumbing (${siteConfig.url}/services/renovations): kitchen and bathroom remodels, re-piping, layout changes

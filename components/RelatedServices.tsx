@@ -12,7 +12,8 @@ type Slug =
   | "bathtubs-showers"
   | "faucets-fixtures"
   | "toilet-bidet-install"
-  | "reverse-osmosis";
+  | "reverse-osmosis"
+  | "sewer-line-repair";
 
 const LABELS: Record<Slug, { name: string; blurb: string }> = {
   "custom-homes": { name: "Custom Home Plumbing", blurb: "Full systems for new builds" },
@@ -26,6 +27,7 @@ const LABELS: Record<Slug, { name: string; blurb: string }> = {
   "faucets-fixtures": { name: "Faucets & Fixtures", blurb: "Repair and replacement" },
   "toilet-bidet-install": { name: "Toilet & Bidet Install", blurb: "Replacements and bidet seats" },
   "reverse-osmosis": { name: "Reverse Osmosis", blurb: "Under sink drinking water" },
+  "sewer-line-repair": { name: "Sewer Line Repair", blurb: "Camera diagnosis and repair" },
 };
 
 /**
@@ -37,15 +39,16 @@ const LABELS: Record<Slug, { name: string; blurb: string }> = {
 const RELATED: Record<Slug, Slug[]> = {
   "custom-homes": ["renovations", "water-heaters", "bathtubs-showers", "faucets-fixtures"],
   renovations: ["bathtubs-showers", "toilet-bidet-install", "faucets-fixtures", "custom-homes"],
-  repairs: ["emergency-plumber", "drain-cleaning", "toilet-bidet-install", "water-heaters"],
-  "emergency-plumber": ["repairs", "drain-cleaning", "water-heaters"],
-  "drain-cleaning": ["repairs", "emergency-plumber", "water-softeners"],
+  repairs: ["emergency-plumber", "drain-cleaning", "sewer-line-repair", "water-heaters"],
+  "emergency-plumber": ["drain-cleaning", "sewer-line-repair", "repairs", "water-heaters"],
+  "drain-cleaning": ["sewer-line-repair", "repairs", "emergency-plumber", "water-softeners"],
   "water-heaters": ["emergency-plumber", "water-softeners", "repairs"],
   "water-softeners": ["reverse-osmosis", "water-heaters", "drain-cleaning", "faucets-fixtures"],
   "bathtubs-showers": ["renovations", "toilet-bidet-install", "faucets-fixtures", "drain-cleaning"],
   "faucets-fixtures": ["bathtubs-showers", "toilet-bidet-install", "repairs", "renovations"],
   "toilet-bidet-install": ["bathtubs-showers", "faucets-fixtures", "repairs", "renovations"],
   "reverse-osmosis": ["water-softeners", "faucets-fixtures", "repairs"],
+  "sewer-line-repair": ["drain-cleaning", "emergency-plumber", "repairs", "toilet-bidet-install"],
 };
 
 export function RelatedServices({ current }: { current: Slug }) {

@@ -176,6 +176,39 @@ export const serviceFaqs: Record<string, FAQ[]> = {
     },
   ],
 
+  "sewer-line-repair": [
+    {
+      question: "How much does sewer line repair cost?",
+      answer:
+        "It depends almost entirely on whether the line needs clearing, a spot repair, or full replacement, and those are very different jobs. Depth, the length of the damaged run, and what sits on top of the line, such as a driveway or mature landscaping, are the other big factors. We inspect with a camera first, then give you a firm price before any work starts.",
+    },
+    {
+      question: "How much does main sewer line replacement cost?",
+      answer:
+        "Replacement is the most expensive path, which is exactly why it should never be recommended without a camera inspection showing it is necessary. Cost scales with the length of the run, how deep it sits, whether excavation crosses hardscape, and whether permits are required. Ask any contractor to show you the footage before approving a replacement.",
+    },
+    {
+      question: "Do I need a camera inspection before sewer repair?",
+      answer:
+        "Yes, and you should insist on it. A camera answers whether the pipe is broken or just blocked, exactly where the problem is, and how deep. Without it, a replacement quote is guesswork, and you may be paying to dig up a line that only needed clearing.",
+    },
+    {
+      question: "Can a sewer line be repaired without digging up the yard?",
+      answer:
+        "Sometimes. Trenchless methods renew a line through access pits rather than trenching the full run, but they require the existing pipe to be in specific condition. We will tell you honestly whether your line is a candidate after inspecting it, rather than promising it up front.",
+    },
+    {
+      question: "Why does my sewer line keep clogging after being cleared?",
+      answer:
+        "Recurring clogs usually mean a structural problem rather than a blockage. The common causes are root intrusion through a joint, a cracked section, or a belly, which is a low spot where the line has sagged and waste collects. Snaking clears the symptom, but the clog returns until the cause is addressed.",
+    },
+    {
+      question: "Who is responsible for the sewer line, me or the city?",
+      answer:
+        "The lateral running from your home to the city main is generally the homeowner's responsibility, and the main itself is the municipality's. Where that boundary falls varies by city, so it is worth confirming with your local utility before scheduling work.",
+    },
+  ],
+
   "reverse-osmosis": [
     {
       question: "How much does reverse osmosis installation cost?",

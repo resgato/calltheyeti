@@ -136,6 +136,12 @@ export default function ParadiseValleyPlumberPage() {
                   Camera inspection and clearing for long, complex estate drain runs and mature-tree root intrusion.
                 </li>
                 <li>
+                  <Link href="/services/sewer-line-repair" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Sewer Line Repair
+                  </Link>{": "}
+                  Camera inspection, root removal, and repair for Paradise Valley sewer laterals.
+                </li>
+                <li>
                   <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs &amp; Showers
                   </Link>{": "}

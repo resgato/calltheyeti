@@ -22,6 +22,12 @@ const services: SearchEntry[] = [
     terms: ["clog", "clogged drain", "sewer line", "backup", "snake", "hydro jetting", "roots", "slow drain", "camera"],
   },
   {
+    title: "Sewer Line Repair",
+    href: "/services/sewer-line-repair",
+    category: "Service",
+    terms: ["sewer", "sewer line", "main line", "lateral", "sewage", "collapsed pipe", "roots", "camera inspection", "trenchless", "belly", "backup"],
+  },
+  {
     title: "Water Heaters",
     href: "/services/water-heaters",
     category: "Service",

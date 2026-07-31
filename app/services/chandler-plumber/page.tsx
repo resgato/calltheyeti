@@ -115,6 +115,12 @@ export default function ChandlerPlumberPage() {
                   Clogged drains, main sewer line clearing, camera inspection, and tree root removal for Chandler homes.
                 </li>
                 <li>
+                  <Link href="/services/sewer-line-repair" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Sewer Line Repair
+                  </Link>{": "}
+                  Camera inspection, root removal, and repair for Chandler sewer laterals.
+                </li>
+                <li>
                   <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
                   </Link>{": "}

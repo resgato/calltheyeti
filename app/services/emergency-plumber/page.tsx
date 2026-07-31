@@ -154,6 +154,12 @@ export default function EmergencyPlumberPage() {
                   .
                 </li>
                 <li>
+                  <Link href="/services/sewer-line-repair" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Sewer Line Repair
+                  </Link>{": "}
+                  Camera inspection, root removal, and repair for Emergency sewer laterals.
+                </li>
+                <li>
                   <strong>No water at all:</strong> main line breaks, failed pressure regulators, and
                   seized shutoff valves.
                 </li>

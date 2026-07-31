@@ -127,6 +127,15 @@ export default function ServicesPage() {
             </div>
           </Link>
           <Link
+            href="/services/sewer-line-repair"
+            className="rounded-2xl border border-line p-6 bg-white dark:bg-surface shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="text-lg font-medium text-black dark:text-black">Sewer Line Repair</div>
+            <div className="text-sm text-black/70 dark:text-black/70 mt-1">
+              Camera inspection, root removal, spot repair, and honest replacement assessment.
+            </div>
+          </Link>
+          <Link
             href="/services/toilet-bidet-install"
             className="rounded-2xl border border-line p-6 bg-white dark:bg-surface shadow-sm hover:shadow-md transition-shadow"
           >
