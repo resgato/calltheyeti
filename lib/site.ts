@@ -30,14 +30,22 @@ export const siteConfig: SiteConfig = {
   phone: "(801) 707-2547",
   phoneHref: "tel:+18017072547",
   email: "cayden@calltheyeti.com",
+  /**
+   * The business is located in Mesa and serves the wider Phoenix metro. Those
+   * are different things: addressLocality must match the Google Business
+   * Profile and directory listings for NAP consistency, while serviceArea below
+   * is what carries the Phoenix coverage. Coordinates are geocoded to the
+   * street address rather than a city centroid, since proximity is a primary
+   * local pack ranking factor.
+   */
   address: {
-    streetAddress: "",
-    addressLocality: "Phoenix",
+    streetAddress: "1726 E Gary St",
+    addressLocality: "Mesa",
     addressRegion: "AZ",
-    postalCode: "",
+    postalCode: "85203",
     addressCountry: "US",
-    latitude: 33.4484,
-    longitude: -112.0740,
+    latitude: 33.4394412,
+    longitude: -111.7935184,
   },
   serviceArea: [
     "Phoenix",

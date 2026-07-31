@@ -135,10 +135,10 @@ export const defaultContactContent: ContactContent = {
   phoneHref: "tel:+18017072547",
   email: "cayden@calltheyeti.com",
   address: {
-    streetAddress: "",
-    addressLocality: "Phoenix",
+    streetAddress: "1726 E Gary St",
+    addressLocality: "Mesa",
     addressRegion: "AZ",
-    postalCode: "",
+    postalCode: "85203",
     addressCountry: "US"
   },
   serviceArea: ["Phoenix", "Mesa", "Scottsdale", "Gilbert", "Chandler", "Queen Creek"]

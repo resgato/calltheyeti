@@ -46,7 +46,7 @@ export default function AboutPage() {
           <section>
             <h2 className="text-2xl font-bold text-black dark:text-black mb-3">Who We Are</h2>
             <p className="text-black/70 dark:text-black/70">
-              Yeti Plumbing is a family-owned plumbing company based in Phoenix, Arizona. Founded in 2020,
+              Yeti Plumbing is a family-owned plumbing company based in Mesa, Arizona, serving the greater Phoenix metro. Founded in 2020,
               we specialize in custom home plumbing, kitchen and bathroom renovations, and residential
               service work across the Phoenix metro area. Our name reflects our approach. We show up
               ready to handle the toughest jobs with strength, reliability, and a calm demeanor.
