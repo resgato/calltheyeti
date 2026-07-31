@@ -125,7 +125,10 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <img src={content.gallery.familyImage} alt="Family-first approach to plumbing" className="mx-auto max-w-md rounded-2xl shadow-md" />
+            {/* w-full is load-bearing: a bare max-w-md overrides Preflight's
+                max-width:100%, so the image rendered at 448px and forced
+                horizontal scroll on phones. */}
+            <img src={content.gallery.familyImage} alt="Family-first approach to plumbing" className="mx-auto w-full max-w-md rounded-2xl shadow-md" />
             <p className="mt-4 text-lg font-medium text-black dark:text-black">{content.gallery.familyTitle}</p>
             <p className="text-black/70 dark:text-black/70">{content.gallery.familyDescription}</p>
           </div>
