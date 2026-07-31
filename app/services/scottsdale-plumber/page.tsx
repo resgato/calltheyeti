@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { siteConfig } from "@/lib/site";
 import { buildLocationPageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
+import { JsonLd } from "@/components/JsonLd";
+import { ConsultationCTA } from "@/components/ConsultationCTA";
 
 export const metadata: Metadata = {
-  title: "Scottsdale Plumber | Licensed Plumbing Services | Yeti Plumbing",
+  title: "Scottsdale Plumber | Licensed Plumbing Services",
   description:
     "Licensed Scottsdale plumber for luxury homes, remodels, and repairs. Serving Old Town, North Scottsdale, McCormick Ranch, and Gainey Ranch. ROC360510.",
   keywords: [
@@ -49,15 +50,9 @@ export default function ScottsdalePlumberPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
-      <Script id="location-jsonld" type="application/ld+json">
-        {JSON.stringify(locationJsonLd)}
-      </Script>
-      <Script id="breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify(breadcrumbJsonLd)}
-      </Script>
-      <Script id="faq-jsonld" type="application/ld+json">
-        {JSON.stringify(faqJsonLd)}
-      </Script>
+      <JsonLd data={locationJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={faqJsonLd} />
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services
@@ -242,6 +237,11 @@ export default function ScottsdalePlumberPage() {
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Other Service Areas</h3>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link href="/services/paradise-valley-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                  Paradise Valley Plumber
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/phoenix-plumber" className="text-red-700 dark:text-red-700 hover:underline">
                   Phoenix Plumber
                 </Link>
@@ -280,6 +280,9 @@ export default function ScottsdalePlumberPage() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-14 overflow-hidden rounded-xl">
+        <ConsultationCTA />
       </div>
     </main>
   );

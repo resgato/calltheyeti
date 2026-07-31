@@ -3,10 +3,13 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { ClickToCallTracker } from "@/components/ClickToCallTracker";
-import { siteConfig, buildLocalBusinessJsonLd } from "@/lib/site";
+import { StickyCallBar } from "@/components/StickyCallBar";
+import { FreeConsultationPopup } from "@/components/FreeConsultationPopup";
+import { siteConfig, buildLocalBusinessJsonLd, serviceAreaLinks } from "@/lib/site";
 import { buildStructuredData } from "@/lib/structured-data";
 import Script from "next/script";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -138,14 +141,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
         
         {/* Structured Data */}
-        <Script id="yeti-jsonld" type="application/ld+json">
-          {JSON.stringify(buildLocalBusinessJsonLd())}
-        </Script>
-        <Script id="structured-data" type="application/ld+json">
-          {JSON.stringify(buildStructuredData())}
-        </Script>
+        <JsonLd data={buildLocalBusinessJsonLd()} />
+        <JsonLd data={buildStructuredData()} />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased pb-24 md:pb-0`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 
@@ -165,6 +164,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div>
                 <h3 className="font-semibold text-black dark:text-black mb-3">Services</h3>
                 <ul className="space-y-2">
+                  <li><Link href="/services/emergency-plumber" className="hover:text-red-700">Emergency Plumbing</Link></li>
+                  <li><Link href="/services/drain-cleaning" className="hover:text-red-700">Drain Cleaning</Link></li>
                   <li><Link href="/services/custom-homes" className="hover:text-red-700">Custom Homes</Link></li>
                   <li><Link href="/services/renovations" className="hover:text-red-700">Renovations</Link></li>
                   <li><Link href="/services/repairs" className="hover:text-red-700">Repairs</Link></li>
@@ -177,12 +178,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div>
                 <h3 className="font-semibold text-black dark:text-black mb-3">Service Areas</h3>
                 <ul className="space-y-2">
-                  <li><Link href="/services/phoenix-plumber" className="hover:text-red-700">Phoenix</Link></li>
-                  <li><Link href="/services/mesa-plumber" className="hover:text-red-700">Mesa</Link></li>
-                  <li><Link href="/services/scottsdale-plumber" className="hover:text-red-700">Scottsdale</Link></li>
-                  <li><Link href="/services/gilbert-plumber" className="hover:text-red-700">Gilbert</Link></li>
-                  <li><Link href="/services/chandler-plumber" className="hover:text-red-700">Chandler</Link></li>
-                  <li><Link href="/services/queen-creek-plumber" className="hover:text-red-700">Queen Creek</Link></li>
+                  {serviceAreaLinks.map((area) => (
+                    <li key={area.href}>
+                      <Link href={area.href} className="hover:text-red-700">{area.name}</Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>
@@ -217,6 +217,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
           </div>
         </footer>
+        <StickyCallBar />
+        <FreeConsultationPopup />
       </body>
     </html>
   );

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { siteConfig } from "@/lib/site";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About Yeti Plumbing | Phoenix's Trusted Plumber",
+  title: "About Us | Phoenix's Trusted Plumber",
   description:
     "Yeti Plumbing is a family-owned Arizona plumbing company founded in 2020. Licensed (ROC360510), insured, and serving Phoenix, Mesa, Scottsdale, Gilbert, Chandler, and Queen Creek with custom home plumbing, renovations, and repairs.",
   keywords: [
@@ -35,9 +35,7 @@ export default function AboutPage() {
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
-      <Script id="breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify(breadcrumbJsonLd)}
-      </Script>
+      <JsonLd data={breadcrumbJsonLd} />
 
       <h1 className="text-4xl font-bold tracking-tight text-black dark:text-black">About Yeti Plumbing</h1>
 

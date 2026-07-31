@@ -99,6 +99,60 @@ export default function ServicesPage() {
         ))}
       </div>
 
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold mb-2 text-black dark:text-black">Emergency &amp; Drain Services</h2>
+        <p className="text-black/70 dark:text-black/70 mb-6">
+          Urgent problems and recurring clogs — handled fast, with the price quoted before we start.
+        </p>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <Link
+            href="/services/emergency-plumber"
+            className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-white dark:bg-gray-50 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="text-lg font-medium text-black dark:text-black">Emergency Plumbing</div>
+            <div className="text-sm text-black/70 dark:text-black/70 mt-1">
+              Burst pipes, slab leaks, water heater failures, and sewer backups across Mesa, Scottsdale, and
+              Paradise Valley.
+            </div>
+          </Link>
+          <Link
+            href="/services/drain-cleaning"
+            className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-white dark:bg-gray-50 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="text-lg font-medium text-black dark:text-black">Drain Cleaning</div>
+            <div className="text-sm text-black/70 dark:text-black/70 mt-1">
+              Clogged drains, main sewer line clearing, camera inspection, and tree root removal.
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold mb-2 text-black dark:text-black">Areas We Serve</h2>
+        <p className="text-black/70 dark:text-black/70 mb-6">
+          Licensed plumbing across the East Valley and central Phoenix.
+        </p>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {[
+            { name: "Phoenix", href: "/services/phoenix-plumber" },
+            { name: "Mesa", href: "/services/mesa-plumber" },
+            { name: "Scottsdale", href: "/services/scottsdale-plumber" },
+            { name: "Paradise Valley", href: "/services/paradise-valley-plumber" },
+            { name: "Gilbert", href: "/services/gilbert-plumber" },
+            { name: "Chandler", href: "/services/chandler-plumber" },
+            { name: "Queen Creek", href: "/services/queen-creek-plumber" },
+          ].map((area) => (
+            <Link
+              key={area.href}
+              href={area.href}
+              className="rounded-lg border border-black/10 dark:border-white/10 px-4 py-3 text-center text-sm font-medium text-black dark:text-black bg-white dark:bg-gray-50 hover:border-red-700 hover:text-red-700"
+            >
+              {area.name} Plumber
+            </Link>
+          ))}
+        </div>
+      </div>
+
       <div className="mt-12 bg-gray-50 dark:bg-gray-100 rounded-lg p-8">
         <h2 className="text-2xl font-semibold mb-4 text-center text-black dark:text-black">Why Choose Yeti Plumbing?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

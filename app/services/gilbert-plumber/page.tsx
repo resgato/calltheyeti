@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { siteConfig } from "@/lib/site";
 import { buildLocationPageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Gilbert Plumber | Licensed Plumbing Services | Yeti Plumbing",
+  title: "Gilbert Plumber | Licensed Plumbing Services",
   description:
     "Licensed Gilbert, AZ plumber serving Power Ranch, Agritopia, and the Heritage District. New construction, renovations, repairs, and water heater service. ROC360510.",
   keywords: [
@@ -49,15 +49,9 @@ export default function GilbertPlumberPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
-      <Script id="location-jsonld" type="application/ld+json">
-        {JSON.stringify(locationJsonLd)}
-      </Script>
-      <Script id="breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify(breadcrumbJsonLd)}
-      </Script>
-      <Script id="faq-jsonld" type="application/ld+json">
-        {JSON.stringify(faqJsonLd)}
-      </Script>
+      <JsonLd data={locationJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={faqJsonLd} />
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services
@@ -252,6 +246,11 @@ export default function GilbertPlumberPage() {
           <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Other Service Areas</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/services/paradise-valley-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                  Paradise Valley Plumber
+                </Link>
+              </li>
               <li>
                 <Link href="/services/phoenix-plumber" className="text-red-700 dark:text-red-700 hover:underline">
                   Phoenix Plumber

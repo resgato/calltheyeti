@@ -126,7 +126,7 @@ export const defaultHomepageContent: HomepageContent = {
   },
   serviceArea: {
     title: "Proudly Serving Arizona",
-    areas: ["Phoenix", "Mesa", "Scottsdale", "Gilbert", "Chandler", "Queen Creek"]
+    areas: ["Phoenix", "Mesa", "Scottsdale", "Paradise Valley", "Gilbert", "Chandler", "Queen Creek"]
   }
 };
 

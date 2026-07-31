@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd } from "@/lib/structured-data";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Custom Home Plumbing | Phoenix New Construction Plumbing",
@@ -42,12 +42,8 @@ export default function CustomHomesPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
-      <Script id="service-jsonld" type="application/ld+json">
-        {JSON.stringify(serviceJsonLd)}
-      </Script>
-      <Script id="breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify(breadcrumbJsonLd)}
-      </Script>
+      <JsonLd data={serviceJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <div className="mb-8">
         <Link href="/services" className="text-red-700 dark:text-red-700 underline">
           ← Back to Services

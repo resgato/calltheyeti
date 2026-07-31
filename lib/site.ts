@@ -43,6 +43,7 @@ export const siteConfig: SiteConfig = {
     "Phoenix",
     "Mesa",
     "Scottsdale",
+    "Paradise Valley",
     "Gilbert",
     "Chandler",
     "Queen Creek",
@@ -50,6 +51,21 @@ export const siteConfig: SiteConfig = {
   businessCategory: "Plumber",
   license: "ROC360510",
 };
+
+/**
+ * City landing pages, in the order we surface them site-wide.
+ * Single source of truth for the homepage, footer, and services index so a new
+ * location page only has to be linked in one place.
+ */
+export const serviceAreaLinks: { name: string; href: string }[] = [
+  { name: "Phoenix", href: "/services/phoenix-plumber" },
+  { name: "Mesa", href: "/services/mesa-plumber" },
+  { name: "Scottsdale", href: "/services/scottsdale-plumber" },
+  { name: "Paradise Valley", href: "/services/paradise-valley-plumber" },
+  { name: "Gilbert", href: "/services/gilbert-plumber" },
+  { name: "Chandler", href: "/services/chandler-plumber" },
+  { name: "Queen Creek", href: "/services/queen-creek-plumber" },
+];
 
 export function buildLocalBusinessJsonLd() {
   return {

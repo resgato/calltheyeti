@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { LeadForm } from "@/components/LeadForm";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, serviceAreaLinks } from "@/lib/site";
 import { buildFAQStructuredData } from "@/lib/structured-data";
 import { defaultHomepageContent } from "@/lib/content";
-import Script from "next/script";
+import { JsonLd } from "@/components/JsonLd";
+import { TrustBar } from "@/components/TrustBar";
+import { HowItWorks } from "@/components/HowItWorks";
+import { ConsultationCTA } from "@/components/ConsultationCTA";
 
 export default function Home() {
   const faqJsonLd = buildFAQStructuredData();
@@ -11,9 +14,7 @@ export default function Home() {
 
   return (
     <main>
-      <Script id="faq-jsonld" type="application/ld+json">
-        {JSON.stringify(faqJsonLd)}
-      </Script>
+      <JsonLd data={faqJsonLd} />
       <section className="bg-red-700 text-white">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-16 md:grid-cols-2 md:items-center">
           <div>
@@ -55,6 +56,8 @@ export default function Home() {
         </div>
       </section>
 
+      <TrustBar />
+
       <section className="bg-yellow-400">
         <div className="mx-auto max-w-6xl px-4 py-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {content.features.map((feature, index) => (
@@ -85,6 +88,8 @@ export default function Home() {
         </div>
       </section>
 
+      <HowItWorks />
+
       <section className="bg-gray-50 dark:bg-gray-100">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-center text-black dark:text-black">{content.gallery.title}</h2>
@@ -114,6 +119,8 @@ export default function Home() {
         </div>
       </section>
 
+      <ConsultationCTA />
+
       <section id="request" className="bg-[--color-ice-50] dark:bg-gray-50">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
@@ -137,8 +144,20 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-black">{content.serviceArea.title}</h2>
           <p className="mt-2 text-black/70 dark:text-black/70">
-            {content.serviceArea.areas.join(" • ")}
+            Licensed plumbing across the East Valley and central Phoenix. Choose your city for local service
+            details.
           </p>
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {serviceAreaLinks.map((area) => (
+              <Link
+                key={area.href}
+                href={area.href}
+                className="rounded-lg border border-black/10 dark:border-white/10 px-4 py-3 text-center text-sm font-medium text-black dark:text-black bg-white dark:bg-gray-50 hover:border-red-700 hover:text-red-700"
+              >
+                {area.name} Plumber
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </main>

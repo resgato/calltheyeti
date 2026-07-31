@@ -3,7 +3,7 @@ import { LeadForm } from "@/components/LeadForm";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact Yeti Plumbing | Get Fast Plumbing Service",
+  title: "Contact Us | Get Fast Plumbing Service",
   description: "Contact Yeti Plumbing for fast, reliable plumbing service in Phoenix, Arizona. Call (801) 707-2547, email, or request service online. Licensed • Insured • ROC360510.",
   keywords: [
     "contact Yeti Plumbing",
