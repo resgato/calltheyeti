@@ -24,7 +24,7 @@ export function GET() {
 
 - Business name: ${siteConfig.name} (${siteConfig.legalName})
 - Website: ${siteConfig.url}
-- Address: ${siteConfig.address.streetAddress}, ${siteConfig.address.addressLocality}, ${siteConfig.address.addressRegion} ${siteConfig.address.postalCode}
+- Based in: ${siteConfig.address.addressLocality}, ${siteConfig.address.addressRegion} ${siteConfig.address.postalCode} (service-area business, we travel to the customer)
 - Phone: ${siteConfig.phone}
 - Email: ${siteConfig.email}
 - License: Arizona Registrar of Contractors ${siteConfig.license}

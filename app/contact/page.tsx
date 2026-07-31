@@ -44,12 +44,19 @@ export default function ContactPage() {
                 {siteConfig.email}
               </a>
             </div>
+            {/*
+              City level only. The full street address stays in the LocalBusiness
+              JSON-LD, where the local ranking signal actually lives, and is not
+              displayed because this is a home-based service-area business. What
+              a visitor needs here is whether we come to them, not where the
+              office sits.
+            */}
             <div>
-              <div className="font-medium text-black dark:text-black">Location</div>
-              <address className="not-italic text-black/70 dark:text-black/70">
-                1726 E Gary St<br />
-                Mesa, AZ 85203
-              </address>
+              <div className="font-medium text-black dark:text-black">Service Area</div>
+              <div className="text-black/70 dark:text-black/70">
+                Based in Mesa, AZ. We come to you across{" "}
+                {siteConfig.serviceArea.join(", ")}, and nearby communities.
+              </div>
             </div>
           </div>
         </div>
