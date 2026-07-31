@@ -52,7 +52,7 @@ export default function EmergencyPlumberPage() {
   ]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <main className="mx-auto max-w-6xl px-4 py-10 md:py-12">
       <JsonLd data={serviceJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={faqJsonLd} />
@@ -360,7 +360,7 @@ export default function EmergencyPlumberPage() {
       <div className="mt-14 -mx-4 overflow-hidden">
         <Testimonials service="emergency" limit={3} />
       </div>
-      <div className="mt-14 -mx-4">
+      <div className="-mx-4">
         <RelatedServices current="emergency-plumber" />
       </div>
     </main>

@@ -10,7 +10,9 @@ type Slug =
   | "water-heaters"
   | "water-softeners"
   | "bathtubs-showers"
-  | "faucets-fixtures";
+  | "faucets-fixtures"
+  | "toilet-bidet-install"
+  | "reverse-osmosis";
 
 const LABELS: Record<Slug, { name: string; blurb: string }> = {
   "custom-homes": { name: "Custom Home Plumbing", blurb: "Full systems for new builds" },
@@ -22,6 +24,8 @@ const LABELS: Record<Slug, { name: string; blurb: string }> = {
   "water-softeners": { name: "Water Softeners", blurb: "Hard water treatment" },
   "bathtubs-showers": { name: "Bathtubs & Showers", blurb: "Install and upgrades" },
   "faucets-fixtures": { name: "Faucets & Fixtures", blurb: "Repair and replacement" },
+  "toilet-bidet-install": { name: "Toilet & Bidet Install", blurb: "Replacements and bidet seats" },
+  "reverse-osmosis": { name: "Reverse Osmosis", blurb: "Under sink drinking water" },
 };
 
 /**
@@ -32,14 +36,16 @@ const LABELS: Record<Slug, { name: string; blurb: string }> = {
  */
 const RELATED: Record<Slug, Slug[]> = {
   "custom-homes": ["renovations", "water-heaters", "bathtubs-showers", "faucets-fixtures"],
-  renovations: ["bathtubs-showers", "faucets-fixtures", "custom-homes", "drain-cleaning"],
-  repairs: ["emergency-plumber", "drain-cleaning", "water-heaters", "faucets-fixtures"],
+  renovations: ["bathtubs-showers", "toilet-bidet-install", "faucets-fixtures", "custom-homes"],
+  repairs: ["emergency-plumber", "drain-cleaning", "toilet-bidet-install", "water-heaters"],
   "emergency-plumber": ["repairs", "drain-cleaning", "water-heaters"],
   "drain-cleaning": ["repairs", "emergency-plumber", "water-softeners"],
   "water-heaters": ["emergency-plumber", "water-softeners", "repairs"],
-  "water-softeners": ["water-heaters", "drain-cleaning", "faucets-fixtures"],
-  "bathtubs-showers": ["renovations", "faucets-fixtures", "drain-cleaning"],
-  "faucets-fixtures": ["bathtubs-showers", "repairs", "renovations"],
+  "water-softeners": ["reverse-osmosis", "water-heaters", "drain-cleaning", "faucets-fixtures"],
+  "bathtubs-showers": ["renovations", "toilet-bidet-install", "faucets-fixtures", "drain-cleaning"],
+  "faucets-fixtures": ["bathtubs-showers", "toilet-bidet-install", "repairs", "renovations"],
+  "toilet-bidet-install": ["bathtubs-showers", "faucets-fixtures", "repairs", "renovations"],
+  "reverse-osmosis": ["water-softeners", "faucets-fixtures", "repairs"],
 };
 
 export function RelatedServices({ current }: { current: Slug }) {
@@ -47,7 +53,7 @@ export function RelatedServices({ current }: { current: Slug }) {
 
   return (
     <section aria-labelledby="related-services" className="border-t border-line bg-surface">
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
         <h2 id="related-services" className="text-2xl font-semibold tracking-tight text-ink">
           Related Plumbing Services
         </h2>

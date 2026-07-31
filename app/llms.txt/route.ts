@@ -51,6 +51,8 @@ plumbing, service and repair work, and emergency response.
 - Water softeners (${siteConfig.url}/services/water-softeners): whole-home softening and filtration for Arizona hard water
 - Bathtubs and showers (${siteConfig.url}/services/bathtubs-showers): tub and shower installation, valve and enclosure work
 - Faucets and fixtures (${siteConfig.url}/services/faucets-fixtures): faucet, disposal, and fixture installation and repair
+- Toilet and bidet installation (${siteConfig.url}/services/toilet-bidet-install): toilet replacement, bidet seats, smart toilets, flange and subfloor repair
+- Reverse osmosis and under sink water filtration (${siteConfig.url}/services/reverse-osmosis): RO systems, dedicated faucets, refrigerator lines, filter replacement
 
 ## Service area pages
 

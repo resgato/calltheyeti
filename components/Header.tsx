@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/lib/site";
+import { SiteSearch } from "@/components/SiteSearch";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,9 @@ export function Header() {
           <Link href="/about" className="font-medium text-ink hover:text-brand-700">About</Link>
           <Link href="/contact" className="font-medium text-ink hover:text-brand-700">Contact</Link>
         </nav>
-        
+
+        <SiteSearch variant="compact" className="hidden lg:block w-64" placeholder="Search services" />
+
         <div className="flex items-center gap-2">
           {/* Desktop Call Button */}
           <a
@@ -81,6 +84,9 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden border-t border-gray-200 dark:border-gray-300 bg-white dark:bg-surface">
           <nav className="px-4 py-3 space-y-3">
+            {/* Search sits first in the mobile menu: on a phone it is faster to
+                type "toilet" than to drill through the services list. */}
+            <SiteSearch variant="compact" className="mb-1" placeholder="Search services or your city" />
             <Link
               href="/services"
               className="block text-sm font-medium text-gray-700 dark:text-gray-700 hover:text-gray-900 dark:hover:text-gray-900 hover:bg-surface dark:hover:bg-gray-100 px-3 py-2 rounded-xl"

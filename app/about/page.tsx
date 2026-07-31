@@ -36,7 +36,7 @@ export default function AboutPage() {
   ]);
 
   return (
-    <main className="mx-auto max-w-4xl px-4 py-12">
+    <main className="mx-auto max-w-4xl px-4 py-8 md:py-12">
       <JsonLd data={breadcrumbJsonLd} />
 
       <h1 className="text-4xl font-bold tracking-tight text-black dark:text-black">About Yeti Plumbing</h1>
@@ -156,7 +156,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="mt-14 -mx-4">
+      <div className="-mx-4">
         <FAQSection faqs={pageFaqs["about"]} />
       </div>
     </main>

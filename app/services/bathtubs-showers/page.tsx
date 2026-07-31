@@ -44,7 +44,7 @@ export default function BathtubsShowersPage() {
   ]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <main className="mx-auto max-w-6xl px-4 py-10 md:py-12">
       <JsonLd data={serviceJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <div className="mb-8">
@@ -274,10 +274,10 @@ export default function BathtubsShowersPage() {
           </div>
         </div>
       </div>
-      <div className="mt-14 -mx-4">
+      <div className="-mx-4">
         <FAQSection faqs={serviceFaqs["bathtubs-showers"]} />
       </div>
-      <div className="mt-14 -mx-4">
+      <div className="-mx-4">
         <RelatedServices current="bathtubs-showers" />
       </div>
     </main>

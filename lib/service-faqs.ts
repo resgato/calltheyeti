@@ -147,6 +147,62 @@ export const serviceFaqs: Record<string, FAQ[]> = {
         "Often yes, if the fixture is decent quality and the cartridge is still available. For a builder-grade faucet already showing corrosion, replacement usually costs less over time than repeated repairs.",
     },
   ],
+
+  "toilet-bidet-install": [
+    {
+      question: "How much does toilet installation cost?",
+      answer:
+        "It depends on the fixture and what we find underneath. A straight swap onto a sound flange is the low end. A corroded flange, a rough-in mismatch, or soft subfloor adds work. We quote the job before starting and re-quote if we uncover damage once the old toilet is pulled.",
+    },
+    {
+      question: "What is a toilet rough-in and why does it matter?",
+      answer:
+        "The rough-in is the distance from the finished wall to the center of the drain. Twelve inches is standard, but many older Phoenix and Mesa homes are ten or fourteen. Buying a fixture without measuring it first is the most common reason an install stalls halfway through.",
+    },
+    {
+      question: "Do I need an electrical outlet for a bidet?",
+      answer:
+        "For an electric bidet seat or an integrated smart toilet, yes. They need a GFCI outlet within reach of the toilet, and most bathrooms do not have one. Non-electric bidet seats tee off the existing water supply and need no outlet at all.",
+    },
+    {
+      question: "Do you haul away the old toilet?",
+      answer:
+        "Yes. Removal and disposal of the old fixture is part of a replacement, so you are not left with it in the garage.",
+    },
+    {
+      question: "Why does my toilet keep running?",
+      answer:
+        "Usually a worn flapper, a failed fill valve, or a float set too high. All are inexpensive fixes and worth doing quickly, because a continuously running toilet can waste hundreds of gallons a day on your water bill.",
+    },
+  ],
+
+  "reverse-osmosis": [
+    {
+      question: "How much does reverse osmosis installation cost?",
+      answer:
+        "The main variables are the system you choose and whether the sink has a spare hole for the dedicated faucet. Drilling granite or quartz, or running a line to the refrigerator, adds to it. We give you a firm price before any work starts.",
+    },
+    {
+      question: "How long does an under sink water filter installation take?",
+      answer:
+        "Most are a same-day job, typically a few hours. That covers teeing off the cold supply, mounting the unit and tank, setting the dedicated faucet, connecting the drain, and pressure testing the system before we leave.",
+    },
+    {
+      question: "Do I still need a water softener if I have reverse osmosis?",
+      answer:
+        "They solve different problems. A softener treats hardness throughout the house and protects fixtures and water heaters. RO treats drinking water at one tap. They work well together, because softened water scales the RO membrane far less and makes it last longer.",
+    },
+    {
+      question: "Can the RO system feed my refrigerator ice maker?",
+      answer:
+        "Yes, and it is worth doing. Running the RO line to the fridge gives you filtered water from the door and filtered ice. We can add it during the original installation or later.",
+    },
+    {
+      question: "How often do reverse osmosis filters need replacing?",
+      answer:
+        "Sediment and carbon pre-filters usually every six to twelve months, and the membrane every two to five years. In the Phoenix area, and especially on unsoftened water, plan on the shorter end of both. A neglected pre-filter is the fastest way to ruin the membrane.",
+    },
+  ],
 };
 
 /**

@@ -29,7 +29,7 @@ const STEPS = [
 export function HowItWorks() {
   return (
     <section className="border-t border-line bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-14">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
         <h2 className="text-2xl font-semibold tracking-tight text-black">How It Works</h2>
         <p className="mt-2 text-black/70">
           No surprise invoices and no pressure. Here is exactly what to expect.

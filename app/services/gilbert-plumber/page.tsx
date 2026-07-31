@@ -48,7 +48,7 @@ export default function GilbertPlumberPage() {
   ]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <main className="mx-auto max-w-6xl px-4 py-10 md:py-12">
       <JsonLd data={locationJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={faqJsonLd} />
@@ -153,6 +153,18 @@ export default function GilbertPlumberPage() {
                     Water Softeners
                   </Link>{": "}
                   Water softener installation and salt delivery coordination for Gilbert homeowners.
+                </li>
+                <li>
+                  <Link href="/services/toilet-bidet-install" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Toilet &amp; Bidet Installation
+                  </Link>{": "}
+                  Toilet replacement, bidet seats, and flange repair for Gilbert homes.
+                </li>
+                <li>
+                  <Link href="/services/reverse-osmosis" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Reverse Osmosis
+                  </Link>{": "}
+                  Under sink drinking water filtration, a common upgrade given Gilbert hard water.
                 </li>
               </ul>
             </section>

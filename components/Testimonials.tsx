@@ -36,7 +36,7 @@ export function Testimonials({
 
   return (
     <section className="border-t border-line bg-surface">
-      <div className="mx-auto max-w-6xl px-4 py-14">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-black">{heading}</h2>

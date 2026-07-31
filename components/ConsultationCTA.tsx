@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site";
 export function ConsultationCTA() {
   return (
     <section className="bg-brand-600 text-white">
-      <div className="mx-auto max-w-6xl px-4 py-14">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-3">
           <div className="md:col-span-2">
             <div className="inline-flex items-center rounded-full bg-accent-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-black">

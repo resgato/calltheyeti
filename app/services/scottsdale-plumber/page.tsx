@@ -49,7 +49,7 @@ export default function ScottsdalePlumberPage() {
   ]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <main className="mx-auto max-w-6xl px-4 py-10 md:py-12">
       <JsonLd data={locationJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={faqJsonLd} />
@@ -153,6 +153,18 @@ export default function ScottsdalePlumberPage() {
                     Water Softeners
                   </Link>{": "}
                   Protect premium fixtures and appliances from Scottsdale hard-water damage.
+                </li>
+                <li>
+                  <Link href="/services/toilet-bidet-install" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Toilet &amp; Bidet Installation
+                  </Link>{": "}
+                  Toilet replacement, bidet seats, and flange repair for Scottsdale homes.
+                </li>
+                <li>
+                  <Link href="/services/reverse-osmosis" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Reverse Osmosis
+                  </Link>{": "}
+                  Under sink drinking water filtration, a common upgrade given Scottsdale hard water.
                 </li>
               </ul>
             </section>
@@ -296,7 +308,7 @@ export default function ScottsdalePlumberPage() {
           </div>
         </div>
       </div>
-      <div className="mt-14 overflow-hidden rounded-xl">
+      <div className="mt-8 overflow-hidden rounded-2xl">
         <ConsultationCTA />
       </div>
     </main>

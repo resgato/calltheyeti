@@ -171,6 +171,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <li><Link href="/services/repairs" className="hover:text-brand-700">Repairs</Link></li>
                   <li><Link href="/services/water-heaters" className="hover:text-brand-700">Water Heaters</Link></li>
                   <li><Link href="/services/water-softeners" className="hover:text-brand-700">Water Softeners</Link></li>
+                  <li><Link href="/services/toilet-bidet-install" className="hover:text-brand-700">Toilet &amp; Bidet Install</Link></li>
+                  <li><Link href="/services/reverse-osmosis" className="hover:text-brand-700">Reverse Osmosis</Link></li>
                   <li><Link href="/services/bathtubs-showers" className="hover:text-brand-700">Bathtubs & Showers</Link></li>
                   <li><Link href="/services/faucets-fixtures" className="hover:text-brand-700">Faucets & Fixtures</Link></li>
                 </ul>

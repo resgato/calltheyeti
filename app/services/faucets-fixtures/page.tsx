@@ -45,7 +45,7 @@ export default function FaucetsFixturesPage() {
   ]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <main className="mx-auto max-w-6xl px-4 py-10 md:py-12">
       <JsonLd data={serviceJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <div className="mb-8">
@@ -284,10 +284,10 @@ export default function FaucetsFixturesPage() {
       <div className="mt-14 -mx-4 overflow-hidden">
         <Testimonials service="faucets-fixtures" limit={3} />
       </div>
-      <div className="mt-14 -mx-4">
+      <div className="-mx-4">
         <FAQSection faqs={serviceFaqs["faucets-fixtures"]} />
       </div>
-      <div className="mt-14 -mx-4">
+      <div className="-mx-4">
         <RelatedServices current="faucets-fixtures" />
       </div>
     </main>

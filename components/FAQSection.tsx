@@ -28,7 +28,7 @@ export function FAQSection({
   return (
     <section aria-labelledby={id} className="border-t border-line">
       <JsonLd data={buildPageFAQJsonLd(faqs)} />
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
         <h2 id={id} className="text-2xl font-semibold tracking-tight text-ink">
           {heading}
         </h2>

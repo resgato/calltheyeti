@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <main className="mx-auto max-w-6xl px-4 py-10 md:py-12">
       <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-black dark:text-black">Contact Us</h1>
@@ -52,7 +52,7 @@ export default function ContactPage() {
         </div>
         <LeadForm />
       </div>
-      <div className="mt-14 -mx-4">
+      <div className="-mx-4">
         <FAQSection faqs={pageFaqs["contact"]} />
       </div>
     </main>

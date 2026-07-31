@@ -81,7 +81,7 @@ export default function ServicesPage() {
   });
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <main className="mx-auto max-w-6xl px-4 py-10 md:py-12">
       <h1 className="text-3xl font-bold tracking-tight text-black dark:text-black">{servicesContent.title}</h1>
       <p className="mt-2 text-black/70 dark:text-black/70">{servicesContent.subtitle}</p>
 
@@ -102,9 +102,9 @@ export default function ServicesPage() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-2 text-black dark:text-black">Emergency &amp; Drain Services</h2>
+        <h2 className="text-2xl font-semibold mb-2 text-black dark:text-black">Specialty &amp; Emergency Services</h2>
         <p className="text-black/70 dark:text-black/70 mb-6">
-          Urgent problems and recurring clogs, handled fast, with the price quoted before we start.
+          Urgent problems, recurring clogs, and fixture upgrades, with the price quoted before we start.
         </p>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <Link
@@ -124,6 +124,24 @@ export default function ServicesPage() {
             <div className="text-lg font-medium text-black dark:text-black">Drain Cleaning</div>
             <div className="text-sm text-black/70 dark:text-black/70 mt-1">
               Clogged drains, main sewer line clearing, camera inspection, and tree root removal.
+            </div>
+          </Link>
+          <Link
+            href="/services/toilet-bidet-install"
+            className="rounded-2xl border border-line p-6 bg-white dark:bg-surface shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="text-lg font-medium text-black dark:text-black">Toilet &amp; Bidet Install</div>
+            <div className="text-sm text-black/70 dark:text-black/70 mt-1">
+              Toilet replacement, bidet seats, smart toilets, and flange repair.
+            </div>
+          </Link>
+          <Link
+            href="/services/reverse-osmosis"
+            className="rounded-2xl border border-line p-6 bg-white dark:bg-surface shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="text-lg font-medium text-black dark:text-black">Reverse Osmosis</div>
+            <div className="text-sm text-black/70 dark:text-black/70 mt-1">
+              Under sink drinking water filtration, dedicated faucets, and fridge lines.
             </div>
           </Link>
         </div>
@@ -218,7 +236,7 @@ export default function ServicesPage() {
           Back to home
         </Link>
       </div>
-      <div className="mt-14 -mx-4">
+      <div className="-mx-4">
         <FAQSection faqs={pageFaqs["services"]} />
       </div>
     </main>
