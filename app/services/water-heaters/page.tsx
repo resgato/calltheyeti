@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
+import { Testimonials } from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title: "Water Heaters | Phoenix Water Heater Installation & Repair",
@@ -297,6 +298,9 @@ export default function WaterHeatersPage() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-14 -mx-4 overflow-hidden">
+        <Testimonials service="water-heaters" limit={3} />
       </div>
     </main>
   );

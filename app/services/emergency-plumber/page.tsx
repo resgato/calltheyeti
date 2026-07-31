@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
+import { Testimonials } from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber | Mesa & Scottsdale, AZ",
@@ -348,6 +349,9 @@ export default function EmergencyPlumberPage() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-14 -mx-4 overflow-hidden">
+        <Testimonials service="emergency" limit={3} />
       </div>
     </main>
   );

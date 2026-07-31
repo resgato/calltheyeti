@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
+import { Testimonials } from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title: "Faucets & Fixtures | Phoenix Plumbing Fixture Installation & Repair",
@@ -276,6 +277,9 @@ export default function FaucetsFixturesPage() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-14 -mx-4 overflow-hidden">
+        <Testimonials service="faucets-fixtures" limit={3} />
       </div>
     </main>
   );

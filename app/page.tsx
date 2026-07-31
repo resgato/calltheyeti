@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { TrustBar } from "@/components/TrustBar";
 import { HowItWorks } from "@/components/HowItWorks";
 import { ConsultationCTA } from "@/components/ConsultationCTA";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   const faqJsonLd = buildFAQStructuredData();
@@ -118,6 +119,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Testimonials limit={3} />
 
       <ConsultationCTA />
 

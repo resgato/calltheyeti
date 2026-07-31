@@ -176,10 +176,14 @@ export function buildLocalBusinessJsonLd() {
         }
       ]
     },
+    // Mirrors the live Google Business Profile (5.0 from 29 reviews). Google
+    // excludes self-serving LocalBusiness ratings from review rich results, so
+    // this will not render stars — it is here so the markup is accurate for
+    // other consumers rather than asserting a stale count.
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "1",
+      reviewCount: "29",
       bestRating: "5",
       worstRating: "1",
     },
