@@ -9,11 +9,11 @@ import { siteConfig } from "@/lib/site";
  */
 export function ConsultationCTA() {
   return (
-    <section className="bg-red-700 text-white">
+    <section className="bg-brand-600 text-white">
       <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-3">
           <div className="md:col-span-2">
-            <div className="inline-flex items-center rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-black">
+            <div className="inline-flex items-center rounded-full bg-accent-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-black">
               Free Consultation
             </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight">
@@ -34,13 +34,13 @@ export function ConsultationCTA() {
           <div className="flex flex-col gap-3">
             <a
               href={siteConfig.phoneHref}
-              className="inline-flex items-center justify-center rounded-md bg-yellow-400 px-5 py-4 text-lg font-bold text-black shadow hover:bg-yellow-500"
+              className="inline-flex items-center justify-center rounded-full bg-accent-400 px-5 py-4 text-lg font-bold text-black shadow hover:bg-accent-500"
             >
               Call {siteConfig.phone}
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md border border-white/40 px-5 py-4 text-lg font-semibold text-white hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-full border border-white/40 px-5 py-4 text-lg font-semibold text-white hover:bg-white/10"
             >
               Request Online
             </Link>

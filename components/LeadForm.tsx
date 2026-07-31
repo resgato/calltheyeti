@@ -102,18 +102,18 @@ export function LeadForm() {
   }
 
   return (
-    <div className="w-full max-w-xl rounded-lg border border-black/10 dark:border-white/10 bg-white dark:bg-gray-50 p-6 shadow-sm">
+    <div className="w-full max-w-xl rounded-2xl border border-line bg-white dark:bg-surface p-6 shadow-sm">
       <h3 className="text-lg font-semibold tracking-tight text-black dark:text-black">Request Service</h3>
       <p className="mt-1 text-sm text-black/70 dark:text-black/70">Fast response. Licensed • Insured • ROC360510</p>
       
       {submitted && (
-        <div className="mt-3 rounded-md bg-green-50 dark:bg-green-100 p-3 text-sm text-green-800 dark:text-green-900">
+        <div className="mt-3 rounded-xl bg-green-50 dark:bg-green-100 p-3 text-sm text-green-800 dark:text-green-900">
           Thanks! We received your request and will contact you shortly.
         </div>
       )}
       
       {error && !submitted && (
-        <div className="mt-3 rounded-md bg-red-50 dark:bg-red-100 p-3 text-sm text-red-700 dark:text-red-900">{error}</div>
+        <div className="mt-3 rounded-xl bg-red-50 dark:bg-red-100 p-3 text-sm text-red-700 dark:text-red-900">{error}</div>
       )}
       
       <form key={formKey} onSubmit={handleSubmit} className="mt-4 grid grid-cols-1 gap-3">
@@ -124,7 +124,7 @@ export function LeadForm() {
             name="name" 
             required 
             placeholder="Jane Doe" 
-            className="h-10 rounded-md border border-black/15 dark:border-white/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
+            className="h-10 rounded-xl border border-line px-3 outline-none focus:ring-2 focus:ring-brand-600 text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
           />
         </div>
         <div className="grid gap-1">
@@ -134,7 +134,7 @@ export function LeadForm() {
             name="phone" 
             required 
             placeholder="(480) 555-0199" 
-            className="h-10 rounded-md border border-black/15 dark:border-white/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
+            className="h-10 rounded-xl border border-line px-3 outline-none focus:ring-2 focus:ring-brand-600 text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
           />
         </div>
         <div className="grid gap-1">
@@ -144,7 +144,7 @@ export function LeadForm() {
             name="email" 
             type="email" 
             placeholder="you@example.com" 
-            className="h-10 rounded-md border border-black/15 dark:border-white/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
+            className="h-10 rounded-xl border border-line px-3 outline-none focus:ring-2 focus:ring-brand-600 text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
           />
         </div>
         <div className="grid gap-1">
@@ -152,7 +152,7 @@ export function LeadForm() {
           <select 
             id="service" 
             name="service" 
-            className="h-10 rounded-md border border-black/15 dark:border-white/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black dark:text-black bg-white dark:bg-white"
+            className="h-10 rounded-xl border border-line px-3 outline-none focus:ring-2 focus:ring-brand-600 text-black dark:text-black bg-white dark:bg-white"
           >
             <option>Custom Home</option>
             <option>Renovation / Remodel</option>
@@ -169,7 +169,7 @@ export function LeadForm() {
             id="zip" 
             name="zip" 
             placeholder="85001" 
-            className="h-10 rounded-md border border-black/15 dark:border-white/15 px-3 outline-none focus:ring-2 focus:ring-[--color-primary] text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
+            className="h-10 rounded-xl border border-line px-3 outline-none focus:ring-2 focus:ring-brand-600 text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
           />
         </div>
         <div className="grid gap-1">
@@ -179,13 +179,13 @@ export function LeadForm() {
             name="message" 
             rows={3} 
             placeholder="Tell us what's going on" 
-            className="rounded-md border border-black/15 dark:border-white/15 px-3 py-2 outline-none focus:ring-2 focus:ring-[--color-primary] text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
+            className="rounded-xl border border-line px-3 py-2 outline-none focus:ring-2 focus:ring-brand-600 text-black dark:text-black bg-white dark:bg-white placeholder-black/50 dark:placeholder-black/50" 
           />
         </div>
         <button
           type="submit"
           disabled={submitting}
-          className="mt-2 inline-flex h-11 items-center justify-center rounded-md bg-red-700 px-4 text-sm font-semibold text-white shadow hover:bg-red-800 disabled:opacity-60"
+          className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-brand-600 px-4 text-sm font-semibold text-white shadow hover:bg-brand-700 disabled:opacity-60"
         >
           {submitting ? "Sending…" : "Get Help Now"}
         </button>

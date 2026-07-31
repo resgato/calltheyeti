@@ -53,7 +53,7 @@ export default function QueenCreekPlumberPage() {
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={faqJsonLd} />
       <div className="mb-8">
-        <Link href="/services" className="text-red-700 dark:text-red-700 underline">
+        <Link href="/services" className="text-brand-700 dark:text-brand-700 underline">
           ← Back to Services
         </Link>
       </div>
@@ -117,43 +117,43 @@ export default function QueenCreekPlumberPage() {
               <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Our Queen Creek Services</h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
-                  <Link href="/services/custom-homes" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
                   </Link>{" "}
                   — Full plumbing design and installation for custom builds on Queen Creek acreage and lot properties.
                 </li>
                 <li>
-                  <Link href="/services/renovations" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
                   </Link>{" "}
                   — Fixture and layout upgrades to improve on builder-standard plumbing.
                 </li>
                 <li>
-                  <Link href="/services/repairs" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
                   </Link>{" "}
                   — Leak repair, drain cleaning, and emergency plumbing for Queen Creek homes.
                 </li>
                 <li>
-                  <Link href="/services/bathtubs-showers" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs & Showers
                   </Link>{" "}
                   — Shower valve upgrades, custom shower installations, and tub replacements.
                 </li>
                 <li>
-                  <Link href="/services/faucets-fixtures" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets & Fixtures
                   </Link>{" "}
                   — Upgrade builder-grade fixtures to premium faucets, disposals, and hardware.
                 </li>
                 <li>
-                  <Link href="/services/water-heaters" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
                   </Link>{" "}
                   — Tankless water heater upgrades and recirculation pump installation for large floor plans.
                 </li>
                 <li>
-                  <Link href="/services/water-softeners" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
                   </Link>{" "}
                   — Water softener installation to protect new Queen Creek homes from hard-water damage.
@@ -223,69 +223,69 @@ export default function QueenCreekPlumberPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Call a Queen Creek Plumber</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Need a plumber in Queen Creek? We serve the area regularly — no extra trip charges.
             </p>
             <a
               href={siteConfig.phoneHref}
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Call Now: {siteConfig.phone}
             </a>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Request a Quote</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Building a custom home or upgrading builder-grade plumbing? Get a free estimate.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Request Quote
             </Link>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Other Service Areas</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/paradise-valley-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/paradise-valley-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Paradise Valley Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/phoenix-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/phoenix-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Phoenix Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/mesa-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/mesa-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Mesa Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/scottsdale-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/scottsdale-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Scottsdale Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/gilbert-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/gilbert-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Gilbert Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/chandler-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/chandler-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Chandler Plumber
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Why Choose Yeti Plumbing?</h3>
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>Licensed & Insured (ROC360510)</li>

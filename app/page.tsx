@@ -16,38 +16,48 @@ export default function Home() {
   return (
     <main>
       <JsonLd data={faqJsonLd} />
-      <section className="bg-red-700 text-white">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-16 md:grid-cols-2 md:items-center">
+      <section className="bg-gradient-to-b from-brand-900 to-brand-800 text-white">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-20 md:grid-cols-2 md:items-center">
           <div>
-            <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+            {/*
+              The logo is not repeated here on purpose: the PNG carries an opaque
+              cream background that reads as a box against the navy, and the mark
+              is already in the header.
+            */}
+            <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white ring-1 ring-white/20">
+              Licensed &amp; Insured · ROC360510
+            </span>
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
               {content.hero.title}
             </h1>
-            <div className="flex justify-center my-8">
-              <img src="/yeti-logo.png" alt="Yeti Plumbing" className="w-full max-w-2xl h-auto" />
-            </div>
-            <p className="mt-4 text-lg text-white/90">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
               {content.hero.description}
             </p>
-            <p className="mt-2 text-white/80">
+            <p className="mt-3 text-sm text-white/70">
               Serving {content.serviceArea.areas.join(", ")} and surrounding areas.
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href={siteConfig.phoneHref}
-                className="inline-flex items-center rounded-md bg-yellow-400 px-4 py-2 text-black font-semibold shadow hover:bg-yellow-500"
+                className="inline-flex items-center rounded-full bg-brand-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-900/30 hover:bg-brand-500"
               >
                 Call {siteConfig.phone}
               </a>
               <a
                 href="#request"
-                className="inline-flex items-center rounded-md border border-white/30 px-4 py-2 text-white hover:bg-white/10"
+                className="inline-flex items-center rounded-full border border-white/30 px-6 py-3.5 text-base font-semibold text-white hover:bg-white/10"
               >
                 Request Service
               </a>
             </div>
-            <ul className="mt-6 grid grid-cols-1 gap-2 text-sm text-white/90 sm:grid-cols-2">
+            <ul className="mt-8 grid grid-cols-1 gap-x-6 gap-y-2 text-sm text-white/85 sm:grid-cols-2">
               {content.hero.features.map((feature, index) => (
-                <li key={index}>✓ {feature}</li>
+                <li key={index} className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-brand-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 111.4-1.4l3.8 3.8 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" />
+                  </svg>
+                  {feature}
+                </li>
               ))}
             </ul>
           </div>
@@ -59,10 +69,10 @@ export default function Home() {
 
       <TrustBar />
 
-      <section className="bg-yellow-400">
+      <section className="bg-accent-400">
         <div className="mx-auto max-w-6xl px-4 py-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {content.features.map((feature, index) => (
-            <div key={index} className="rounded-md bg-white p-4 shadow-sm">
+            <div key={index} className="rounded-xl bg-white p-4 shadow-sm">
               <div className="text-base font-semibold text-black">{feature.title}</div>
               <div className="text-xs text-black/70">{feature.description}</div>
             </div>
@@ -70,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-black/10 dark:border-white/10">
+      <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white">{content.services.title}</h2>
           <p className="mt-2 text-black/70 dark:text-white/70">{content.services.subtitle}</p>
@@ -79,7 +89,7 @@ export default function Home() {
               <Link
                 key={index}
                 href={item.href}
-                className="rounded-lg border border-black/10 dark:border-white/10 p-4 hover:shadow-sm bg-white dark:bg-gray-50"
+                className="rounded-2xl border border-line p-4 hover:shadow-sm bg-white dark:bg-surface"
               >
                 <div className="text-lg font-medium text-black dark:text-black">{item.title}</div>
                 <div className="text-sm text-black/70 dark:text-black/70">{item.description}</div>
@@ -91,7 +101,7 @@ export default function Home() {
 
       <HowItWorks />
 
-      <section className="bg-gray-50 dark:bg-gray-100">
+      <section className="bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-center text-black dark:text-black">{content.gallery.title}</h2>
           <p className="mt-2 text-black/70 dark:text-black/70 text-center">{content.gallery.subtitle}</p>
@@ -101,11 +111,11 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-black dark:text-black">{project.title}</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <img src={project.beforeImage} alt={`${project.title} before`} className="w-full rounded-lg shadow-md" />
+                    <img src={project.beforeImage} alt={`${project.title} before`} className="w-full rounded-2xl shadow-md" />
                     <p className="mt-2 text-sm text-black/70 dark:text-black/70 text-center">Before</p>
                   </div>
                   <div>
-                    <img src={project.afterImage} alt={`${project.title} after`} className="w-full rounded-lg shadow-md" />
+                    <img src={project.afterImage} alt={`${project.title} after`} className="w-full rounded-2xl shadow-md" />
                     <p className="mt-2 text-sm text-black/70 dark:text-black/70 text-center">After</p>
                   </div>
                 </div>
@@ -113,7 +123,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <img src={content.gallery.familyImage} alt="Family-first approach to plumbing" className="mx-auto max-w-md rounded-lg shadow-md" />
+            <img src={content.gallery.familyImage} alt="Family-first approach to plumbing" className="mx-auto max-w-md rounded-2xl shadow-md" />
             <p className="mt-4 text-lg font-medium text-black dark:text-black">{content.gallery.familyTitle}</p>
             <p className="text-black/70 dark:text-black/70">{content.gallery.familyDescription}</p>
           </div>
@@ -124,7 +134,7 @@ export default function Home() {
 
       <ConsultationCTA />
 
-      <section id="request" className="bg-[--color-ice-50] dark:bg-gray-50">
+      <section id="request" className="bg-brand-50 dark:bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <div>
@@ -143,7 +153,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-black/10 dark:border-white/10">
+      <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-black">{content.serviceArea.title}</h2>
           <p className="mt-2 text-black/70 dark:text-black/70">
@@ -155,7 +165,7 @@ export default function Home() {
               <Link
                 key={area.href}
                 href={area.href}
-                className="rounded-lg border border-black/10 dark:border-white/10 px-4 py-3 text-center text-sm font-medium text-black dark:text-black bg-white dark:bg-gray-50 hover:border-red-700 hover:text-red-700"
+                className="rounded-2xl border border-line px-4 py-3 text-center text-sm font-medium text-black dark:text-black bg-white dark:bg-surface hover:border-brand-600 hover:text-brand-700"
               >
                 {area.name} Plumber
               </Link>

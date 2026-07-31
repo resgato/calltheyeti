@@ -32,13 +32,13 @@ export default function ContactPage() {
           <div className="mt-6 space-y-3 text-sm">
             <div>
               <div className="font-medium text-black dark:text-black">Phone</div>
-              <a href={siteConfig.phoneHref} className="text-[--color-primary] underline">
+              <a href={siteConfig.phoneHref} className="text-brand-600 underline">
                 {siteConfig.phone}
               </a>
             </div>
             <div>
               <div className="font-medium text-black dark:text-black">Email</div>
-              <a href={`mailto:${siteConfig.email}`} className="text-[--color-primary] underline">
+              <a href={`mailto:${siteConfig.email}`} className="text-brand-600 underline">
                 {siteConfig.email}
               </a>
             </div>

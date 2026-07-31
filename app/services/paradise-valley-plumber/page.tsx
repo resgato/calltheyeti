@@ -56,7 +56,7 @@ export default function ParadiseValleyPlumberPage() {
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={faqJsonLd} />
       <div className="mb-8">
-        <Link href="/services" className="text-red-700 dark:text-red-700 underline">
+        <Link href="/services" className="text-brand-700 dark:text-brand-700 underline">
           ← Back to Services
         </Link>
       </div>
@@ -106,55 +106,55 @@ export default function ParadiseValleyPlumberPage() {
               </h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
-                  <Link href="/services/custom-homes" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
                   </Link>{" "}
                   — Full plumbing design and installation for new Paradise Valley estates, casitas, and guest houses.
                 </li>
                 <li>
-                  <Link href="/services/renovations" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
                   </Link>{" "}
                   — Primary suite and spa bath remodels, chef&apos;s kitchen upgrades, and whole-estate re-pipes.
                 </li>
                 <li>
-                  <Link href="/services/emergency-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Emergency Plumbing
                   </Link>{" "}
                   — Burst pipes, slab leaks, and water heater failures handled fast to limit damage to finishes.
                 </li>
                 <li>
-                  <Link href="/services/repairs" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
                   </Link>{" "}
                   — Leak repair, valve replacement, and diagnostics across large estate properties.
                 </li>
                 <li>
-                  <Link href="/services/drain-cleaning" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Drain Cleaning
                   </Link>{" "}
                   — Camera inspection and clearing for long, complex estate drain runs and mature-tree root intrusion.
                 </li>
                 <li>
-                  <Link href="/services/bathtubs-showers" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs &amp; Showers
                   </Link>{" "}
                   — Freestanding soaking tubs, steam showers, and multi-head and body-spray shower systems.
                 </li>
                 <li>
-                  <Link href="/services/faucets-fixtures" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets &amp; Fixtures
                   </Link>{" "}
                   — Designer and imported fixture installation, pot fillers, and specialty valve work.
                 </li>
                 <li>
-                  <Link href="/services/water-heaters" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
                   </Link>{" "}
                   — Tankless and multi-unit systems sized for estates with heavy simultaneous hot-water demand.
                 </li>
                 <li>
-                  <Link href="/services/water-softeners" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
                   </Link>{" "}
                   — Whole-home softening and filtration to protect premium fixtures from Valley hard water.
@@ -259,69 +259,69 @@ export default function ParadiseValleyPlumberPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Call a Paradise Valley Plumber</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Need a plumber in Paradise Valley? We offer free estimates and prompt scheduling.
             </p>
             <a
               href={siteConfig.phoneHref}
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Call Now: {siteConfig.phone}
             </a>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Request a Quote</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Planning an estate remodel or new build? Get a detailed plumbing estimate.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Request Quote
             </Link>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Other Service Areas</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/scottsdale-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/scottsdale-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Scottsdale Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/phoenix-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/phoenix-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Phoenix Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/mesa-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/mesa-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Mesa Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/gilbert-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/gilbert-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Gilbert Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/chandler-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/chandler-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Chandler Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/queen-creek-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/queen-creek-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Queen Creek Plumber
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Why Choose Yeti Plumbing?</h3>
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>Licensed &amp; Insured (ROC360510)</li>

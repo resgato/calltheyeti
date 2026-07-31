@@ -27,7 +27,7 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="border-t border-black/10 bg-white">
+    <section className="border-t border-line bg-white">
       <div className="mx-auto max-w-6xl px-4 py-14">
         <h2 className="text-2xl font-semibold tracking-tight text-black">How It Works</h2>
         <p className="mt-2 text-black/70">
@@ -36,8 +36,8 @@ export function HowItWorks() {
 
         <ol className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
           {STEPS.map((s) => (
-            <li key={s.step} className="rounded-lg border border-black/10 bg-white p-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-700 text-lg font-bold text-white">
+            <li key={s.step} className="rounded-2xl border border-line bg-white p-6">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">
                 {s.step}
               </div>
               <h3 className="mt-4 text-lg font-semibold text-black">{s.title}</h3>
@@ -49,7 +49,7 @@ export function HowItWorks() {
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <a
             href={siteConfig.phoneHref}
-            className="inline-flex items-center rounded-md bg-red-700 px-5 py-3 font-semibold text-white hover:bg-red-800"
+            className="inline-flex items-center rounded-full bg-brand-600 px-5 py-3 font-semibold text-white hover:bg-brand-700"
           >
             Call {siteConfig.phone}
           </a>

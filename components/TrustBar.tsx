@@ -15,13 +15,13 @@ const TRUST_ITEMS = [
 
 export function TrustBar() {
   return (
-    <section aria-label="Our credentials" className="border-b border-black/10 bg-white">
+    <section aria-label="Our credentials" className="border-b border-line bg-white">
       <div className="mx-auto max-w-6xl px-4 py-6">
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {TRUST_ITEMS.map((item) => (
             <li key={item.label} className="flex items-start gap-2">
               <svg
-                className="mt-0.5 h-5 w-5 shrink-0 text-red-700"
+                className="mt-0.5 h-5 w-5 shrink-0 text-brand-700"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 aria-hidden="true"

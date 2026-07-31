@@ -11,11 +11,11 @@ import { siteConfig } from "@/lib/site";
  */
 export function StickyCallBar() {
   return (
-    <div className="md:hidden fixed bottom-0 inset-x-0 z-50 border-t border-black/10 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
+    <div className="md:hidden fixed bottom-0 inset-x-0 z-50 border-t border-line bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
       <div className="flex items-stretch gap-2 px-3 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))]">
         <a
           href={siteConfig.phoneHref}
-          className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-red-700 px-4 py-3 text-base font-bold text-white shadow hover:bg-red-800"
+          className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-4 py-3 text-base font-bold text-white shadow hover:bg-brand-700"
           aria-label={`Call Yeti Plumbing at ${siteConfig.phone}`}
         >
           <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -25,7 +25,7 @@ export function StickyCallBar() {
         </a>
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center rounded-md border border-red-700 px-4 py-3 text-base font-semibold text-red-700 hover:bg-red-50"
+          className="inline-flex items-center justify-center rounded-full border border-brand-600 px-4 py-3 text-base font-semibold text-brand-700 hover:bg-brand-50"
         >
           Get Quote
         </Link>

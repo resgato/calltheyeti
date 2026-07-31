@@ -88,7 +88,7 @@ export default function ServicesPage() {
           <Link
             key={s.title}
             href={s.href}
-            className="rounded-lg border border-black/10 dark:border-white/10 overflow-hidden bg-white dark:bg-gray-50 shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-2xl border border-line overflow-hidden bg-white dark:bg-surface shadow-sm hover:shadow-md transition-shadow"
           >
             <img src={s.image} alt={s.title} className="w-full h-48 object-cover" />
             <div className="p-4">
@@ -107,7 +107,7 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <Link
             href="/services/emergency-plumber"
-            className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-white dark:bg-gray-50 shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-2xl border border-line p-6 bg-white dark:bg-surface shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="text-lg font-medium text-black dark:text-black">Emergency Plumbing</div>
             <div className="text-sm text-black/70 dark:text-black/70 mt-1">
@@ -117,7 +117,7 @@ export default function ServicesPage() {
           </Link>
           <Link
             href="/services/drain-cleaning"
-            className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-white dark:bg-gray-50 shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-2xl border border-line p-6 bg-white dark:bg-surface shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="text-lg font-medium text-black dark:text-black">Drain Cleaning</div>
             <div className="text-sm text-black/70 dark:text-black/70 mt-1">
@@ -145,7 +145,7 @@ export default function ServicesPage() {
             <Link
               key={area.href}
               href={area.href}
-              className="rounded-lg border border-black/10 dark:border-white/10 px-4 py-3 text-center text-sm font-medium text-black dark:text-black bg-white dark:bg-gray-50 hover:border-red-700 hover:text-red-700"
+              className="rounded-2xl border border-line px-4 py-3 text-center text-sm font-medium text-black dark:text-black bg-white dark:bg-surface hover:border-brand-600 hover:text-brand-700"
             >
               {area.name} Plumber
             </Link>
@@ -153,7 +153,7 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <div className="mt-12 bg-gray-50 dark:bg-gray-100 rounded-lg p-8">
+      <div className="mt-12 bg-surface rounded-2xl p-8">
         <h2 className="text-2xl font-semibold mb-4 text-center text-black dark:text-black">Why Choose Yeti Plumbing?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
@@ -189,30 +189,30 @@ export default function ServicesPage() {
         <h2 className="text-2xl font-semibold mb-6 text-center text-black dark:text-black">Recent Work Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="space-y-2">
-            <img src="/kitchen.jpg" alt="Kitchen renovation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <img src="/kitchen.jpg" alt="Kitchen renovation" className="w-full h-32 object-cover rounded-2xl shadow-sm" />
             <p className="text-sm text-black/70 dark:text-black/70 text-center">Kitchen Renovation</p>
           </div>
           <div className="space-y-2">
-            <img src="/bathtub.jpg" alt="Bathroom upgrade" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <img src="/bathtub.jpg" alt="Bathroom upgrade" className="w-full h-32 object-cover rounded-2xl shadow-sm" />
             <p className="text-sm text-black/70 dark:text-black/70 text-center">Bathroom Upgrade</p>
           </div>
           <div className="space-y-2">
-            <img src="/arizonawaterheater.png" alt="Water heater installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <img src="/arizonawaterheater.png" alt="Water heater installation" className="w-full h-32 object-cover rounded-2xl shadow-sm" />
             <p className="text-sm text-black/70 dark:text-black/70 text-center">Water Heater</p>
           </div>
           <div className="space-y-2">
-            <img src="/sinksinstalled.webp" alt="Fixture installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <img src="/sinksinstalled.webp" alt="Fixture installation" className="w-full h-32 object-cover rounded-2xl shadow-sm" />
             <p className="text-sm text-black/70 dark:text-black/70 text-center">Fixture Installation</p>
           </div>
           <div className="space-y-2">
-            <img src="/watersoftener.jpg" alt="Water softener installation" className="w-full h-32 object-cover rounded-lg shadow-sm" />
+            <img src="/watersoftener.jpg" alt="Water softener installation" className="w-full h-32 object-cover rounded-2xl shadow-sm" />
             <p className="text-sm text-black/70 dark:text-black/70 text-center">Water Softener</p>
           </div>
         </div>
       </div>
 
       <div className="mt-8">
-        <Link href="/" className="text-red-700 dark:text-red-700 underline">
+        <Link href="/" className="text-brand-700 dark:text-brand-700 underline">
           Back to home
         </Link>
       </div>

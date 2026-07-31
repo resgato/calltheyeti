@@ -89,13 +89,13 @@ export default function AboutPage() {
           <section>
             <h2 className="text-2xl font-bold text-black dark:text-black mb-3">Services We Provide</h2>
             <ul className="space-y-2 text-black/70 dark:text-black/70">
-              <li><Link href="/services/custom-homes" className="text-red-700 hover:underline font-medium">Custom Home Plumbing</Link> — Full plumbing systems for new construction</li>
-              <li><Link href="/services/renovations" className="text-red-700 hover:underline font-medium">Renovation Plumbing</Link> — Kitchen and bathroom remodels</li>
-              <li><Link href="/services/repairs" className="text-red-700 hover:underline font-medium">Plumbing Repairs</Link> — Leak fixes, drain cleaning, emergency service</li>
-              <li><Link href="/services/bathtubs-showers" className="text-red-700 hover:underline font-medium">Bathtubs & Showers</Link> — Installation and repair</li>
-              <li><Link href="/services/faucets-fixtures" className="text-red-700 hover:underline font-medium">Faucets & Fixtures</Link> — Faucet replacement and fixture upgrades</li>
-              <li><Link href="/services/water-heaters" className="text-red-700 hover:underline font-medium">Water Heaters</Link> — Tank and tankless installation and repair</li>
-              <li><Link href="/services/water-softeners" className="text-red-700 hover:underline font-medium">Water Softeners</Link> — Water treatment and filtration systems</li>
+              <li><Link href="/services/custom-homes" className="text-brand-700 hover:underline font-medium">Custom Home Plumbing</Link> — Full plumbing systems for new construction</li>
+              <li><Link href="/services/renovations" className="text-brand-700 hover:underline font-medium">Renovation Plumbing</Link> — Kitchen and bathroom remodels</li>
+              <li><Link href="/services/repairs" className="text-brand-700 hover:underline font-medium">Plumbing Repairs</Link> — Leak fixes, drain cleaning, emergency service</li>
+              <li><Link href="/services/bathtubs-showers" className="text-brand-700 hover:underline font-medium">Bathtubs & Showers</Link> — Installation and repair</li>
+              <li><Link href="/services/faucets-fixtures" className="text-brand-700 hover:underline font-medium">Faucets & Fixtures</Link> — Faucet replacement and fixture upgrades</li>
+              <li><Link href="/services/water-heaters" className="text-brand-700 hover:underline font-medium">Water Heaters</Link> — Tank and tankless installation and repair</li>
+              <li><Link href="/services/water-softeners" className="text-brand-700 hover:underline font-medium">Water Softeners</Link> — Water treatment and filtration systems</li>
             </ul>
           </section>
 
@@ -105,18 +105,18 @@ export default function AboutPage() {
               Yeti Plumbing serves homeowners and builders across the Phoenix metropolitan area:
             </p>
             <ul className="grid grid-cols-2 gap-2 text-black/70 dark:text-black/70">
-              <li><Link href="/services/phoenix-plumber" className="text-red-700 hover:underline">Phoenix</Link></li>
-              <li><Link href="/services/mesa-plumber" className="text-red-700 hover:underline">Mesa</Link></li>
-              <li><Link href="/services/scottsdale-plumber" className="text-red-700 hover:underline">Scottsdale</Link></li>
-              <li><Link href="/services/gilbert-plumber" className="text-red-700 hover:underline">Gilbert</Link></li>
-              <li><Link href="/services/chandler-plumber" className="text-red-700 hover:underline">Chandler</Link></li>
-              <li><Link href="/services/queen-creek-plumber" className="text-red-700 hover:underline">Queen Creek</Link></li>
+              <li><Link href="/services/phoenix-plumber" className="text-brand-700 hover:underline">Phoenix</Link></li>
+              <li><Link href="/services/mesa-plumber" className="text-brand-700 hover:underline">Mesa</Link></li>
+              <li><Link href="/services/scottsdale-plumber" className="text-brand-700 hover:underline">Scottsdale</Link></li>
+              <li><Link href="/services/gilbert-plumber" className="text-brand-700 hover:underline">Gilbert</Link></li>
+              <li><Link href="/services/chandler-plumber" className="text-brand-700 hover:underline">Chandler</Link></li>
+              <li><Link href="/services/queen-creek-plumber" className="text-brand-700 hover:underline">Queen Creek</Link></li>
             </ul>
           </section>
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Quick Facts</h3>
             <ul className="space-y-3 text-sm text-black dark:text-black">
               <li><strong>Founded:</strong> 2020</li>
@@ -127,27 +127,27 @@ export default function AboutPage() {
             </ul>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Get in Touch</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Ready to work with us? Call or request a quote online.
             </p>
             <a
               href={siteConfig.phoneHref}
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800 mb-3 w-full text-center"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700 mb-3 w-full text-center"
             >
               Call {siteConfig.phone}
             </a>
             <Link
               href="/contact"
-              className="inline-block border border-red-700 text-red-700 px-4 py-2 rounded-md hover:bg-red-50 w-full text-center"
+              className="inline-block border border-brand-600 text-brand-700 px-4 py-2 rounded-full hover:bg-brand-50 w-full text-center"
             >
               Request a Quote
             </Link>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
-            <img src="/familyfirst.jpg" alt="Yeti Plumbing family-first approach" className="w-full rounded-lg" />
+          <div className="bg-surface p-6 rounded-2xl">
+            <img src="/familyfirst.jpg" alt="Yeti Plumbing family-first approach" className="w-full rounded-2xl" />
             <p className="mt-3 text-sm text-black/70 dark:text-black/70 text-center">
               Family-first approach to every job
             </p>

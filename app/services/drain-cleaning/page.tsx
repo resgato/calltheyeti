@@ -57,7 +57,7 @@ export default function DrainCleaningPage() {
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={faqJsonLd} />
       <div className="mb-8">
-        <Link href="/services" className="text-red-700 dark:text-red-700 underline">
+        <Link href="/services" className="text-brand-700 dark:text-brand-700 underline">
           ← Back to Services
         </Link>
       </div>
@@ -120,7 +120,7 @@ export default function DrainCleaningPage() {
               </ul>
               <p className="text-black dark:text-black mt-4">
                 If sewage is entering the home, stop using every fixture and call us. See our{" "}
-                <Link href="/services/emergency-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                   emergency plumbing service
                 </Link>
                 .
@@ -141,7 +141,7 @@ export default function DrainCleaningPage() {
                 <strong>Hard water scale.</strong> Valley water is heavily mineralized. Over years, scale
                 accumulates on the inside of drain and supply lines, narrowing the effective diameter until
                 ordinary use starts causing backups. A{" "}
-                <Link href="/services/water-softeners" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                   water softener
                 </Link>{" "}
                 slows this considerably.
@@ -175,37 +175,37 @@ export default function DrainCleaningPage() {
               </h2>
               <ul className="text-black dark:text-black space-y-2">
                 <li>
-                  <Link href="/services/mesa-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/mesa-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Mesa
                   </Link>{" "}
                   — East Mesa, Superstition Springs, and Mesa Riverview.
                 </li>
                 <li>
-                  <Link href="/services/scottsdale-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/scottsdale-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Scottsdale
                   </Link>{" "}
                   — Old Town, McCormick Ranch, and North Scottsdale.
                 </li>
                 <li>
-                  <Link href="/services/paradise-valley-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/paradise-valley-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Paradise Valley
                   </Link>{" "}
                   — all of 85253.
                 </li>
                 <li>
-                  <Link href="/services/phoenix-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/phoenix-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Phoenix
                   </Link>
                   ,{" "}
-                  <Link href="/services/gilbert-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/gilbert-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Gilbert
                   </Link>
                   ,{" "}
-                  <Link href="/services/chandler-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/chandler-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Chandler
                   </Link>
                   , and{" "}
-                  <Link href="/services/queen-creek-plumber" className="text-red-700 dark:text-red-700 hover:underline font-semibold">
+                  <Link href="/services/queen-creek-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Queen Creek
                   </Link>
                   .
@@ -262,59 +262,59 @@ export default function DrainCleaningPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Clogged Drain?</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Call for drain cleaning in Mesa, Scottsdale, or Paradise Valley. Price quoted before we start.
             </p>
             <a
               href={siteConfig.phoneHref}
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Call Now: {siteConfig.phone}
             </a>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Sewage Backing Up?</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Stop using all fixtures and treat it as an emergency.
             </p>
             <Link
               href="/services/emergency-plumber"
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Emergency Plumbing
             </Link>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Service Areas</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/mesa-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/mesa-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Mesa Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/scottsdale-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/scottsdale-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Scottsdale Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/paradise-valley-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/paradise-valley-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Paradise Valley Plumber
                 </Link>
               </li>
               <li>
-                <Link href="/services/phoenix-plumber" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/phoenix-plumber" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Phoenix Plumber
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Why Choose Yeti Plumbing?</h3>
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>Licensed &amp; Insured (ROC360510)</li>

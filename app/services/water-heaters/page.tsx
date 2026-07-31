@@ -54,7 +54,7 @@ export default function WaterHeatersPage() {
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={faqJsonLd} />
       <div className="mb-8">
-        <Link href="/services" className="text-red-700 dark:text-red-700 underline">
+        <Link href="/services" className="text-brand-700 dark:text-brand-700 underline">
           ← Back to Services
         </Link>
       </div>
@@ -70,7 +70,7 @@ export default function WaterHeatersPage() {
           </p>
 
           <div className="mb-8">
-            <img src="/arizonawaterheater.png" alt="Water heater installation" className="w-full h-64 object-cover rounded-lg shadow-md" />
+            <img src="/arizonawaterheater.png" alt="Water heater installation" className="w-full h-64 object-cover rounded-2xl shadow-md" />
           </div>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -235,59 +235,59 @@ export default function WaterHeatersPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Get a Water Heater Quote</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Need a new water heater? Get a detailed estimate today.
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Request Quote
             </Link>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Emergency Service</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               No hot water? We provide emergency water heater repair service.
             </p>
             <a 
               href="tel:+18017072547" 
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Call Now: (801) 707-2547
             </a>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Related Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/repairs" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Plumbing Repairs
                 </Link>
               </li>
               <li>
-                <Link href="/services/repairs" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Emergency Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/renovations" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Renovation Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/custom-homes" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Custom Home Plumbing
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Why Choose Yeti Plumbing?</h3>
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>✓ Licensed & Insured (ROC360510)</li>

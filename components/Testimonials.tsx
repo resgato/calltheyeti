@@ -10,7 +10,7 @@ function Stars() {
   return (
     <div className="flex gap-0.5" aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
-        <svg key={i} className="h-4 w-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+        <svg key={i} className="h-4 w-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
           <path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
         </svg>
       ))}
@@ -35,7 +35,7 @@ export function Testimonials({
   const items = reviewsFor(service, limit);
 
   return (
-    <section className="border-t border-black/10 bg-gray-50">
+    <section className="border-t border-line bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -54,7 +54,7 @@ export function Testimonials({
             href={GOOGLE_PROFILE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-red-700 hover:underline"
+            className="text-sm font-medium text-brand-700 hover:underline"
           >
             Read all reviews on Google →
           </a>
@@ -64,7 +64,7 @@ export function Testimonials({
           {items.map((r) => (
             <figure
               key={r.author}
-              className="flex flex-col rounded-lg border border-black/10 bg-white p-6 shadow-sm"
+              className="flex flex-col rounded-2xl border border-line bg-white p-6 shadow-sm"
             >
               <Stars />
               <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-black/80">

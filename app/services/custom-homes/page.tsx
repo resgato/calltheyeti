@@ -45,7 +45,7 @@ export default function CustomHomesPage() {
       <JsonLd data={serviceJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <div className="mb-8">
-        <Link href="/services" className="text-red-700 dark:text-red-700 underline">
+        <Link href="/services" className="text-brand-700 dark:text-brand-700 underline">
           ← Back to Services
         </Link>
       </div>
@@ -61,7 +61,7 @@ export default function CustomHomesPage() {
           </p>
 
           <div className="mb-8">
-            <img src="/kitchen.jpg" alt="Custom home kitchen plumbing" className="w-full h-64 object-cover rounded-lg shadow-md" />
+            <img src="/kitchen.jpg" alt="Custom home kitchen plumbing" className="w-full h-64 object-cover rounded-2xl shadow-md" />
           </div>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -122,7 +122,7 @@ export default function CustomHomesPage() {
               </p>
 
             <div className="my-8">
-              <img src="/familyfirst.jpg" alt="Family-first custom home plumbing" className="w-full h-48 object-cover rounded-lg shadow-md" />
+              <img src="/familyfirst.jpg" alt="Family-first custom home plumbing" className="w-full h-48 object-cover rounded-2xl shadow-md" />
             </div>
 
             </section>
@@ -153,46 +153,46 @@ export default function CustomHomesPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Get a Custom Home Plumbing Quote</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Ready to start your custom home plumbing project? Get a detailed estimate today.
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Request Quote
             </Link>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Related Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/renovations" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Renovation Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/faucets-fixtures" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Kitchen Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/bathtubs-showers" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Bathroom Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/water-heaters" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Water Heaters
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Why Choose Yeti Plumbing?</h3>
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>✓ Licensed & Insured (ROC360510)</li>

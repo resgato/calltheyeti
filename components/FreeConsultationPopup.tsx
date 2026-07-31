@@ -109,12 +109,12 @@ export function FreeConsultationPopup() {
         className="absolute inset-0 bg-black/20 sm:bg-black/50"
       />
 
-      <div className="relative w-full sm:max-w-md rounded-t-2xl sm:rounded-2xl bg-white shadow-2xl border border-black/10 mb-[env(safe-area-inset-bottom)]">
+      <div className="relative w-full sm:max-w-md rounded-t-2xl sm:rounded-2xl bg-white shadow-2xl border border-line mb-[env(safe-area-inset-bottom)]">
         <button
           ref={closeRef}
           onClick={dismiss}
           aria-label="Close"
-          className="absolute right-3 top-3 rounded-full p-2 text-black/50 hover:bg-black/5 hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-red-700"
+          className="absolute right-3 top-3 rounded-full p-2 text-black/50 hover:bg-black/5 hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -122,7 +122,7 @@ export function FreeConsultationPopup() {
         </button>
 
         <div className="px-6 pt-7 pb-6">
-          <div className="inline-flex items-center rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-black">
+          <div className="inline-flex items-center rounded-full bg-accent-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-black">
             Free Consultation
           </div>
 
@@ -144,14 +144,14 @@ export function FreeConsultationPopup() {
             <a
               href={siteConfig.phoneHref}
               onClick={() => track("offer_popup_call")}
-              className="flex-1 inline-flex items-center justify-center rounded-md bg-red-700 px-4 py-3 text-base font-bold text-white hover:bg-red-800"
+              className="flex-1 inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-3 text-base font-bold text-white hover:bg-brand-700"
             >
               Call {siteConfig.phone}
             </a>
             <Link
               href="/contact"
               onClick={() => { track("offer_popup_form"); setOpen(false); }}
-              className="flex-1 inline-flex items-center justify-center rounded-md border border-red-700 px-4 py-3 text-base font-semibold text-red-700 hover:bg-red-50"
+              className="flex-1 inline-flex items-center justify-center rounded-full border border-brand-600 px-4 py-3 text-base font-semibold text-brand-700 hover:bg-brand-50"
             >
               Request Online
             </Link>

@@ -103,8 +103,8 @@ export const metadata: Metadata = {
   category: "Plumbing Services",
   classification: "Local Business",
   other: {
-    "theme-color": "#b91c1c",
-    "msapplication-TileColor": "#b91c1c",
+    "theme-color": "#14548f",
+    "msapplication-TileColor": "#14548f",
     "msapplication-config": "/browserconfig.xml",
   },
 };
@@ -127,7 +127,7 @@ export default function RootLayout({
         
         {/* Additional SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#b91c1c" />
+        <meta name="theme-color" content="#14548f" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         
@@ -158,21 +158,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ClickToCallTracker />
         <Header />
         {children}
-        <footer className="mt-24 border-t border-black/10 dark:border-white/10 bg-white dark:bg-gray-50">
+        <footer className="mt-24 border-t border-line bg-white dark:bg-surface">
           <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-black/70 dark:text-black/70">
             <nav aria-label="Footer navigation" className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
               <div>
                 <h3 className="font-semibold text-black dark:text-black mb-3">Services</h3>
                 <ul className="space-y-2">
-                  <li><Link href="/services/emergency-plumber" className="hover:text-red-700">Emergency Plumbing</Link></li>
-                  <li><Link href="/services/drain-cleaning" className="hover:text-red-700">Drain Cleaning</Link></li>
-                  <li><Link href="/services/custom-homes" className="hover:text-red-700">Custom Homes</Link></li>
-                  <li><Link href="/services/renovations" className="hover:text-red-700">Renovations</Link></li>
-                  <li><Link href="/services/repairs" className="hover:text-red-700">Repairs</Link></li>
-                  <li><Link href="/services/water-heaters" className="hover:text-red-700">Water Heaters</Link></li>
-                  <li><Link href="/services/water-softeners" className="hover:text-red-700">Water Softeners</Link></li>
-                  <li><Link href="/services/bathtubs-showers" className="hover:text-red-700">Bathtubs & Showers</Link></li>
-                  <li><Link href="/services/faucets-fixtures" className="hover:text-red-700">Faucets & Fixtures</Link></li>
+                  <li><Link href="/services/emergency-plumber" className="hover:text-brand-700">Emergency Plumbing</Link></li>
+                  <li><Link href="/services/drain-cleaning" className="hover:text-brand-700">Drain Cleaning</Link></li>
+                  <li><Link href="/services/custom-homes" className="hover:text-brand-700">Custom Homes</Link></li>
+                  <li><Link href="/services/renovations" className="hover:text-brand-700">Renovations</Link></li>
+                  <li><Link href="/services/repairs" className="hover:text-brand-700">Repairs</Link></li>
+                  <li><Link href="/services/water-heaters" className="hover:text-brand-700">Water Heaters</Link></li>
+                  <li><Link href="/services/water-softeners" className="hover:text-brand-700">Water Softeners</Link></li>
+                  <li><Link href="/services/bathtubs-showers" className="hover:text-brand-700">Bathtubs & Showers</Link></li>
+                  <li><Link href="/services/faucets-fixtures" className="hover:text-brand-700">Faucets & Fixtures</Link></li>
                 </ul>
               </div>
               <div>
@@ -180,7 +180,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <ul className="space-y-2">
                   {serviceAreaLinks.map((area) => (
                     <li key={area.href}>
-                      <Link href={area.href} className="hover:text-red-700">{area.name}</Link>
+                      <Link href={area.href} className="hover:text-brand-700">{area.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -188,21 +188,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div>
                 <h3 className="font-semibold text-black dark:text-black mb-3">Company</h3>
                 <ul className="space-y-2">
-                  <li><Link href="/about" className="hover:text-red-700">About Us</Link></li>
-                  <li><Link href="/contact" className="hover:text-red-700">Contact</Link></li>
-                  <li><Link href="/services" className="hover:text-red-700">All Services</Link></li>
+                  <li><Link href="/about" className="hover:text-brand-700">About Us</Link></li>
+                  <li><Link href="/contact" className="hover:text-brand-700">Contact</Link></li>
+                  <li><Link href="/services" className="hover:text-brand-700">All Services</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-semibold text-black dark:text-black mb-3">Contact</h3>
                 <ul className="space-y-2">
-                  <li><a href={siteConfig.phoneHref} className="hover:text-red-700">{siteConfig.phone}</a></li>
-                  <li><a href={`mailto:${siteConfig.email}`} className="hover:text-red-700">{siteConfig.email}</a></li>
+                  <li><a href={siteConfig.phoneHref} className="hover:text-brand-700">{siteConfig.phone}</a></li>
+                  <li><a href={`mailto:${siteConfig.email}`} className="hover:text-brand-700">{siteConfig.email}</a></li>
                   <li className="text-xs">Licensed & Insured · ROC360510</li>
                 </ul>
               </div>
             </nav>
-            <div className="border-t border-black/10 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="border-t border-line pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <p>
                 © {new Date().getFullYear()} {siteConfig.name}. All rights reserved. {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} · {siteConfig.phone} · ROC360510
               </p>

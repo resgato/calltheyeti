@@ -45,7 +45,7 @@ export default function RenovationsPage() {
       <JsonLd data={serviceJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <div className="mb-8">
-        <Link href="/services" className="text-red-700 dark:text-red-700 underline">
+        <Link href="/services" className="text-brand-700 dark:text-brand-700 underline">
           ← Back to Services
         </Link>
       </div>
@@ -61,7 +61,7 @@ export default function RenovationsPage() {
           </p>
 
           <div className="mb-8">
-            <img src="/bathtub.jpg" alt="Bathroom renovation plumbing" className="w-full h-64 object-cover rounded-lg shadow-md" />
+            <img src="/bathtub.jpg" alt="Bathroom renovation plumbing" className="w-full h-64 object-cover rounded-2xl shadow-md" />
           </div>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -91,7 +91,7 @@ export default function RenovationsPage() {
               </ul>
 
             <div className="my-8">
-              <img src="/kitchenbefore.jpg" alt="Kitchen before renovation" className="w-full h-48 object-cover rounded-lg shadow-md" />
+              <img src="/kitchenbefore.jpg" alt="Kitchen before renovation" className="w-full h-48 object-cover rounded-2xl shadow-md" />
             </div>
 
               <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Bathroom Renovation Plumbing</h3>
@@ -109,7 +109,7 @@ export default function RenovationsPage() {
               </ul>
 
             <div className="my-8">
-              <img src="/kitchen.jpg" alt="Kitchen after renovation" className="w-full h-48 object-cover rounded-lg shadow-md" />
+              <img src="/kitchen.jpg" alt="Kitchen after renovation" className="w-full h-48 object-cover rounded-2xl shadow-md" />
             </div>
 
               <h3 className="text-xl font-semibold text-black dark:text-black mb-3">Fixture Upgrades</h3>
@@ -163,46 +163,46 @@ export default function RenovationsPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Get a Renovation Quote</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
               Planning a renovation? Get a detailed plumbing estimate for your project.
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800"
+              className="inline-block bg-brand-600 text-white px-4 py-2 rounded-full hover:bg-brand-700"
             >
               Request Quote
             </Link>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Related Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/faucets-fixtures" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Kitchen Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/bathtubs-showers" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Bathroom Plumbing
                 </Link>
               </li>
               <li>
-                <Link href="/services/bathtubs-showers" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Bathtubs & Showers
                 </Link>
               </li>
               <li>
-                <Link href="/services/faucets-fixtures" className="text-red-700 dark:text-red-700 hover:underline">
+                <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline">
                   Faucets & Fixtures
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-100 p-6 rounded-lg">
+          <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Why Choose Yeti Plumbing?</h3>
             <ul className="space-y-2 text-sm text-black dark:text-black">
               <li>✓ Licensed & Insured (ROC360510)</li>
