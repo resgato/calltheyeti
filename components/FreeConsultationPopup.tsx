@@ -34,13 +34,13 @@ export function FreeConsultationPopup() {
     try {
       window.localStorage.setItem(STORAGE_KEY, String(Date.now()));
     } catch {
-      /* private mode — fall back to once-per-page-load */
+      /* private mode, fall back to once-per-page-load */
     }
     track("offer_popup_dismissed");
   }, [track]);
 
   useEffect(() => {
-    // Already converting on these pages — don't interrupt.
+    // Already converting on these pages, don't interrupt.
     if (pathname === "/contact" || pathname?.startsWith("/admin")) return;
 
     try {
@@ -51,7 +51,7 @@ export function FreeConsultationPopup() {
     }
 
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
-      // Still shown, just without the slide-in — handled in the class list below.
+      // Still shown, just without the slide-in, handled in the class list below.
     }
 
     let done = false;
@@ -127,7 +127,7 @@ export function FreeConsultationPopup() {
           </div>
 
           <h2 id="consult-offer-title" className="mt-3 text-2xl font-bold tracking-tight text-black">
-            Talk to a licensed plumber — free.
+            Talk to a licensed plumber, free.
           </h2>
           <p className="mt-2 text-sm text-black/70">
             Planning a remodel, a new build, or trying to figure out what that leak is going to cost? Get a
@@ -136,7 +136,7 @@ export function FreeConsultationPopup() {
 
           <ul className="mt-4 space-y-1.5 text-sm text-black/80">
             <li>✓ No-obligation estimate</li>
-            <li>✓ Upfront pricing — you approve before we start</li>
+            <li>✓ Upfront pricing, you approve before we start</li>
             <li>✓ Licensed &amp; insured (ROC360510)</li>
           </ul>
 

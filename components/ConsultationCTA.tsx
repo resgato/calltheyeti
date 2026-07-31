@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site";
 /**
  * On-page counterpart to the free-consultation popup.
  *
- * The offer needs a permanent home on the page too — visitors who dismiss the
+ * The offer needs a permanent home on the page too, visitors who dismiss the
  * popup (or never trigger it) should still be able to find and take the offer.
  */
 export function ConsultationCTA() {
@@ -22,7 +22,7 @@ export function ConsultationCTA() {
             <p className="mt-3 text-white/90">
               Whether you are planning a kitchen remodel, speccing plumbing for a new build, or staring at a
               leak you do not understand, we will look at it and give you a straight answer at no charge. You
-              get an upfront price before any work begins — and you are never obligated to move forward.
+              get an upfront price before any work begins, and you are never obligated to move forward.
             </p>
             <ul className="mt-4 grid grid-cols-1 gap-2 text-sm text-white/90 sm:grid-cols-3">
               <li>✓ No-obligation estimate</li>

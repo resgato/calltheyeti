@@ -69,7 +69,7 @@ export default function Home() {
 
       <TrustBar />
 
-      {/* Neutral surface, not the amber band this used to be — amber is reserved
+      {/* Neutral surface, not the amber band this used to be, amber is reserved
           for urgency and the free-consultation offer so it keeps its signal. */}
       <section className="bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-12 grid grid-cols-1 gap-6 sm:grid-cols-3">

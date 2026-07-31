@@ -103,7 +103,9 @@ export function LeadForm() {
 
   return (
     <div className="w-full max-w-xl rounded-2xl border border-line bg-white dark:bg-surface p-6 shadow-sm">
-      <h3 className="text-lg font-semibold tracking-tight text-black dark:text-black">Request Service</h3>
+      {/* h2, not h3: this is a top-level section on every page it appears on,
+          and starting at h3 under the page h1 skipped a level. */}
+      <h2 className="text-lg font-semibold tracking-tight text-black dark:text-black">Request Service</h2>
       <p className="mt-1 text-sm text-black/70 dark:text-black/70">Fast response. Licensed • Insured • ROC360510</p>
       
       {submitted && (

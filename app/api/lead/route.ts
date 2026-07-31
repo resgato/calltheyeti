@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
       await resend.emails.send({
         from: "Yeti Plumbing <help@resgato.com>",
         to: [siteConfig.email],
-        subject: `New Lead: ${escapeHtml(payload.service || "Service Request")} — ${escapeHtml(payload.name)}`,
+        subject: `New Lead: ${escapeHtml(payload.service || "Service Request")}, ${escapeHtml(payload.name)}`,
         replyTo: payload.email || undefined,
         html,
       });

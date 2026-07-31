@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
     const { error } = await supabase.from('content').select('id').limit(1);
 
     if (error && error.code !== 'PGRST116') {
-      // PGRST116 = table not found, which is fine — the query still woke the DB
+      // PGRST116 = table not found, which is fine, the query still woke the DB
       console.error('Keep-alive query error:', error);
     }
 

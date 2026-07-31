@@ -62,7 +62,7 @@ export default function ScottsdalePlumberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Plumber in Scottsdale, AZ — Yeti Plumbing
+            Plumber in Scottsdale, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
             Scottsdale is known for upscale living, resort-style amenities, and some of the most impressive
@@ -77,7 +77,7 @@ export default function ScottsdalePlumberPage() {
                 Plumbing for Scottsdale Luxury Homes
               </h2>
               <p className="text-black dark:text-black mb-4">
-                Scottsdale properties often feature high-end finishes — rain showers, freestanding soaking
+                Scottsdale properties often feature high-end finishes, rain showers, freestanding soaking
                 tubs, pot fillers, built-in espresso plumbing, and whole-home recirculation systems. These
                 luxury installations require a plumber who understands both the technical requirements and
                 the aesthetic expectations. Our team has worked on custom homes and major renovations
@@ -93,7 +93,7 @@ export default function ScottsdalePlumberPage() {
                 In Old Town Scottsdale and South Scottsdale, the housing stock is older. Many homes and
                 condos here were built in the 1960s and 1970s and may still have original copper or
                 galvanized piping. These properties benefit from re-piping, water heater upgrades, and
-                fixture modernization — all services we specialize in.
+                fixture modernization, all of which we specialize in.
               </p>
             </section>
 
@@ -101,46 +101,58 @@ export default function ScottsdalePlumberPage() {
               <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Our Scottsdale Services</h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
+                  <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Emergency Plumbing
+                  </Link>{": "}
+                  Fast response for burst pipes, slab leaks, and water heater failures from Old Town to North Scottsdale. Price quoted before we start.
+                </li>
+                <li>
+                  <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Drain Cleaning
+                  </Link>{": "}
+                  Clogged drains, main sewer line clearing, camera inspection, and tree root removal for Scottsdale homes.
+                </li>
+                <li>
                   <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
-                  </Link>{" "}
-                  — Luxury plumbing systems for new Scottsdale builds, including multi-zone recirculation and outdoor kitchens.
+                  </Link>{": "}
+                  Luxury plumbing systems for new Scottsdale builds, including multi-zone recirculation and outdoor kitchens.
                 </li>
                 <li>
                   <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
-                  </Link>{" "}
-                  — Spa-style bathroom remodels, gourmet kitchen upgrades, and whole-home re-pipes.
+                  </Link>{": "}
+                  Spa-style bathroom remodels, gourmet kitchen upgrades, and whole-home re-pipes.
                 </li>
                 <li>
                   <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
-                  </Link>{" "}
-                  — Leak repair, drain clearing, and emergency plumbing for Scottsdale homes and condos.
+                  </Link>{": "}
+                  Leak repair, drain clearing, and emergency plumbing for Scottsdale homes and condos.
                 </li>
                 <li>
                   <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs & Showers
-                  </Link>{" "}
-                  — Freestanding tub installation, custom shower systems, and multi-head shower setups.
+                  </Link>{": "}
+                  Freestanding tub installation, custom shower systems, and multi-head shower setups.
                 </li>
                 <li>
                   <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets & Fixtures
-                  </Link>{" "}
-                  — High-end faucet installation, pot fillers, and designer fixture upgrades.
+                  </Link>{": "}
+                  High-end faucet installation, pot fillers, and designer fixture upgrades.
                 </li>
                 <li>
                   <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
-                  </Link>{" "}
-                  — Tankless water heater installation for large Scottsdale homes with high hot-water demand.
+                  </Link>{": "}
+                  Tankless water heater installation for large Scottsdale homes with high hot-water demand.
                 </li>
                 <li>
                   <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
-                  </Link>{" "}
-                  — Protect premium fixtures and appliances from Scottsdale hard-water damage.
+                  </Link>{": "}
+                  Protect premium fixtures and appliances from Scottsdale hard-water damage.
                 </li>
               </ul>
             </section>
@@ -171,7 +183,7 @@ export default function ScottsdalePlumberPage() {
                 Why Scottsdale Homeowners Choose Us
               </h2>
               <p className="text-black dark:text-black mb-4">
-                Scottsdale homeowners expect a higher level of service — and they should. When you invest in
+                Scottsdale homeowners expect a higher level of service, and they should. When you invest in
                 premium fixtures and finishes, you need a plumber who installs them correctly and treats your
                 property with care. We protect floors, countertops, and finishes during every job. Our work
                 areas are always left clean.
@@ -278,6 +290,9 @@ export default function ScottsdalePlumberPage() {
               <li>Upfront, Honest Pricing</li>
               <li>Warranty on All Work</li>
             </ul>
+            <Link href="/about" className="mt-4 inline-block text-sm font-medium text-brand-700 hover:underline">
+              About Yeti Plumbing
+            </Link>
           </div>
         </div>
       </div>

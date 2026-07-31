@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { defaultServicesContent } from "@/lib/content";
 import { LeadForm } from "@/components/LeadForm";
+import { FAQSection } from "@/components/FAQSection";
+import { pageFaqs } from "@/lib/service-faqs";
 
 export const metadata: Metadata = {
   title: "Plumbing Services | Custom Homes, Renovations & Repairs",
@@ -102,7 +104,7 @@ export default function ServicesPage() {
       <div className="mt-12">
         <h2 className="text-2xl font-semibold mb-2 text-black dark:text-black">Emergency &amp; Drain Services</h2>
         <p className="text-black/70 dark:text-black/70 mb-6">
-          Urgent problems and recurring clogs — handled fast, with the price quoted before we start.
+          Urgent problems and recurring clogs, handled fast, with the price quoted before we start.
         </p>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <Link
@@ -215,6 +217,9 @@ export default function ServicesPage() {
         <Link href="/" className="text-brand-700 dark:text-brand-700 underline">
           Back to home
         </Link>
+      </div>
+      <div className="mt-14 -mx-4">
+        <FAQSection faqs={pageFaqs["services"]} />
       </div>
     </main>
   );

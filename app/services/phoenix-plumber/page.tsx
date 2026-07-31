@@ -63,10 +63,10 @@ export default function PhoenixPlumberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Plumber in Phoenix, AZ — Yeti Plumbing
+            Plumber in Phoenix, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
-            As the capital and largest city in Arizona, Phoenix is home to a massive range of properties — from
+            As the capital and largest city in Arizona, Phoenix is home to a massive range of properties, from
             historic bungalows near Downtown to sprawling estates in Arcadia and brand-new builds in North Phoenix.
             Yeti Plumbing is a licensed, insured plumbing contractor (ROC360510) serving every corner of the Valley.
           </p>
@@ -87,7 +87,7 @@ export default function PhoenixPlumberPage() {
               <p className="text-black dark:text-black mb-4">
                 In Ahwatukee, many homes were built during the late 1980s and 1990s and are reaching the
                 age where polybutylene or early CPVC supply lines begin to fail. Downtown Phoenix condos
-                and lofts present their own set of challenges — tight spaces, shared walls, and high-rise
+                and lofts present their own set of challenges, tight spaces, shared walls, and high-rise
                 plumbing stacks that demand precision work.
               </p>
               <p className="text-black dark:text-black">
@@ -101,46 +101,58 @@ export default function PhoenixPlumberPage() {
               <h2 className="text-2xl font-bold text-black dark:text-black mb-4">What We Offer</h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
+                  <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Emergency Plumbing
+                  </Link>{": "}
+                  Fast response for burst pipes, slab leaks, and water heater failures across central Phoenix and the metro. Price quoted before we start.
+                </li>
+                <li>
+                  <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Drain Cleaning
+                  </Link>{": "}
+                  Clogged drains, main sewer line clearing, camera inspection, and tree root removal for Phoenix homes.
+                </li>
+                <li>
                   <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
-                  </Link>{" "}
-                  — Complete plumbing systems for new luxury builds throughout Phoenix and Paradise Valley.
+                  </Link>{": "}
+                  Complete plumbing systems for new luxury builds throughout Phoenix and Paradise Valley.
                 </li>
                 <li>
                   <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
-                  </Link>{" "}
-                  — Kitchen and bathroom remodel plumbing, including layout changes and fixture upgrades.
+                  </Link>{": "}
+                  Kitchen and bathroom remodel plumbing, including layout changes and fixture upgrades.
                 </li>
                 <li>
                   <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
-                  </Link>{" "}
-                  — Leak detection, burst pipe repair, drain clearing, and emergency service.
+                  </Link>{": "}
+                  Leak detection, burst pipe repair, drain clearing, and emergency service.
                 </li>
                 <li>
                   <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs & Showers
-                  </Link>{" "}
-                  — Installation and repair of tubs, showers, and shower valves.
+                  </Link>{": "}
+                  Installation and repair of tubs, showers, and shower valves.
                 </li>
                 <li>
                   <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets & Fixtures
-                  </Link>{" "}
-                  — Faucet replacement, garbage disposal installation, and fixture upgrades.
+                  </Link>{": "}
+                  Faucet replacement, garbage disposal installation, and fixture upgrades.
                 </li>
                 <li>
                   <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
-                  </Link>{" "}
-                  — Tank and tankless water heater installation, repair, and replacement.
+                  </Link>{": "}
+                  Tank and tankless water heater installation, repair, and replacement.
                 </li>
                 <li>
                   <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
-                  </Link>{" "}
-                  — Water softener and filtration systems to combat Phoenix hard water.
+                  </Link>{": "}
+                  Water softener and filtration systems to combat Phoenix hard water.
                 </li>
               </ul>
             </section>
@@ -175,7 +187,7 @@ export default function PhoenixPlumberPage() {
               <p className="text-black dark:text-black mb-4">
                 Phoenix homeowners deal with some of the hardest municipal water in the country. That mineral
                 content wreaks havoc on water heaters, dishwashers, and supply lines. We see the damage firsthand
-                every day and know exactly how to address it — from recommending the right water softener to
+                every day and know exactly how to address it, from recommending the right water softener to
                 installing fixtures designed to withstand hard-water conditions.
               </p>
               <p className="text-black dark:text-black">
@@ -286,6 +298,9 @@ export default function PhoenixPlumberPage() {
               <li>Upfront, Honest Pricing</li>
               <li>Warranty on All Work</li>
             </ul>
+            <Link href="/about" className="mt-4 inline-block text-sm font-medium text-brand-700 hover:underline">
+              About Yeti Plumbing
+            </Link>
           </div>
         </div>
       </div>

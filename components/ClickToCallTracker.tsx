@@ -13,8 +13,8 @@ declare global {
  * Fires a `clicktocall` analytics event whenever a visitor clicks any
  * phone link (`<a href="tel:...">`) anywhere on the site.
  *
- * Uses a single delegated listener so every phone link — hard-coded or
- * driven by siteConfig.phoneHref — is tracked without per-link changes.
+ * Uses a single delegated listener so every phone link, hard-coded or
+ * driven by siteConfig.phoneHref, is tracked without per-link changes.
  *
  * The event is pushed to the GTM dataLayer (primary path: GTM forwards it
  * to GA4). If a gtag() GA4 tag is ever loaded directly, that path is used

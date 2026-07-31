@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
 import { Testimonials } from "@/components/Testimonials";
+import { RelatedServices } from "@/components/RelatedServices";
 
 export const metadata: Metadata = {
   title: "Drain Cleaning | Mesa & Scottsdale, AZ",
@@ -65,11 +66,11 @@ export default function DrainCleaningPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Drain Cleaning — Mesa, Scottsdale &amp; Paradise Valley, AZ
+            Drain Cleaning in Mesa, Scottsdale &amp; Paradise Valley, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
             A slow drain is an annoyance. A backed-up main line is a flooded floor. Yeti Plumbing clears
-            clogged drains and sewer lines across Mesa, Scottsdale, Paradise Valley, and Phoenix — and we
+            clogged drains and sewer lines across Mesa, Scottsdale, Paradise Valley, and Phoenix. We also
             find out why it clogged, so you are not calling someone again in three months.
           </p>
 
@@ -80,24 +81,24 @@ export default function DrainCleaningPage() {
               </h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
-                  <strong>Kitchen sink drains</strong> — grease, food waste, and soap buildup, including
+                  <strong>Kitchen sink drains:</strong> grease, food waste, and soap buildup, including
                   lines shared with a dishwasher or disposal.
                 </li>
                 <li>
-                  <strong>Bathroom sink and tub drains</strong> — hair and soap scum, the most common
+                  <strong>Bathroom sink and tub drains:</strong> hair and soap scum, the most common
                   household clog.
                 </li>
                 <li>
-                  <strong>Toilets and branch lines</strong> — obstructions that plunging will not move.
+                  <strong>Toilets and branch lines:</strong> obstructions that plunging will not move.
                 </li>
                 <li>
-                  <strong>Shower drains</strong> — slow-draining pans and standing water.
+                  <strong>Shower drains:</strong> slow-draining pans and standing water.
                 </li>
                 <li>
-                  <strong>Laundry and floor drains</strong> — lint buildup and garage floor drain backups.
+                  <strong>Laundry and floor drains:</strong> lint buildup and garage floor drain backups.
                 </li>
                 <li>
-                  <strong>Main sewer lines</strong> — full-house backups, root intrusion, and blockages that
+                  <strong>Main sewer lines:</strong> full-house backups, root intrusion, and blockages that
                   cause several fixtures to back up at once.
                 </li>
               </ul>
@@ -164,7 +165,7 @@ export default function DrainCleaningPage() {
               </p>
               <p className="text-black dark:text-black">
                 For recurring clogs, we run a camera through the line afterward. That tells us whether we are
-                dealing with roots, a break, a belly, or scale — and you see the same footage we do. It turns a
+                dealing with roots, a break, a belly, or scale, and you see the same footage we do. It turns a
                 repeat problem into a specific, fixable one instead of an open-ended series of service calls.
               </p>
             </section>
@@ -177,20 +178,20 @@ export default function DrainCleaningPage() {
                 <li>
                   <Link href="/services/mesa-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Mesa
-                  </Link>{" "}
-                  — East Mesa, Superstition Springs, and Mesa Riverview.
+                  </Link>{": "}
+                  East Mesa, Superstition Springs, and Mesa Riverview.
                 </li>
                 <li>
                   <Link href="/services/scottsdale-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Scottsdale
-                  </Link>{" "}
-                  — Old Town, McCormick Ranch, and North Scottsdale.
+                  </Link>{": "}
+                  Old Town, McCormick Ranch, and North Scottsdale.
                 </li>
                 <li>
                   <Link href="/services/paradise-valley-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Paradise Valley
-                  </Link>{" "}
-                  — all of 85253.
+                  </Link>{", "}
+                  all of 85253.
                 </li>
                 <li>
                   <Link href="/services/phoenix-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
@@ -327,6 +328,9 @@ export default function DrainCleaningPage() {
       </div>
       <div className="mt-14 -mx-4 overflow-hidden">
         <Testimonials service="drain-cleaning" limit={3} />
+      </div>
+      <div className="mt-14 -mx-4">
+        <RelatedServices current="drain-cleaning" />
       </div>
     </main>
   );

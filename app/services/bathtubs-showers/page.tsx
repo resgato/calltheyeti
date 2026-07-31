@@ -3,6 +3,9 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedServices } from "@/components/RelatedServices";
+import { FAQSection } from "@/components/FAQSection";
+import { serviceFaqs } from "@/lib/service-faqs";
 
 export const metadata: Metadata = {
   title: "Bathtubs & Showers | Phoenix Bathtub & Shower Installation & Repair",
@@ -270,6 +273,12 @@ export default function BathtubsShowersPage() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-14 -mx-4">
+        <FAQSection faqs={serviceFaqs["bathtubs-showers"]} />
+      </div>
+      <div className="mt-14 -mx-4">
+        <RelatedServices current="bathtubs-showers" />
       </div>
     </main>
   );

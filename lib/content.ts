@@ -69,9 +69,9 @@ export interface ServicesContent {
 // Default content - this would typically come from a database
 export const defaultHomepageContent: HomepageContent = {
   hero: {
-    title: "Arizona's Best Plumber — Fast. Friendly. Fair.",
+    title: "Arizona's Best Plumber. Fast. Friendly. Fair.",
     subtitle: "Custom homes, renovations, and service plumbing done right.",
-    description: "Custom homes, renovations, and service plumbing done right. Bathtubs, showers, faucets, kitchens, and more — same-day service across the Valley.",
+    description: "Custom homes, renovations, and service plumbing done right. Bathtubs, showers, faucets, kitchens, and more. Same-day service across the Valley.",
           features: [
         "Licensed & Insured",
       "Upfront, Honest Pricing",
@@ -80,7 +80,7 @@ export const defaultHomepageContent: HomepageContent = {
   },
   services: {
     title: "Plumbing Services",
-    subtitle: "Expert technicians for any job — big or small.",
+    subtitle: "Expert technicians for any job, big or small.",
     items: [
       { title: "Custom Homes", description: "Plumbing rough-ins & finish", href: "/services/custom-homes" },
       { title: "Renovations", description: "Kitchen & bath remodel plumbing", href: "/services/renovations" },
@@ -146,7 +146,7 @@ export const defaultContactContent: ContactContent = {
 
 export const defaultServicesContent: ServicesContent = {
   title: "Plumbing Services",
-  subtitle: "Expert technicians for any job — big or small.",
+  subtitle: "Expert technicians for any job, big or small.",
   services: [
     {
       title: "Custom Homes",

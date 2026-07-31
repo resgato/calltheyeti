@@ -3,6 +3,8 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
+import { FAQSection } from "@/components/FAQSection";
+import { pageFaqs } from "@/lib/service-faqs";
 
 export const metadata: Metadata = {
   title: "About Us | Phoenix's Trusted Plumber",
@@ -46,7 +48,7 @@ export default function AboutPage() {
             <p className="text-black/70 dark:text-black/70">
               Yeti Plumbing is a family-owned plumbing company based in Phoenix, Arizona. Founded in 2020,
               we specialize in custom home plumbing, kitchen and bathroom renovations, and residential
-              service work across the Phoenix metro area. Our name reflects our approach — we show up
+              service work across the Phoenix metro area. Our name reflects our approach. We show up
               ready to handle the toughest jobs with strength, reliability, and a calm demeanor.
             </p>
           </section>
@@ -54,7 +56,7 @@ export default function AboutPage() {
           <section>
             <h2 className="text-2xl font-bold text-black dark:text-black mb-3">Our Expertise</h2>
             <p className="text-black/70 dark:text-black/70">
-              Our team brings hands-on experience across every type of residential plumbing — from
+              Our team brings hands-on experience across every type of residential plumbing, from
               full rough-in systems for new custom homes to precise finish work on high-end renovations.
               We work closely with general contractors, custom home builders, and homeowners throughout
               the Valley. Whether it is a complex re-pipe in a 1960s Arcadia ranch home or a tankless
@@ -80,22 +82,22 @@ export default function AboutPage() {
               We built Yeti Plumbing around three principles: <strong>Fast. Friendly. Fair.</strong>
             </p>
             <ul className="space-y-2 text-black/70 dark:text-black/70">
-              <li><strong>Customer Education</strong> — We explain what we find and walk you through your options before any work begins. No surprises, no pressure.</li>
-              <li><strong>Clean Jobsites</strong> — We protect your home during every visit. Drop cloths, boot covers, and cleanup are standard on every job.</li>
-              <li><strong>Upfront Pricing</strong> — You will know the cost before we start. We do not charge hidden fees or tack on extras after the fact.</li>
+              <li><strong>Customer Education</strong> We explain what we find and walk you through your options before any work begins. No surprises, no pressure.</li>
+              <li><strong>Clean Jobsites</strong> We protect your home during every visit. Drop cloths, boot covers, and cleanup are standard on every job.</li>
+              <li><strong>Upfront Pricing</strong> You will know the cost before we start. We do not charge hidden fees or tack on extras after the fact.</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-black dark:text-black mb-3">Services We Provide</h2>
             <ul className="space-y-2 text-black/70 dark:text-black/70">
-              <li><Link href="/services/custom-homes" className="text-brand-700 hover:underline font-medium">Custom Home Plumbing</Link> — Full plumbing systems for new construction</li>
-              <li><Link href="/services/renovations" className="text-brand-700 hover:underline font-medium">Renovation Plumbing</Link> — Kitchen and bathroom remodels</li>
-              <li><Link href="/services/repairs" className="text-brand-700 hover:underline font-medium">Plumbing Repairs</Link> — Leak fixes, drain cleaning, emergency service</li>
-              <li><Link href="/services/bathtubs-showers" className="text-brand-700 hover:underline font-medium">Bathtubs & Showers</Link> — Installation and repair</li>
-              <li><Link href="/services/faucets-fixtures" className="text-brand-700 hover:underline font-medium">Faucets & Fixtures</Link> — Faucet replacement and fixture upgrades</li>
-              <li><Link href="/services/water-heaters" className="text-brand-700 hover:underline font-medium">Water Heaters</Link> — Tank and tankless installation and repair</li>
-              <li><Link href="/services/water-softeners" className="text-brand-700 hover:underline font-medium">Water Softeners</Link> — Water treatment and filtration systems</li>
+              <li><Link href="/services/custom-homes" className="text-brand-700 hover:underline font-medium">Custom Home Plumbing</Link>, Full plumbing systems for new construction</li>
+              <li><Link href="/services/renovations" className="text-brand-700 hover:underline font-medium">Renovation Plumbing</Link>, Kitchen and bathroom remodels</li>
+              <li><Link href="/services/repairs" className="text-brand-700 hover:underline font-medium">Plumbing Repairs</Link>, Leak fixes, drain cleaning, emergency service</li>
+              <li><Link href="/services/bathtubs-showers" className="text-brand-700 hover:underline font-medium">Bathtubs & Showers</Link>, Installation and repair</li>
+              <li><Link href="/services/faucets-fixtures" className="text-brand-700 hover:underline font-medium">Faucets & Fixtures</Link>, Faucet replacement and fixture upgrades</li>
+              <li><Link href="/services/water-heaters" className="text-brand-700 hover:underline font-medium">Water Heaters</Link>, Tank and tankless installation and repair</li>
+              <li><Link href="/services/water-softeners" className="text-brand-700 hover:underline font-medium">Water Softeners</Link>, Water treatment and filtration systems</li>
             </ul>
           </section>
 
@@ -153,6 +155,9 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="mt-14 -mx-4">
+        <FAQSection faqs={pageFaqs["about"]} />
       </div>
     </main>
   );

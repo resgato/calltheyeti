@@ -206,7 +206,7 @@ export function buildPageFAQJsonLd(faqs: { question: string; answer: string }[])
   }
 }
 
-// Location page structured data — city-specific LocalBusiness
+// Location page structured data, city-specific LocalBusiness
 export function buildLocationPageJsonLd(config: {
   city: string
   state: string

@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd, buildPageFAQJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
 import { Testimonials } from "@/components/Testimonials";
+import { RelatedServices } from "@/components/RelatedServices";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber | Mesa & Scottsdale, AZ",
@@ -61,9 +62,12 @@ export default function EmergencyPlumberPage() {
         </Link>
       </div>
 
-      {/* Emergency call banner — highest-intent CTA, kept above the fold */}
+      {/* Emergency call banner, highest-intent CTA, kept above the fold */}
       <div className="mb-10 rounded-2xl bg-brand-600 p-6 text-white">
-        <h2 className="text-xl font-bold">Have an active leak right now?</h2>
+        {/* Styled as a heading but not marked up as one: this banner sits above
+            the h1, and a real h2 here would put a subheading before the page
+            title in the document outline. */}
+        <p className="text-xl font-bold">Have an active leak right now?</p>
         <p className="mt-2 text-white/90">
           Shut off your water, then call us. We will talk you through it and get a truck moving.
         </p>
@@ -78,12 +82,12 @@ export default function EmergencyPlumberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Emergency Plumber — Mesa, Scottsdale &amp; Paradise Valley, AZ
+            Emergency Plumber in Mesa, Scottsdale &amp; Paradise Valley, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
             Plumbing emergencies do not wait for business hours, and every minute of running water is more
             drywall, flooring, and cabinetry to replace. Yeti Plumbing responds fast across Mesa, Scottsdale,
-            Paradise Valley, and Phoenix — licensed, insured, and upfront about price before we start.
+            Paradise Valley, and Phoenix. We are licensed, insured, and upfront about price before we start.
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -109,8 +113,8 @@ export default function EmergencyPlumberPage() {
                   shut off the gas valve or flip the breaker for an electric unit.
                 </li>
                 <li>
-                  <strong>Sewage backing up:</strong> Stop running every fixture in the house — including the
-                  washing machine and dishwasher — and do not flush.
+                  <strong>Sewage backing up:</strong> Stop running every fixture in the house, including the
+                  washing machine and dishwasher, and do not flush.
                 </li>
               </ul>
               <p className="text-black dark:text-black mt-4">
@@ -125,16 +129,16 @@ export default function EmergencyPlumberPage() {
               </h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
-                  <strong>Burst and leaking pipes</strong> — supply line failures, split fittings, and
+                  <strong>Burst and leaking pipes:</strong> supply line failures, split fittings, and
                   pinhole leaks in aging copper.
                 </li>
                 <li>
-                  <strong>Slab leaks</strong> — hot spots on the floor, unexplained water bills, or the sound
+                  <strong>Slab leaks:</strong> hot spots on the floor, unexplained water bills, or the sound
                   of running water with everything off. Common in older Mesa and Scottsdale homes on slab
                   foundations.
                 </li>
                 <li>
-                  <strong>Water heater failure</strong> — tanks that are leaking, flooding a garage, or have
+                  <strong>Water heater failure:</strong> tanks that are leaking, flooding a garage, or have
                   stopped producing hot water entirely. See our{" "}
                   <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline">
                     water heater services
@@ -142,7 +146,7 @@ export default function EmergencyPlumberPage() {
                   .
                 </li>
                 <li>
-                  <strong>Sewer backups and main line blockages</strong> — sewage in tubs or floor drains,
+                  <strong>Sewer backups and main line blockages:</strong> sewage in tubs or floor drains,
                   or multiple fixtures backing up at once. See{" "}
                   <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline">
                     drain cleaning
@@ -150,11 +154,11 @@ export default function EmergencyPlumberPage() {
                   .
                 </li>
                 <li>
-                  <strong>No water at all</strong> — main line breaks, failed pressure regulators, and
+                  <strong>No water at all:</strong> main line breaks, failed pressure regulators, and
                   seized shutoff valves.
                 </li>
                 <li>
-                  <strong>Overflowing or continuously running toilets</strong> — failed fill valves, flappers,
+                  <strong>Overflowing or continuously running toilets:</strong> failed fill valves, flappers,
                   and supply lines.
                 </li>
               </ul>
@@ -189,26 +193,26 @@ export default function EmergencyPlumberPage() {
                 <li>
                   <Link href="/services/mesa-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Mesa
-                  </Link>{" "}
-                  — including East Mesa, Superstition Springs, and Mesa Riverview.
+                  </Link>{", "}
+                  including East Mesa, Superstition Springs, and Mesa Riverview.
                 </li>
                 <li>
                   <Link href="/services/scottsdale-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Scottsdale
-                  </Link>{" "}
-                  — Old Town through North Scottsdale, DC Ranch, and Troon.
+                  </Link>{": "}
+                  Old Town through North Scottsdale, DC Ranch, and Troon.
                 </li>
                 <li>
                   <Link href="/services/paradise-valley-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Paradise Valley
-                  </Link>{" "}
-                  — all of 85253, including Clearwater Hills and Camelback Country Club.
+                  </Link>{", "}
+                  all of 85253, including Clearwater Hills and Camelback Country Club.
                 </li>
                 <li>
                   <Link href="/services/phoenix-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Phoenix
-                  </Link>{" "}
-                  — central Phoenix and the surrounding metro.
+                  </Link>{", "}
+                  central Phoenix and the surrounding metro.
                 </li>
                 <li>
                   <Link href="/services/gilbert-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
@@ -280,7 +284,7 @@ export default function EmergencyPlumberPage() {
           <div className="bg-brand-600 p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-2 text-white">Emergency? Call Now</h3>
             <p className="text-sm text-white/90 mb-4">
-              Active leak, no water, or sewage backup — call and we will dispatch.
+              Active leak, no water, or sewage backup, call and we will dispatch.
             </p>
             <a
               href={siteConfig.phoneHref}
@@ -347,11 +351,17 @@ export default function EmergencyPlumberPage() {
               <li>Clean, Professional Service</li>
               <li>Warranty on All Work</li>
             </ul>
+            <Link href="/about" className="mt-4 inline-block text-sm font-medium text-brand-700 hover:underline">
+              About Yeti Plumbing
+            </Link>
           </div>
         </div>
       </div>
       <div className="mt-14 -mx-4 overflow-hidden">
         <Testimonials service="emergency" limit={3} />
+      </div>
+      <div className="mt-14 -mx-4">
+        <RelatedServices current="emergency-plumber" />
       </div>
     </main>
   );

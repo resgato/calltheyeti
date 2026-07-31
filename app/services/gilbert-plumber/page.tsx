@@ -61,7 +61,7 @@ export default function GilbertPlumberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Plumber in Gilbert, AZ — Yeti Plumbing
+            Plumber in Gilbert, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
             Gilbert has transformed from a small farming town into one of the fastest-growing communities
@@ -82,8 +82,8 @@ export default function GilbertPlumberPage() {
                 faucets and valves wearing out, and early signs of hard-water scale inside pipes.
               </p>
               <p className="text-black dark:text-black mb-4">
-                The master-planned communities that define Gilbert — Power Ranch, Seville, Lyons Gate, and
-                Morrison Ranch — were built with copper supply lines and ABS or PVC drain systems. While
+                The master-planned communities that define Gilbert, Power Ranch, Seville, Lyons Gate, and
+                Morrison Ranch, were built with copper supply lines and ABS or PVC drain systems. While
                 generally reliable, the extreme hard water in this part of the Valley accelerates wear on
                 valves, connectors, and water-using appliances. Homes without a water softener often need
                 water heater replacement several years ahead of schedule.
@@ -101,46 +101,58 @@ export default function GilbertPlumberPage() {
               <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Our Gilbert Plumbing Services</h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
+                  <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Emergency Plumbing
+                  </Link>{": "}
+                  Fast response for burst pipes, slab leaks, and water heater failures across Gilbert. Price quoted before we start.
+                </li>
+                <li>
+                  <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Drain Cleaning
+                  </Link>{": "}
+                  Clogged drains, main sewer line clearing, camera inspection, and tree root removal for Gilbert homes.
+                </li>
+                <li>
                   <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
-                  </Link>{" "}
-                  — Complete plumbing for new construction in Gilbert and southeast Valley developments.
+                  </Link>{": "}
+                  Complete plumbing for new construction in Gilbert and southeast Valley developments.
                 </li>
                 <li>
                   <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
-                  </Link>{" "}
-                  — Kitchen and bathroom upgrades, fixture relocation, and re-piping for Gilbert homes.
+                  </Link>{": "}
+                  Kitchen and bathroom upgrades, fixture relocation, and re-piping for Gilbert homes.
                 </li>
                 <li>
                   <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
-                  </Link>{" "}
-                  — Leak detection, pipe repair, drain cleaning, and emergency plumbing in Gilbert.
+                  </Link>{": "}
+                  Leak detection, pipe repair, drain cleaning, and emergency plumbing in Gilbert.
                 </li>
                 <li>
                   <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs & Showers
-                  </Link>{" "}
-                  — Shower valve replacement, tub-to-shower conversions, and new installations.
+                  </Link>{": "}
+                  Shower valve replacement, tub-to-shower conversions, and new installations.
                 </li>
                 <li>
                   <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets & Fixtures
-                  </Link>{" "}
-                  — Faucet upgrades, garbage disposal installation, and hard-water-resistant fixtures.
+                  </Link>{": "}
+                  Faucet upgrades, garbage disposal installation, and hard-water-resistant fixtures.
                 </li>
                 <li>
                   <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
-                  </Link>{" "}
-                  — Tank and tankless water heater replacement — a common need for Gilbert homes reaching 15-20 years.
+                  </Link>{": "}
+                  Tank and tankless water heater replacement, a common need for Gilbert homes reaching 15-20 years.
                 </li>
                 <li>
                   <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
-                  </Link>{" "}
-                  — Water softener installation and salt delivery coordination for Gilbert homeowners.
+                  </Link>{": "}
+                  Water softener installation and salt delivery coordination for Gilbert homeowners.
                 </li>
               </ul>
             </section>
@@ -288,6 +300,9 @@ export default function GilbertPlumberPage() {
               <li>Upfront, Honest Pricing</li>
               <li>Warranty on All Work</li>
             </ul>
+            <Link href="/about" className="mt-4 inline-block text-sm font-medium text-brand-700 hover:underline">
+              About Yeti Plumbing
+            </Link>
           </div>
         </div>
       </div>

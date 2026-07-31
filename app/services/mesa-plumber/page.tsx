@@ -62,12 +62,12 @@ export default function MesaPlumberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Plumber in Mesa, AZ — Yeti Plumbing
+            Plumber in Mesa, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
             Mesa is the third-largest city in Arizona and one of the biggest in the entire country. With
             decades of residential growth spanning from the 1950s through today, the city has an incredibly
-            diverse housing stock — and plumbing to match. Yeti Plumbing provides licensed, professional
+            diverse housing stock, and plumbing to match. Yeti Plumbing provides licensed, professional
             plumbing services across all of Mesa.
           </p>
 
@@ -78,8 +78,8 @@ export default function MesaPlumberPage() {
               </h2>
               <p className="text-black dark:text-black mb-4">
                 Mesa sits in the East Valley and draws water from a mix of Salt River Project and
-                municipal sources. The water here is notoriously hard — averaging 15 to 25 grains per
-                gallon — which means calcium and mineral deposits accumulate quickly inside pipes, water
+                municipal sources. The water here is notoriously hard, averaging 15 to 25 grains per
+                gallon, which means calcium and mineral deposits accumulate quickly inside pipes, water
                 heaters, and appliances. Homes without a water softener often see water heater failures
                 years earlier than expected.
               </p>
@@ -91,8 +91,7 @@ export default function MesaPlumberPage() {
               </p>
               <p className="text-black dark:text-black">
                 In contrast, East Mesa and the areas near Superstition Springs and Signal Butte saw rapid
-                development in the 2000s. These homes are relatively new, but the desert soil conditions —
-                expansive clay that shifts during monsoon season — can stress slab foundations and the
+                development in the 2000s. These homes are relatively new, but the desert soil conditions, expansive clay that shifts during monsoon season, can stress slab foundations and the
                 plumbing lines beneath them. Slab leaks are a common call we handle in these communities.
               </p>
             </section>
@@ -101,46 +100,58 @@ export default function MesaPlumberPage() {
               <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Our Mesa Plumbing Services</h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
+                  <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Emergency Plumbing
+                  </Link>{": "}
+                  Fast response for burst pipes, slab leaks, and water heater failures across Mesa. Price quoted before we start.
+                </li>
+                <li>
+                  <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Drain Cleaning
+                  </Link>{": "}
+                  Clogged drains, main sewer line clearing, camera inspection, and tree root removal for Mesa homes.
+                </li>
+                <li>
                   <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
-                  </Link>{" "}
-                  — Full plumbing installations for new construction in East Mesa and surrounding areas.
+                  </Link>{": "}
+                  Full plumbing installations for new construction in East Mesa and surrounding areas.
                 </li>
                 <li>
                   <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
-                  </Link>{" "}
-                  — Re-piping, layout changes, and fixture upgrades for Mesa kitchen and bath remodels.
+                  </Link>{": "}
+                  Re-piping, layout changes, and fixture upgrades for Mesa kitchen and bath remodels.
                 </li>
                 <li>
                   <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
-                  </Link>{" "}
-                  — Slab leak repair, drain cleaning, water line replacement, and emergency service.
+                  </Link>{": "}
+                  Slab leak repair, drain cleaning, water line replacement, and emergency service.
                 </li>
                 <li>
                   <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs & Showers
-                  </Link>{" "}
-                  — Tub and shower installation, valve replacement, and tile-ready rough-ins.
+                  </Link>{": "}
+                  Tub and shower installation, valve replacement, and tile-ready rough-ins.
                 </li>
                 <li>
                   <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets & Fixtures
-                  </Link>{" "}
-                  — Faucet installation, garbage disposals, and fixture repair throughout Mesa.
+                  </Link>{": "}
+                  Faucet installation, garbage disposals, and fixture repair throughout Mesa.
                 </li>
                 <li>
                   <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
-                  </Link>{" "}
-                  — Tank and tankless water heater installation and repair. Sediment flushing for Mesa hard water.
+                  </Link>{": "}
+                  Tank and tankless water heater installation and repair. Sediment flushing for Mesa hard water.
                 </li>
                 <li>
                   <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
-                  </Link>{" "}
-                  — Water softener installation and maintenance to protect your Mesa home from mineral damage.
+                  </Link>{": "}
+                  Water softener installation and maintenance to protect your Mesa home from mineral damage.
                 </li>
               </ul>
             </section>
@@ -278,6 +289,9 @@ export default function MesaPlumberPage() {
               <li>Upfront, Honest Pricing</li>
               <li>Warranty on All Work</li>
             </ul>
+            <Link href="/about" className="mt-4 inline-block text-sm font-medium text-brand-700 hover:underline">
+              About Yeti Plumbing
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 /**
- * Credential strip. Standard pattern on national home-service sites — surfaces
+ * Credential strip. Standard pattern on national home-service sites, surfaces
  * licensing and guarantees above the fold where they answer the "can I trust
  * this contractor" question before the visitor scrolls.
  *

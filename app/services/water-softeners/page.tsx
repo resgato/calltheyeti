@@ -3,6 +3,9 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedServices } from "@/components/RelatedServices";
+import { FAQSection } from "@/components/FAQSection";
+import { serviceFaqs } from "@/lib/service-faqs";
 
 export const metadata: Metadata = {
   title: "Water Softeners | Phoenix Water Softener Installation & Repair",
@@ -291,6 +294,12 @@ export default function WaterSoftenersPage() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-14 -mx-4">
+        <FAQSection faqs={serviceFaqs["water-softeners"]} />
+      </div>
+      <div className="mt-14 -mx-4">
+        <RelatedServices current="water-softeners" />
       </div>
     </main>
   );

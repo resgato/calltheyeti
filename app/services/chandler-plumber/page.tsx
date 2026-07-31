@@ -61,7 +61,7 @@ export default function ChandlerPlumberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Plumber in Chandler, AZ — Yeti Plumbing
+            Plumber in Chandler, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
             Chandler sits at the heart of Arizona&apos;s tech corridor, home to major semiconductor
@@ -78,7 +78,7 @@ export default function ChandlerPlumberPage() {
               </h2>
               <p className="text-black dark:text-black mb-4">
                 Chandler has a distinct mix of housing ages. The neighborhoods surrounding Downtown
-                Chandler — areas like Chandler Park and Ranch El Dorado — include homes from the 1970s
+                Chandler, areas like Chandler Park and Ranch El Dorado, include homes from the 1970s
                 through 1990s. These properties are at the stage where significant plumbing work becomes
                 necessary: water heater replacements, re-pipes of aging copper or polybutylene lines, and
                 sewer line repairs where tree roots have infiltrated older clay pipes.
@@ -93,7 +93,7 @@ export default function ChandlerPlumberPage() {
               <p className="text-black dark:text-black">
                 Sun Lakes, a large active-adult community on Chandler&apos;s southern border, presents its
                 own set of plumbing needs. Many residents are aging in place and need accessibility
-                upgrades — walk-in tubs, grab bar installations, and ADA-compliant fixtures. The homes
+                upgrades, walk-in tubs, grab bar installations, and ADA-compliant fixtures. The homes
                 themselves, many built in the 1980s and 1990s, often need water heater replacement and
                 fixture modernization.
               </p>
@@ -103,46 +103,58 @@ export default function ChandlerPlumberPage() {
               <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Our Chandler Plumbing Services</h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
+                  <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Emergency Plumbing
+                  </Link>{": "}
+                  Fast response for burst pipes, slab leaks, and water heater failures across Chandler. Price quoted before we start.
+                </li>
+                <li>
+                  <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Drain Cleaning
+                  </Link>{": "}
+                  Clogged drains, main sewer line clearing, camera inspection, and tree root removal for Chandler homes.
+                </li>
+                <li>
                   <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
-                  </Link>{" "}
-                  — New construction plumbing for custom builds in Chandler and the southeast Valley.
+                  </Link>{": "}
+                  New construction plumbing for custom builds in Chandler and the southeast Valley.
                 </li>
                 <li>
                   <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
-                  </Link>{" "}
-                  — Full bathroom and kitchen renovations, including ADA accessibility upgrades.
+                  </Link>{": "}
+                  Full bathroom and kitchen renovations, including ADA accessibility upgrades.
                 </li>
                 <li>
                   <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
-                  </Link>{" "}
-                  — Sewer line repair, slab leak detection, re-pipes, and emergency plumbing service.
+                  </Link>{": "}
+                  Sewer line repair, slab leak detection, re-pipes, and emergency plumbing service.
                 </li>
                 <li>
                   <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs & Showers
-                  </Link>{" "}
-                  — Walk-in tub installation, shower upgrades, and accessibility modifications.
+                  </Link>{": "}
+                  Walk-in tub installation, shower upgrades, and accessibility modifications.
                 </li>
                 <li>
                   <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets & Fixtures
-                  </Link>{" "}
-                  — Fixture upgrades, touchless faucets, and ADA-compliant installations.
+                  </Link>{": "}
+                  Fixture upgrades, touchless faucets, and ADA-compliant installations.
                 </li>
                 <li>
                   <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
-                  </Link>{" "}
-                  — Water heater replacement and tankless upgrades for Chandler homes of all ages.
+                  </Link>{": "}
+                  Water heater replacement and tankless upgrades for Chandler homes of all ages.
                 </li>
                 <li>
                   <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
-                  </Link>{" "}
-                  — Water softener systems to protect Chandler homes from mineral buildup and scale.
+                  </Link>{": "}
+                  Water softener systems to protect Chandler homes from mineral buildup and scale.
                 </li>
               </ul>
             </section>
@@ -280,6 +292,9 @@ export default function ChandlerPlumberPage() {
               <li>Upfront, Honest Pricing</li>
               <li>Warranty on All Work</li>
             </ul>
+            <Link href="/about" className="mt-4 inline-block text-sm font-medium text-brand-700 hover:underline">
+              About Yeti Plumbing
+            </Link>
           </div>
         </div>
       </div>

@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 /**
  * Three-step "what happens when you call" section.
  *
  * Removing uncertainty about the process is one of the highest-converting
- * patterns on home-service sites — homeowners hesitate mainly because they do
+ * patterns on home-service sites, homeowners hesitate mainly because they do
  * not know whether they are committing to a cost by picking up the phone.
  */
 const STEPS = [
@@ -53,7 +54,12 @@ export function HowItWorks() {
           >
             Call {siteConfig.phone}
           </a>
-          <span className="text-sm text-black/60">Free estimates · Licensed ROC360510</span>
+          <span className="text-sm text-black/60">
+            Free estimates · Licensed ROC360510 ·{" "}
+            <Link href="/about" className="font-medium text-brand-700 hover:underline">
+              Meet the team
+            </Link>
+          </span>
         </div>
       </div>
     </section>

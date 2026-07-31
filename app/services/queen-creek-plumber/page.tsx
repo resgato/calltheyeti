@@ -61,13 +61,13 @@ export default function QueenCreekPlumberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Plumber in Queen Creek, AZ — Yeti Plumbing
+            Plumber in Queen Creek, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
             Queen Creek is one of the fastest-growing towns in the Phoenix metro area. Situated in the
             far southeast Valley, roughly 35 miles from Downtown Phoenix, Queen Creek has seen an
             explosion of new residential development over the past decade. With new homes come new
-            plumbing needs — and Yeti Plumbing is here to serve this growing community.
+            plumbing needs, and Yeti Plumbing is here to serve this growing community.
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -117,46 +117,58 @@ export default function QueenCreekPlumberPage() {
               <h2 className="text-2xl font-bold text-black dark:text-black mb-4">Our Queen Creek Services</h2>
               <ul className="text-black dark:text-black space-y-3">
                 <li>
+                  <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Emergency Plumbing
+                  </Link>{": "}
+                  Fast response for burst pipes, slab leaks, and water heater failures across Queen Creek. Price quoted before we start.
+                </li>
+                <li>
+                  <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
+                    Drain Cleaning
+                  </Link>{": "}
+                  Clogged drains, main sewer line clearing, camera inspection, and tree root removal for Queen Creek homes.
+                </li>
+                <li>
                   <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
-                  </Link>{" "}
-                  — Full plumbing design and installation for custom builds on Queen Creek acreage and lot properties.
+                  </Link>{": "}
+                  Full plumbing design and installation for custom builds on Queen Creek acreage and lot properties.
                 </li>
                 <li>
                   <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
-                  </Link>{" "}
-                  — Fixture and layout upgrades to improve on builder-standard plumbing.
+                  </Link>{": "}
+                  Fixture and layout upgrades to improve on builder-standard plumbing.
                 </li>
                 <li>
                   <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
-                  </Link>{" "}
-                  — Leak repair, drain cleaning, and emergency plumbing for Queen Creek homes.
+                  </Link>{": "}
+                  Leak repair, drain cleaning, and emergency plumbing for Queen Creek homes.
                 </li>
                 <li>
                   <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs & Showers
-                  </Link>{" "}
-                  — Shower valve upgrades, custom shower installations, and tub replacements.
+                  </Link>{": "}
+                  Shower valve upgrades, custom shower installations, and tub replacements.
                 </li>
                 <li>
                   <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets & Fixtures
-                  </Link>{" "}
-                  — Upgrade builder-grade fixtures to premium faucets, disposals, and hardware.
+                  </Link>{": "}
+                  Upgrade builder-grade fixtures to premium faucets, disposals, and hardware.
                 </li>
                 <li>
                   <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
-                  </Link>{" "}
-                  — Tankless water heater upgrades and recirculation pump installation for large floor plans.
+                  </Link>{": "}
+                  Tankless water heater upgrades and recirculation pump installation for large floor plans.
                 </li>
                 <li>
                   <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
-                  </Link>{" "}
-                  — Water softener installation to protect new Queen Creek homes from hard-water damage.
+                  </Link>{": "}
+                  Water softener installation to protect new Queen Creek homes from hard-water damage.
                 </li>
               </ul>
             </section>
@@ -226,7 +238,7 @@ export default function QueenCreekPlumberPage() {
           <div className="bg-surface p-6 rounded-2xl">
             <h3 className="text-lg font-semibold mb-4 text-black dark:text-black">Call a Queen Creek Plumber</h3>
             <p className="text-sm text-black/70 dark:text-black/70 mb-4">
-              Need a plumber in Queen Creek? We serve the area regularly — no extra trip charges.
+              Need a plumber in Queen Creek? We serve the area regularly, so there are no extra trip charges.
             </p>
             <a
               href={siteConfig.phoneHref}
@@ -294,6 +306,9 @@ export default function QueenCreekPlumberPage() {
               <li>Upfront, Honest Pricing</li>
               <li>Warranty on All Work</li>
             </ul>
+            <Link href="/about" className="mt-4 inline-block text-sm font-medium text-brand-700 hover:underline">
+              About Yeti Plumbing
+            </Link>
           </div>
         </div>
       </div>

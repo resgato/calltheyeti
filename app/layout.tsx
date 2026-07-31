@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     title: "Yeti Plumbing | Phoenix Custom Homes, Renovations & Service",
     description:
-      "Phoenix specialists in custom homes, renovations, and service plumbing — bathtubs, showers, faucets, kitchens and more.",
+      "Phoenix specialists in custom homes, renovations, and service plumbing: bathtubs, showers, faucets, kitchens and more.",
     siteName: siteConfig.name,
     locale: "en_US",
     images: [
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Yeti Plumbing | Phoenix Custom Homes, Renovations & Service",
     description:
-      "Phoenix specialists in custom homes, renovations, and service plumbing — bathtubs, showers, faucets, kitchens and more.",
+      "Phoenix specialists in custom homes, renovations, and service plumbing: bathtubs, showers, faucets, kitchens and more.",
     images: ["/yeti-logo.png"],
     creator: "@calltheyeti",
   },

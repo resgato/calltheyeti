@@ -4,6 +4,9 @@ import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
 import { Testimonials } from "@/components/Testimonials";
+import { RelatedServices } from "@/components/RelatedServices";
+import { FAQSection } from "@/components/FAQSection";
+import { serviceFaqs } from "@/lib/service-faqs";
 
 export const metadata: Metadata = {
   title: "Faucets & Fixtures | Phoenix Plumbing Fixture Installation & Repair",
@@ -280,6 +283,12 @@ export default function FaucetsFixturesPage() {
       </div>
       <div className="mt-14 -mx-4 overflow-hidden">
         <Testimonials service="faucets-fixtures" limit={3} />
+      </div>
+      <div className="mt-14 -mx-4">
+        <FAQSection faqs={serviceFaqs["faucets-fixtures"]} />
+      </div>
+      <div className="mt-14 -mx-4">
+        <RelatedServices current="faucets-fixtures" />
       </div>
     </main>
   );

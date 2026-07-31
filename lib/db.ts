@@ -30,14 +30,14 @@ export async function createTables() {
           type: 'homepage',
           data: {
             hero: {
-              title: "Arizona's Best Plumber — Fast. Friendly. Fair.",
+              title: "Arizona's Best Plumber. Fast. Friendly. Fair.",
               subtitle: "Custom homes, renovations, and service plumbing done right.",
-              description: "Custom homes, renovations, and service plumbing done right. Bathtubs, showers, faucets, kitchens, and more — same-day service across the Valley.",
+              description: "Custom homes, renovations, and service plumbing done right. Bathtubs, showers, faucets, kitchens, and more. Same-day service across the Valley.",
               features: ["Licensed & Insured", "Upfront, Honest Pricing", "1000+ Local Homes Served"]
             },
             services: {
               title: "Plumbing Services",
-              subtitle: "Expert technicians for any job — big or small.",
+              subtitle: "Expert technicians for any job, big or small.",
               items: [
                 { title: "Custom Homes", description: "Plumbing rough-ins & finish", href: "/services" },
                 { title: "Renovations", description: "Kitchen & bath remodel plumbing", href: "/services" },
@@ -94,7 +94,7 @@ export async function createTables() {
           type: 'services',
           data: {
             title: "Plumbing Services",
-            subtitle: "Expert technicians for any job — big or small.",
+            subtitle: "Expert technicians for any job, big or small.",
             services: [
               {
                 title: "Custom Homes",

@@ -3,6 +3,9 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { buildServicePageJsonLd, buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedServices } from "@/components/RelatedServices";
+import { FAQSection } from "@/components/FAQSection";
+import { serviceFaqs } from "@/lib/service-faqs";
 
 export const metadata: Metadata = {
   title: "Renovation Plumbing | Phoenix Kitchen & Bath Remodel Plumbing",
@@ -213,6 +216,12 @@ export default function RenovationsPage() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-14 -mx-4">
+        <FAQSection faqs={serviceFaqs["renovations"]} />
+      </div>
+      <div className="mt-14 -mx-4">
+        <RelatedServices current="renovations" />
       </div>
     </main>
   );

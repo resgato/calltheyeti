@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { LeadForm } from "@/components/LeadForm";
 import { siteConfig } from "@/lib/site";
+import { FAQSection } from "@/components/FAQSection";
+import { pageFaqs } from "@/lib/service-faqs";
 
 export const metadata: Metadata = {
   title: "Contact Us | Get Fast Plumbing Service",
@@ -49,6 +51,9 @@ export default function ContactPage() {
           </div>
         </div>
         <LeadForm />
+      </div>
+      <div className="mt-14 -mx-4">
+        <FAQSection faqs={pageFaqs["contact"]} />
       </div>
     </main>
   );

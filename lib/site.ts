@@ -178,7 +178,7 @@ export function buildLocalBusinessJsonLd() {
     },
     // Mirrors the live Google Business Profile (5.0 from 29 reviews). Google
     // excludes self-serving LocalBusiness ratings from review rich results, so
-    // this will not render stars — it is here so the markup is accurate for
+    // this will not render stars, it is here so the markup is accurate for
     // other consumers rather than asserting a stale count.
     aggregateRating: {
       "@type": "AggregateRating",
@@ -187,7 +187,15 @@ export function buildLocalBusinessJsonLd() {
       bestRating: "5",
       worstRating: "1",
     },
-    sameAs: ["https://www.instagram.com/yetiplumbingaz/", "https://www.yelp.com/biz/yeti-plumbing-phoenix"],
+    // sameAs is how an engine confirms this site and the off-site profiles are
+    // the same entity. The Google Business Profile carries the real review
+    // history, so it matters most. The Yelp slug is /yeti-plumbing-mesa; the
+    // previous /yeti-plumbing-phoenix value did not resolve.
+    sameAs: [
+      "https://maps.google.com/?cid=16026398084225769617",
+      "https://www.instagram.com/yetiplumbingaz/",
+      "https://www.yelp.com/biz/yeti-plumbing-mesa",
+    ],
   } as const;
 }
 

@@ -64,10 +64,10 @@ export default function ParadiseValleyPlumberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight mb-4 text-black dark:text-black">
-            Plumber in Paradise Valley, AZ — Yeti Plumbing
+            Plumber in Paradise Valley, AZ
           </h1>
           <p className="text-lg text-black/70 dark:text-black/70 mb-6">
-            Paradise Valley is Arizona&apos;s most exclusive address — acre-plus estate lots tucked between
+            Paradise Valley is Arizona&apos;s most exclusive address, with acre-plus estate lots tucked between
             Camelback Mountain and Mummy Mountain, world-class resorts, and homes where every detail is
             specified. Plumbing here is not a commodity job. Yeti Plumbing brings estate-level workmanship,
             discretion, and clean job sites to every property in 85253.
@@ -108,56 +108,56 @@ export default function ParadiseValleyPlumberPage() {
                 <li>
                   <Link href="/services/custom-homes" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Custom Home Plumbing
-                  </Link>{" "}
-                  — Full plumbing design and installation for new Paradise Valley estates, casitas, and guest houses.
+                  </Link>{": "}
+                  Full plumbing design and installation for new Paradise Valley estates, casitas, and guest houses.
                 </li>
                 <li>
                   <Link href="/services/renovations" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Renovation Plumbing
-                  </Link>{" "}
-                  — Primary suite and spa bath remodels, chef&apos;s kitchen upgrades, and whole-estate re-pipes.
+                  </Link>{": "}
+                  Primary suite and spa bath remodels, chef&apos;s kitchen upgrades, and whole-estate re-pipes.
                 </li>
                 <li>
                   <Link href="/services/emergency-plumber" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Emergency Plumbing
-                  </Link>{" "}
-                  — Burst pipes, slab leaks, and water heater failures handled fast to limit damage to finishes.
+                  </Link>{": "}
+                  Burst pipes, slab leaks, and water heater failures handled fast to limit damage to finishes.
                 </li>
                 <li>
                   <Link href="/services/repairs" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Plumbing Repairs
-                  </Link>{" "}
-                  — Leak repair, valve replacement, and diagnostics across large estate properties.
+                  </Link>{": "}
+                  Leak repair, valve replacement, and diagnostics across large estate properties.
                 </li>
                 <li>
                   <Link href="/services/drain-cleaning" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Drain Cleaning
-                  </Link>{" "}
-                  — Camera inspection and clearing for long, complex estate drain runs and mature-tree root intrusion.
+                  </Link>{": "}
+                  Camera inspection and clearing for long, complex estate drain runs and mature-tree root intrusion.
                 </li>
                 <li>
                   <Link href="/services/bathtubs-showers" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Bathtubs &amp; Showers
-                  </Link>{" "}
-                  — Freestanding soaking tubs, steam showers, and multi-head and body-spray shower systems.
+                  </Link>{": "}
+                  Freestanding soaking tubs, steam showers, and multi-head and body-spray shower systems.
                 </li>
                 <li>
                   <Link href="/services/faucets-fixtures" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Faucets &amp; Fixtures
-                  </Link>{" "}
-                  — Designer and imported fixture installation, pot fillers, and specialty valve work.
+                  </Link>{": "}
+                  Designer and imported fixture installation, pot fillers, and specialty valve work.
                 </li>
                 <li>
                   <Link href="/services/water-heaters" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Heaters
-                  </Link>{" "}
-                  — Tankless and multi-unit systems sized for estates with heavy simultaneous hot-water demand.
+                  </Link>{": "}
+                  Tankless and multi-unit systems sized for estates with heavy simultaneous hot-water demand.
                 </li>
                 <li>
                   <Link href="/services/water-softeners" className="text-brand-700 dark:text-brand-700 hover:underline font-semibold">
                     Water Softeners
-                  </Link>{" "}
-                  — Whole-home softening and filtration to protect premium fixtures from Valley hard water.
+                  </Link>{": "}
+                  Whole-home softening and filtration to protect premium fixtures from Valley hard water.
                 </li>
               </ul>
             </section>
@@ -330,6 +330,9 @@ export default function ParadiseValleyPlumberPage() {
               <li>Upfront, Honest Pricing</li>
               <li>Warranty on All Work</li>
             </ul>
+            <Link href="/about" className="mt-4 inline-block text-sm font-medium text-brand-700 hover:underline">
+              About Yeti Plumbing
+            </Link>
           </div>
         </div>
       </div>

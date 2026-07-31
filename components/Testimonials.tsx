@@ -21,7 +21,7 @@ function Stars() {
 /**
  * Real Google reviews shown as social proof.
  *
- * No Review/aggregateRating markup here on purpose — see lib/reviews.ts.
+ * No Review/aggregateRating markup here on purpose, see lib/reviews.ts.
  */
 export function Testimonials({
   service = "general",
