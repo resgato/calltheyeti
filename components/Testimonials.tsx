@@ -60,11 +60,16 @@ export function Testimonials({
           </a>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {items.map((r) => (
+        {/* Three quotes side by side is right on desktop but three stacked is a
+            lot of scrolling on a phone, so anything past the second is hidden
+            below md. The full set stays in the markup for crawlers. */}
+        <div className="mt-6 grid grid-cols-1 gap-4 md:mt-8 md:grid-cols-3 md:gap-6">
+          {items.map((r, i) => (
             <figure
               key={r.author}
-              className="flex flex-col rounded-2xl border border-line bg-white p-6 shadow-sm"
+              className={`flex-col rounded-2xl border border-line bg-white p-5 shadow-sm md:p-6 ${
+                i > 1 ? "hidden md:flex" : "flex"
+              }`}
             >
               <Stars />
               <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-black/80">

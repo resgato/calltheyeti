@@ -35,19 +35,19 @@ export function HowItWorks() {
           No surprise invoices and no pressure. Here is exactly what to expect.
         </p>
 
-        <ol className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <ol className="mt-6 grid grid-cols-1 gap-4 md:mt-8 md:grid-cols-3 md:gap-6">
           {STEPS.map((s) => (
-            <li key={s.step} className="rounded-2xl border border-line bg-white p-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">
+            <li key={s.step} className="rounded-2xl border border-line bg-white p-5 md:p-6">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 text-base font-bold text-white md:h-10 md:w-10 md:text-lg">
                 {s.step}
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-black">{s.title}</h3>
+              <h3 className="mt-3 text-base font-semibold text-black md:mt-4 md:text-lg">{s.title}</h3>
               <p className="mt-2 text-sm text-black/70">{s.body}</p>
             </li>
           ))}
         </ol>
 
-        <div className="mt-8 flex flex-wrap items-center gap-3">
+        <div className="mt-6 flex flex-wrap items-center gap-3 md:mt-8">
           <a
             href={siteConfig.phoneHref}
             className="inline-flex items-center rounded-full bg-brand-600 px-5 py-3 font-semibold text-white hover:bg-brand-700"

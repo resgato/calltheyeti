@@ -90,12 +90,14 @@ export default function Home() {
 
       {/* Neutral surface, not the amber band this used to be, amber is reserved
           for urgency and the free-consultation offer so it keeps its signal. */}
+      {/* Two up and tighter on phones. This band sits directly under the trust
+          strip and says a similar thing, so it does not need a full screen. */}
       <section className="bg-surface">
-        <div className="mx-auto max-w-6xl px-4 py-10 md:py-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="mx-auto max-w-6xl px-4 py-8 md:py-12 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6">
           {content.features.map((feature, index) => (
-            <div key={index} className="rounded-2xl border border-line bg-white p-6 shadow-sm">
-              <div className="text-base font-semibold text-ink">{feature.title}</div>
-              <div className="mt-1 text-sm text-ink-soft">{feature.description}</div>
+            <div key={index} className="rounded-xl border border-line bg-white p-4 sm:p-6 shadow-sm">
+              <div className="text-sm sm:text-base font-semibold text-ink">{feature.title}</div>
+              <div className="mt-1 text-xs sm:text-sm text-ink-soft">{feature.description}</div>
             </div>
           ))}
         </div>
@@ -104,21 +106,25 @@ export default function Home() {
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
           {/* Moved out of the hero so the hero stays headline, search, and CTA. */}
-          <p className="max-w-3xl text-xl leading-relaxed text-ink">
+          <p className="max-w-3xl text-lg sm:text-xl leading-relaxed text-ink">
             {content.hero.description}
           </p>
 
-          <h2 className="mt-12 text-2xl font-semibold tracking-tight text-black dark:text-white">{content.services.title}</h2>
-          <p className="mt-2 text-black/70 dark:text-white/70">{content.services.subtitle}</p>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {/* No dark:text-white here. The site is light only (globals.css pins
+              the background), but Tailwind's dark: variant still fires on the
+              OS setting, so these two rendered white on white for anyone with
+              dark mode enabled. */}
+          <h2 className="mt-8 md:mt-12 text-2xl font-semibold tracking-tight text-ink">{content.services.title}</h2>
+          <p className="mt-2 text-ink-soft">{content.services.subtitle}</p>
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
             {content.services.items.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
                 className="rounded-2xl border border-line p-4 hover:shadow-sm bg-white dark:bg-surface"
               >
-                <div className="text-lg font-medium text-black dark:text-black">{item.title}</div>
-                <div className="text-sm text-black/70 dark:text-black/70">{item.description}</div>
+                <div className="text-base sm:text-lg font-medium text-black dark:text-black">{item.title}</div>
+                <div className="mt-0.5 text-xs sm:text-sm text-black/70 dark:text-black/70">{item.description}</div>
               </Link>
             ))}
           </div>
@@ -131,9 +137,9 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-center text-black dark:text-black">{content.gallery.title}</h2>
           <p className="mt-2 text-black/70 dark:text-black/70 text-center">{content.gallery.subtitle}</p>
-          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-6 md:mt-8 md:gap-8 md:grid-cols-2">
             {content.gallery.projects.map((project, index) => (
-              <div key={index} className="space-y-4">
+              <div key={index} className="space-y-3">
                 <h3 className="text-lg font-semibold text-black dark:text-black">{project.title}</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -148,11 +154,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-6 md:mt-8 text-center">
             {/* w-full is load-bearing: a bare max-w-md overrides Preflight's
                 max-width:100%, so the image rendered at 448px and forced
                 horizontal scroll on phones. */}
-            <img src={content.gallery.familyImage} alt="Family-first approach to plumbing" className="mx-auto w-full max-w-md rounded-2xl shadow-md" />
+            <img src={content.gallery.familyImage} alt="Family-first approach to plumbing" className="mx-auto w-full max-w-[240px] sm:max-w-md rounded-2xl shadow-md" />
             <p className="mt-4 text-lg font-medium text-black dark:text-black">{content.gallery.familyTitle}</p>
             <p className="text-black/70 dark:text-black/70">{content.gallery.familyDescription}</p>
           </div>
@@ -182,24 +188,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Wrapping chips instead of a card grid. Same seven links and the same
+          "{City} Plumber" anchor text, in roughly half the height. The footer
+          already repeats these, so this block does not need to be a full screen. */}
       <section className="border-t border-line">
-        <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
+        <div className="mx-auto max-w-6xl px-4 py-8 md:py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-black">{content.serviceArea.title}</h2>
           <p className="mt-2 text-black/70 dark:text-black/70">
             Licensed plumbing across the East Valley and central Phoenix. Choose your city for local service
             details.
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <ul className="mt-5 flex flex-wrap gap-2">
             {serviceAreaLinks.map((area) => (
-              <Link
-                key={area.href}
-                href={area.href}
-                className="rounded-2xl border border-line px-4 py-3 text-center text-sm font-medium text-black dark:text-black bg-white dark:bg-surface hover:border-brand-600 hover:text-brand-700"
-              >
-                {area.name} Plumber
-              </Link>
+              <li key={area.href}>
+                <Link
+                  href={area.href}
+                  className="inline-flex rounded-full border border-line bg-white px-3.5 py-2 text-sm font-medium text-ink hover:border-brand-600 hover:text-brand-700"
+                >
+                  {area.name} Plumber
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
     </main>
