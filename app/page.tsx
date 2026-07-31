@@ -69,12 +69,14 @@ export default function Home() {
 
       <TrustBar />
 
-      <section className="bg-accent-400">
-        <div className="mx-auto max-w-6xl px-4 py-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      {/* Neutral surface, not the amber band this used to be — amber is reserved
+          for urgency and the free-consultation offer so it keeps its signal. */}
+      <section className="bg-surface">
+        <div className="mx-auto max-w-6xl px-4 py-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {content.features.map((feature, index) => (
-            <div key={index} className="rounded-xl bg-white p-4 shadow-sm">
-              <div className="text-base font-semibold text-black">{feature.title}</div>
-              <div className="text-xs text-black/70">{feature.description}</div>
+            <div key={index} className="rounded-2xl border border-line bg-white p-6 shadow-sm">
+              <div className="text-base font-semibold text-ink">{feature.title}</div>
+              <div className="mt-1 text-sm text-ink-soft">{feature.description}</div>
             </div>
           ))}
         </div>
